@@ -38,6 +38,7 @@ with flox_assert_initialized() {
     map_set(req,"lbContext",context);
     map_set(req,"lbOnComplete",onComplete);
     map_set(req,"lbOnError",onError);
+    // Remove the data
+    map_destroy(data);
     return req;
 }
-

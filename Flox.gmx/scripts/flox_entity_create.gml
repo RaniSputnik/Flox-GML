@@ -23,4 +23,6 @@ var player = flox_player_get();
 if flox_entity_exists(player) map_set(entity,flox_owner_id,map_get(player,"id"));
 else map_set(entity,flox_owner_id,noone);
 
+// TODO apply any type information for the entity
+
 return entity;

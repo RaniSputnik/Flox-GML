@@ -1,5 +1,5 @@
 /**
- * i_flox_on_leaderboard_load_error(request,error,httpStatus,cachedBody)
+ * i_flox_on_leaderboard_load_error(Map request, String error, Real httpStatus, Map cachedBody)
  * Called when the leaderboard fails to load
  */
  

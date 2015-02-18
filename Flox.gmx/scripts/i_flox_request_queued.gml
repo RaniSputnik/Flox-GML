@@ -1,5 +1,11 @@
 /**
- * flox_service_request_queued(request)
+ * i_flox_request_queued(String method, String path, Map data)
+ * Defers a queue based on availability. If the server is currently
+ * reachable, the queued request will be performed right away. However
+ * if the server can not be reached then the request will be saved for 
+ * later. Queued requests are persisted across sessions, so if you make
+ * a request and it fails then the game is closed. When the game is
+ * reopened the request will be attempted again. Order is guaranteed.
  */
 
 var method = argument0;
@@ -21,7 +27,6 @@ if method == http_method_put {
         }
     }
 }
- 
 // Add the request to the queue   
 var request = i_flox_request_create(method,path,data,noone,noone);
 i_flox_service_queue_enqueue(request);

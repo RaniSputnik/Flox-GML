@@ -1,5 +1,5 @@
 /**
- * i_flox_on_leaderboard_load_complete(Map request, Map response, Number httpStatus)
+ * i_flox_on_leaderboard_load_complete(Map request, Map response, Real httpStatus)
  * Called when a leaderboard is loaded successfully
  */
  

@@ -151,6 +151,7 @@
       <script>scripts\scrLeaderboardLoadComplete.gml</script>
       <script>scripts\scrLeaderboardLoadError.gml</script>
     </scripts>
+    <script>scripts\flox_player_login_key.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fntCourierSmall</font>
@@ -162,7 +163,9 @@
     </objects>
     <objects name="tests">
       <object>objects\objForceServiceFailure</object>
+      <object>objects\objLogout</object>
       <object>objects\objLeaderboardList</object>
+      <object>objects\objLeaderboardPost</object>
       <object>objects\objLoading</object>
     </objects>
   </objects>

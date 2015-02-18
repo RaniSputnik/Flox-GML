@@ -27,10 +27,7 @@
             <kind>1</kind>
             <string>/// Initialize
 
-self.loadingIndicator = noone;
-self.error = "";
 self.leaderboardId = "test-leaderboard";
-self.list = noone;
 </string>
           </argument>
         </arguments>
@@ -53,20 +50,10 @@ self.list = noone;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Load the leaderboard
+            <string>/// Logout the current player
 
-// One load at a time please
-if instance_exists(self.loadingIndicator) then exit;
-// Request the load
-self.request = flox_leaderboard_load(self.leaderboardId,fx_all_time,
-    scrLeaderboardLoadComplete,
-    scrLeaderboardLoadError);    
-// Create the loading indicator
-var xx = x + sprite_width - (sprite_height*0.5);
-var yy = y + (sprite_height*0.5);
-self.loadingIndicator = instance_create(xx,yy,objLoading);
-// Clear any error messages
-self.error = "";
+flox_player_logout();
+
 </string>
           </argument>
         </arguments>
@@ -96,82 +83,7 @@ draw_self();
 draw_set_color(c_white);
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
-draw_text(x+16,y+16,"Load Leaderboard");
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draw any error text
-
-if self.error != "" {
-    draw_set_color(c_red);
-    draw_set_halign(fa_left);
-    draw_set_valign(fa_middle);
-    draw_text(x,y+sprite_height+16,self.error);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draw the leaderboard scores
-
-// If the list of scores exists
-if ds_exists(self.list, ds_type_list) {
-    var xx = x + 16;
-    var yy = y + sprite_height + 16;
-    if self.error != "" then yy += 32;
-    draw_set_color(c_black);
-    draw_set_halign(fa_left);
-    draw_set_valign(fa_middle);
-
-    // For every score in the list (to a max of 10)
-    var n = min(ds_list_size(self.list), 10);
-    for (var i = 0; i &lt; n; i++) {
-        // Get the score data
-        var scoreData = ds_list_find_value(self.list,i);
-        var playerId = ds_map_find_value(scoreData,"playerId");
-        var playerName = ds_map_find_value(scoreData,"playerName");
-        var value = ds_map_find_value(scoreData,"value");
-        var data = ds_map_find_value(scoreData,"date");
-        var country = ds_map_find_value(scoreData,"country");
-        // Work out where to draw the text
-        draw_text(xx,yy,string(i+1)+". "+string(value)+" "+playerName);
-        // Increment the position to draw the text
-        yy += string_height("|") + 4;   
-    }
-}
+draw_text(x+16,y+16,"Logout");
 </string>
           </argument>
         </arguments>

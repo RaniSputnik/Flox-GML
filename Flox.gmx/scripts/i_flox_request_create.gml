@@ -2,7 +2,8 @@
  * i_flox_request_create(String method, String path, Map data,
  *      Script(Map request, Map response, Number status) onComplete,
  *      Script(Map request, String error, Number status, Map cachedResponse) onError) Map
- * Creates a request object.
+ * Creates a request object. Callbacks are optional, pass noone if
+ * they are not needed. 
  */
  
 var method     = argument0;

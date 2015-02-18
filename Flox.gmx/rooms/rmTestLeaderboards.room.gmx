@@ -10,9 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>flox_init(FLOX_ID,FLOX_KEY,"0.1");
-
-//flox_leaderboard_post('test-leaderboard',irandom(1000),"Dat Test");</code>
+  <code>flox_init(FLOX_ID,FLOX_KEY,"0.1");</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -54,8 +52,10 @@
   </views>
   <instances>
     <instance objName="objDsDebugger" x="32" y="0" name="inst_43C0BFA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLeaderboardList" x="192" y="128" name="inst_A6219299" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objForceServiceFailure" x="192" y="64" name="inst_F7A80788" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLeaderboardList" x="64" y="288" name="inst_A6219299" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objForceServiceFailure" x="64" y="32" name="inst_F7A80788" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLeaderboardPost" x="64" y="224" name="inst_63A330BB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLogout" x="64" y="160" name="inst_E459FE00" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

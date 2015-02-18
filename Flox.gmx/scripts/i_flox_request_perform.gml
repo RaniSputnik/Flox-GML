@@ -64,7 +64,6 @@ map_set(headers,"X-Flox",json_encode(floxHeader));
 if map_exists(cachedResult) {
     var eTag = i_flox_cache_metadata_get(path,"eTag",flox_null);
     map_set(headers,"If-None-Match",eTag);
-    flox_debug_message("Cache eTag retrieved",eTag);
 }
 
 // Create the full url, we set an invalid url if the request has any issues
