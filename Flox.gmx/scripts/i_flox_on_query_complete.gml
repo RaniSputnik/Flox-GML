@@ -30,6 +30,10 @@ for (var i = 0; i < numResults; i++) {
     var entityId = ds_map_find_value(result,"id");
     var eTag = map_default(result,"eTag",fx_null);
     
+    // Add in a placeholder so that all other entities get placed correctly
+    var finalResults = map_get(query,"results");
+    ds_list_add(finalResults,noone);
+    
     // Attempt to load the entity from the cache
     var entityPath = "entities" + "/" + entityType + "/" + entityId;
     var cachedEntity = i_flox_cache_get(entityPath,eTag);
@@ -46,9 +50,6 @@ for (var i = 0; i < numResults; i++) {
         // Provide the query and the position where the entity should be added
         map_set(req,"query",query);
         map_set(req,"position",i);
-        var finalResults = map_get(query,"results");
-        // Add in a placeholder so that all other entities get placed correctly
-        ds_list_add(finalResults,noone);
     }    
 }
 
