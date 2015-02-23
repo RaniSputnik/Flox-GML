@@ -21,8 +21,6 @@
         <script>scripts\flox_init.gml</script>
         <script>scripts\flox_player_get.gml</script>
         <script>scripts\flox_player_logout.gml</script>
-        <script>scripts\flox_completed.gml</script>
-        <script>scripts\flox_failed.gml</script>
         <script>scripts\flox_flush_local_data.gml</script>
       </scripts>
       <scripts name="analytics">
@@ -151,7 +149,6 @@
       <script>scripts\scrLeaderboardLoadComplete.gml</script>
       <script>scripts\scrLeaderboardLoadError.gml</script>
     </scripts>
-    <script>scripts\flox_player_login_key.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fntCourierSmall</font>
