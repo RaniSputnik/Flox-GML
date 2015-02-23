@@ -40,6 +40,7 @@
       </scripts>
       <scripts name="queries">
         <script>scripts\flox_query_begin.gml</script>
+        <script>scripts\flox_query_where.gml</script>
         <script>scripts\flox_query_find.gml</script>
       </scripts>
       <scripts name="leaderboards">
@@ -98,6 +99,8 @@
           <script>scripts\i_flox_on_query_error.gml</script>
           <script>scripts\i_flox_query_add_entity.gml</script>
           <script>scripts\i_flox_query_finish.gml</script>
+          <script>scripts\i_flox_assert_query_building.gml</script>
+          <script>scripts\i_flox_query_list_string.gml</script>
         </scripts>
         <scripts name="leaderboards">
           <script>scripts\i_flox_on_leaderboard_load_complete.gml</script>
@@ -161,12 +164,15 @@
     <scripts name="tests">
       <script>scripts\scrLeaderboardLoadComplete.gml</script>
       <script>scripts\scrLeaderboardLoadError.gml</script>
-      <scripts name="query-basic">
-        <script>scripts\scrOnQueryBasicLoad.gml</script>
-        <script>scripts\scrOnQueryBasicError.gml</script>
+      <scripts name="queries">
+        <script>scripts\scrTestQueryBasic.gml</script>
+        <script>scripts\scrTestQueryWhere.gml</script>
+        <script>scripts\scrOnQueryComplete.gml</script>
+        <script>scripts\scrOnQueryError.gml</script>
       </scripts>
     </scripts>
   </scripts>
+  <shaders name="shaders"/>
   <fonts name="fonts">
     <font>fonts\fntCourierSmall</font>
   </fonts>
@@ -182,7 +188,7 @@
       <object>objects\objLeaderboardList</object>
       <object>objects\objLeaderboardPost</object>
       <object>objects\objSaveEntity</object>
-      <object>objects\objTestQueryBasic</object>
+      <object>objects\objTestQuery</object>
       <object>objects\objButton</object>
       <object>objects\objLoading</object>
     </objects>
@@ -190,6 +196,7 @@
   <rooms name="rooms">
     <room>rooms\rmInit</room>
     <room>rooms\rmTestQueryBasic</room>
+    <room>rooms\rmTestQueryWhere</room>
     <room>rooms\rmTestLeaderboards</room>
   </rooms>
   <constants number="2">

@@ -18,8 +18,7 @@ if not flox_assert(script_exists(onError),
 
 // Perform the request
 with flox_assert_initialized() {
-    if not flox_assert(map_exists(self._query), 
-        "Can not find query, no query exists") then exit;
+    if not i_flox_assert_query_building() return false;
     // Get the properties of the query
     var entityType = map_get(_query,"type");
     var path = "entities"+"/"+string(entityType);
@@ -37,3 +36,5 @@ with flox_assert_initialized() {
     map_set(req,"query",self._query);
     self._query = noone;
 }
+
+return true;

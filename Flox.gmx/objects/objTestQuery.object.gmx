@@ -27,9 +27,11 @@
             <kind>1</kind>
             <string>
 self.loadingIndicator = noone;
-self.message = "Load Players";
+self.message = "";
 self.error = "";
 self.results = noone;
+
+self.queryScript = noone;
 </string>
           </argument>
         </arguments>
@@ -56,9 +58,8 @@ self.results = noone;
 
 if instance_exists(self.loadingIndicator) then exit;
 
-// Load the players
-flox_query_begin(fx_type_player);
-flox_query_find(scrOnQueryBasicLoad,scrOnQueryBasicError);
+// Start the query
+script_execute(self.queryScript);
 // Create the loading indicator
 var xx = x + sprite_width - (sprite_height*0.5);
 var yy = y + (sprite_height*0.5);
