@@ -34,7 +34,7 @@ if method == http_method_get and map_exists(data) {
 }
 // Get the cached result from last time (if there is one)
 if method == http_method_get and i_flox_cache_contains(path) {
-    cachedResult = i_flox_cache_get(path);
+    cachedResult = i_flox_cache_get(path,fx_null);
     flox_debug_message("Cache contains previous response",json_encode(cachedResult));
     // Do not use ds_map_add_map because otherwise the cached result will be removed
     if map_exists(cachedResult) then map_set(request,"cachedResult",cachedResult);

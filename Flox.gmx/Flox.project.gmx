@@ -38,6 +38,10 @@
         <script>scripts\flox_entity_free.gml</script>
         <script>scripts\flox_entity_save_queued.gml</script>
       </scripts>
+      <scripts name="queries">
+        <script>scripts\flox_query_begin.gml</script>
+        <script>scripts\flox_query_find.gml</script>
+      </scripts>
       <scripts name="leaderboards">
         <script>scripts\flox_leaderboard_post.gml</script>
         <script>scripts\flox_leaderboard_load.gml</script>
@@ -89,6 +93,13 @@
           <script>scripts\i_flox_entity_from_map.gml</script>
           <script>scripts\i_flox_entity_to_map.gml</script>
         </scripts>
+        <scripts name="queries">
+          <script>scripts\i_flox_on_query_complete.gml</script>
+          <script>scripts\i_flox_on_query_entity_load_complete.gml</script>
+          <script>scripts\i_flox_on_query_error.gml</script>
+          <script>scripts\i_flox_query_add_entity.gml</script>
+          <script>scripts\i_flox_query_finish.gml</script>
+        </scripts>
         <scripts name="leaderboards">
           <script>scripts\i_flox_on_leaderboard_load_complete.gml</script>
           <script>scripts\i_flox_on_leaderboard_load_error.gml</script>
@@ -134,6 +145,7 @@
             <script>scripts\list_json_encode.gml</script>
             <script>scripts\list_add_list.gml</script>
             <script>scripts\list_add_map.gml</script>
+            <script>scripts\list_replace_map.gml</script>
             <script>scripts\list_exists.gml</script>
             <script>scripts\list_size.gml</script>
             <script>scripts\list_destroy.gml</script>

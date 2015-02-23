@@ -6,7 +6,7 @@
 var path = argument0;
 var cache = i_flox_cache();
 // Remove the existing cache data
-var existing = i_flox_cache_get(path);
+var existing = i_flox_cache_get(path,fx_null);
 if map_exists(existing) map_destroy(existing);
 map_delete(cache,path);
 // Loop through and remove all the meta data
