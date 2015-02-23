@@ -18,5 +18,5 @@ var numLoaded = map_get(query,"numLoaded") + 1
 map_set(query,"numLoaded",numLoaded);
 var numResults = map_get(query,"numResults");
 if (numLoaded == numResults) {
-     i_flox_query_finish(query);
+    i_flox_query_finish(query);
 }

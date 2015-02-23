@@ -225,7 +225,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>false</string>
+            <string>true</string>
           </argument>
         </arguments>
       </action>
@@ -329,6 +329,9 @@ self._serviceQueueShouldProcess = false;
 // Whether or not the rest service is currently processing
 // the list of queued requests
 self._serviceProcessingQueue = false; 
+
+// The current query being built
+self._query = noone;
 
 
 </string>
