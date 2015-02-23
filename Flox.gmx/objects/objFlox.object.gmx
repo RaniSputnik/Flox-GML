@@ -470,14 +470,8 @@ if map_has(self._serviceRequests,requestId) {
     var onComplete  = map_default(requestInfo,"onComplete",noone);
     var onError     = map_default(requestInfo,"onError",noone);
 
-    // If the request was not okay then the server could not be reached
-    if not flox_http_status_is_success(httpStatus) {
-        flox_debug_message("Flox server unreachable");
-        if script_exists(onError)
-            then script_execute(onError,requestInfo,"Flox server unreachable",httpStatus,cache);
-    }
-    // Deal with funny GameMaker status shenanigans
-    else if status &lt; 0 and not map_exists(headers) {
+    // If we couldn't contact the server for any odd/unknown reasons
+    if status &lt; 0 and not map_exists(headers) {
         flox_debug_message("Flox server unreachable");
         if script_exists(onError)
             then script_execute(onError,requestInfo,"Flox server unreachable",http_status_unknown,cache);
@@ -532,11 +526,11 @@ if map_has(self._serviceRequests,requestId) {
             }
             // Otherwise the Flox response was an error status
             else {
-                flox_debug_message("Http status was not a success");
-                var error = "unknown";
+                var error = "Unknown";
                 // Try and determine the error message
-                if map_exists(result) and map_has(result,"message")
-                    then error = map_get(result,"message");
+                if map_exists(response) and map_has(response,"message")
+                    then error = map_get(response,"message");
+                flox_debug_message("Request was not successful, error = "+error);
                 // Call the onError script
                 if script_exists(onError)
                     then script_execute(onError,requestInfo,error,httpStatus,cache);
