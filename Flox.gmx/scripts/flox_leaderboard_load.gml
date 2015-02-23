@@ -1,5 +1,7 @@
 /**
- * flox_leaderboard_load(String leaderboardID, String timeScope || List playerIds) Map
+ * flox_leaderboard_load(String leaderboardID, String timeScope || List playerIds
+ *                       Script(List scores) onComplete,
+ *                       Script(String error, Real httpStatus, List cachedScores) onError)
  * Loads all scores on a leaderboard in the given constraints.
  * You may either specify a timescope (flox_today, flox_this_week, flox_all_time)
  * Or you can specify a list of player ids that will be selected from the leaderboard
@@ -40,5 +42,4 @@ with flox_assert_initialized() {
     map_set(req,"lbOnError",onError);
     // Remove the data
     map_destroy(data);
-    return req;
 }

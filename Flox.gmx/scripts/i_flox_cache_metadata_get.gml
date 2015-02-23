@@ -1,5 +1,5 @@
 /**
- * i_flox_cache_get_metadata(String path, String key, Any default) Any
+ * i_flox_cache_metadata_get(String path, String key, Any default) Any
  * Returns the value for the specified metadata for a given path 
  * If the metadata doesn't exist, it will return the default value
  */
