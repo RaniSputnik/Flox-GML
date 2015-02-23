@@ -11,7 +11,7 @@ var cache = i_flox_cache();
 // Cached object or noone (but don't write the 'noone' into the
 var cachedObject = map_default(cache,path,noone,false);
 if map_exists(cachedObject) {
-    var cachedETag = i_flox_cache_metadata_get(path,"eTag");
+    var cachedETag = i_flox_cache_metadata_get(path,"eTag",fx_null);
     if (eTag == fx_null or eTag == cachedETag) {
         return cachedObject;
     }

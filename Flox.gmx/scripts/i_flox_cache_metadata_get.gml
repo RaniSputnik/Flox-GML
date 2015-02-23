@@ -4,17 +4,13 @@
  * If the metadata doesn't exist, it will return the default value
  */
 
-var key = argument[1];
-var path = argument[0]
+var path = string(argument0);
+var key = string(argument1);
 var metaPath = path + "-" + key;
-var def;
-if argument_count > 2 then def = argument[2];
+var def = argument2;
 
 var cache = i_flox_cache();
 if map_has(cache,metaPath) {
-    return map_get(metadata,metaPath);
+    return map_get(cache,metaPath);
 }
-else {
-    flox_assert(def != undefined,"Can not get metadata, path '"+path+"' does not have metadata for key '"+key+"'");
-    return def;
-}
+else return def;

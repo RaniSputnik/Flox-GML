@@ -225,7 +225,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>true</string>
+            <string>false</string>
           </argument>
         </arguments>
       </action>
