@@ -177,6 +177,7 @@
       <object>objects\objDsDebugger</object>
     </objects>
     <objects name="tests">
+      <object>objects\objTestNavigator</object>
       <object>objects\objForceServiceFailure</object>
       <object>objects\objLogout</object>
       <object>objects\objLeaderboardList</object>
@@ -188,6 +189,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rmInit</room>
     <room>rooms\rmTestQueryBasic</room>
     <room>rooms\rmTestLeaderboards</room>
   </rooms>
