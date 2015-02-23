@@ -163,6 +163,8 @@
       <object>objects\objLogout</object>
       <object>objects\objLeaderboardList</object>
       <object>objects\objLeaderboardPost</object>
+      <object>objects\objSaveEntity</object>
+      <object>objects\objButton</object>
       <object>objects\objLoading</object>
     </objects>
   </objects>

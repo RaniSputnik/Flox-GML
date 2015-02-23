@@ -3,26 +3,12 @@
   <spriteName>sprButton</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>10</depth>
+  <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>objButton</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -39,36 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Initialize
+            <string>/// Draw the button
 
-self.message = "Logout";
-self.leaderboardId = "test-leaderboard";
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="6" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Logout the current player
+draw_self();
 
-flox_player_logout();
-
+draw_set_color(c_white);
+draw_set_halign(fa_left);
+draw_set_valign(fa_middle);
+draw_text(x+16,y+16,self.message);
 </string>
           </argument>
         </arguments>
@@ -86,8 +50,5 @@ flox_player_logout();
   <PhysicsObjectFriction>0.200000002980232</PhysicsObjectFriction>
   <PhysicsObjectAwake>-1</PhysicsObjectAwake>
   <PhysicsObjectKinematic>0</PhysicsObjectKinematic>
-  <PhysicsShapePoints>
-    <point>64,16</point>
-    <point>64,64</point>
-  </PhysicsShapePoints>
+  <PhysicsShapePoints/>
 </object>
