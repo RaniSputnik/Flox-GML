@@ -469,7 +469,13 @@ if map_has(self._serviceRequests,requestId) {
     var onError     = map_default(requestInfo,"onError",noone);
 
     // If the request was not okay then the server could not be reached
-    if status &lt; 0 and not map_exists(headers) {
+    if not flox_http_status_is_success(httpStatus) {
+        flox_debug_message("Flox server unreachable");
+        if script_exists(onError)
+            then script_execute(onError,requestInfo,"Flox server unreachable",httpStatus,cache);
+    }
+    // Deal with funny GameMaker status shenanigans
+    else if status &lt; 0 and not map_exists(headers) {
         flox_debug_message("Flox server unreachable");
         if script_exists(onError)
             then script_execute(onError,requestInfo,"Flox server unreachable",http_status_unknown,cache);

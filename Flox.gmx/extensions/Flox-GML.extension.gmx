@@ -133,6 +133,31 @@
           <value>"allTime"</value>
           <hidden>0</hidden>
         </constant>
+        <constant>
+          <name>fx_type_player</name>
+          <value>".player"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_id</name>
+          <value>"id"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_type</name>
+          <value>"type"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_updated_at</name>
+          <value>"updatedAt"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_created_at</name>
+          <value>"createdAt"</value>
+          <hidden>0</hidden>
+        </constant>
       </constants>
     </file>
   </files>

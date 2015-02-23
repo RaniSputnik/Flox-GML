@@ -36,6 +36,7 @@
         <script>scripts\flox_entity_get.gml</script>
         <script>scripts\flox_entity_set.gml</script>
         <script>scripts\flox_entity_free.gml</script>
+        <script>scripts\flox_entity_save_queued.gml</script>
       </scripts>
       <scripts name="leaderboards">
         <script>scripts\flox_leaderboard_post.gml</script>
@@ -86,6 +87,7 @@
         </scripts>
         <scripts name="entities">
           <script>scripts\i_flox_entity_from_map.gml</script>
+          <script>scripts\i_flox_entity_to_map.gml</script>
         </scripts>
         <scripts name="leaderboards">
           <script>scripts\i_flox_on_leaderboard_load_complete.gml</script>
