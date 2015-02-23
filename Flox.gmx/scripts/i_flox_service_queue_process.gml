@@ -23,7 +23,7 @@ if not self._serviceProcessingQueue {
     // Else dispatch that the service queue is complete
     else {
         self._serviceProcessingQueue = false;
-        i_flox_service_queue_finished(http_status_ok,flox_null);
+        i_flox_service_queue_finished(http_status_ok,fx_null);
     }
 }
 

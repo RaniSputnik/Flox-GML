@@ -43,7 +43,7 @@ with flox_get() {
     var player = flox_player_get();
     var auth = i_flox_authentication_get();
     if not flox_entity_exists(player) or not map_exists(auth) {
-        i_flox_player_login(flox_guest,flox_null,flox_null,noone,noone,id);
+        i_flox_player_login(fx_guest,fx_null,fx_null,noone,noone,id);
     } 
     
     // Start a new session

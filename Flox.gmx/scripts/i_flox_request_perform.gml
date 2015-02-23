@@ -44,7 +44,7 @@ if method == http_method_get and i_flox_cache_contains(path) {
 // Auth header
 var floxSDK = map_create("request-headers-flox-sdk");
 map_set(floxSDK,"type","gml");
-map_set(floxSDK,"version",flox_sdk_version);
+map_set(floxSDK,"version",fx_sdk_version);
 // Player Header
 var floxPlayer = map_create("request-headers-flox-player");
 map_copy(floxPlayer,auth);
@@ -62,7 +62,7 @@ map_set(headers,"X-Flox",json_encode(floxHeader));
 
 // Get the meta-data associated with the cached result
 if map_exists(cachedResult) {
-    var eTag = i_flox_cache_metadata_get(path,"eTag",flox_null);
+    var eTag = i_flox_cache_metadata_get(path,"eTag",fx_null);
     map_set(headers,"If-None-Match",eTag);
 }
 

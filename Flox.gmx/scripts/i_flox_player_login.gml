@@ -17,9 +17,9 @@ var previousAuth = i_flox_authentication_get();
 
 // If we are logging in as a guest we don't need an internet connection
 // we can login with credentials that are all supplied by the client
-if authType == flox_guest {
+if authType == fx_guest {
     // If we are logging in as a guest, create a player then callback
-    var player = i_flox_player_create(flox_guest);
+    var player = i_flox_player_create(fx_guest);
     // We create a phoney request that carries all the details of the login
     // to the i_flox_on_player_login_complete function
     var req = map_create("login-fake-request");
@@ -29,8 +29,8 @@ if authType == flox_guest {
     if map_exists(previousAuth)
         then map_set(req,"loginPreviousAuth",previousAuth);
     var result = map_create("login-fake-result");
-    map_set(result,"id",map_get(player,flox_id));
-    map_set(result,"type",map_get(player,flox_type));
+    map_set(result,"id",map_get(player,fx_id));
+    map_set(result,"type",map_get(player,fx_type));
     map_set_map(result,"entity",player);
     // Notify that the login is complete (it can not fail, and the status is over 9000)
     i_flox_on_player_login_complete(req,result,90001);

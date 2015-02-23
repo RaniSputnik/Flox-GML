@@ -39,83 +39,58 @@
       <functions/>
       <constants>
         <constant>
-          <name>flox_sdk_version</name>
+          <name>fx_sdk_version</name>
           <value>"0.4.0"</value>
           <hidden>0</hidden>
         </constant>
         <constant>
-          <name>flox_null</name>
+          <name>fx_null</name>
           <value>"null"</value>
           <hidden>0</hidden>
         </constant>
         <constant>
-          <name>flox_guest</name>
+          <name>fx_guest</name>
           <value>"guest"</value>
           <hidden>0</hidden>
         </constant>
         <constant>
-          <name>flox_key</name>
+          <name>fx_key</name>
           <value>"key"</value>
           <hidden>0</hidden>
         </constant>
         <constant>
-          <name>flox_email</name>
+          <name>fx_email</name>
           <value>"email"</value>
           <hidden>0</hidden>
         </constant>
         <constant>
-          <name>flox_email_and_password</name>
+          <name>fx_email_and_password</name>
           <value>"emailPwd"</value>
           <hidden>0</hidden>
         </constant>
         <constant>
-          <name>flox_no_access</name>
-          <value>""</value>
-          <hidden>0</hidden>
-        </constant>
-        <constant>
-          <name>flox_read_only</name>
+          <name>fx_read_only</name>
           <value>"r"</value>
           <hidden>0</hidden>
         </constant>
         <constant>
-          <name>flox_read_write</name>
+          <name>fx_read_write</name>
           <value>"rw"</value>
           <hidden>0</hidden>
         </constant>
         <constant>
-          <name>flox_id</name>
-          <value>"id"</value>
-          <hidden>0</hidden>
-        </constant>
-        <constant>
-          <name>flox_owner_id</name>
-          <value>"ownerId"</value>
-          <hidden>0</hidden>
-        </constant>
-        <constant>
-          <name>flox_public_access</name>
+          <name>fx_public_access</name>
           <value>"publicAccess"</value>
           <hidden>0</hidden>
         </constant>
         <constant>
-          <name>flox_created_at</name>
-          <value>"createdAt"</value>
-          <hidden>0</hidden>
-        </constant>
-        <constant>
-          <name>flox_updated_at</name>
-          <value>"updatedAt"</value>
-          <hidden>0</hidden>
-        </constant>
-        <constant>
-          <name>flox_type</name>
-          <value>"type"</value>
-          <hidden>0</hidden>
-        </constant>
-        <constant>
-          <name>flox_auth_type</name>
+          <name>fx_auth_type</name>
           <value>"authType"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_no_access</name>
+          <value>""</value>
           <hidden>0</hidden>
         </constant>
         <constant>
@@ -156,6 +131,11 @@
         <constant>
           <name>fx_created_at</name>
           <value>"createdAt"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_owner_id</name>
+          <value>"ownerId"</value>
           <hidden>0</hidden>
         </constant>
       </constants>
