@@ -173,26 +173,7 @@
   <rooms name="rooms">
     <room>rooms\rmTestLeaderboards</room>
   </rooms>
-  <constants number="21">
-    <constant name="http_method_get">"get"</constant>
-    <constant name="http_method_post">"post"</constant>
-    <constant name="http_method_put">"put"</constant>
-    <constant name="http_method_delete">"delete"</constant>
-    <constant name="http_status_unknown">0</constant>
-    <constant name="http_status_ok">200</constant>
-    <constant name="http_status_accepted">202</constant>
-    <constant name="http_status_no_content">204</constant>
-    <constant name="http_status_not_modified">304</constant>
-    <constant name="http_status_bad_request">400</constant>
-    <constant name="http_status_unauthorized">401</constant>
-    <constant name="http_status_forbidden">403</constant>
-    <constant name="http_status_not_found">404</constant>
-    <constant name="http_status_request_timeout">408</constant>
-    <constant name="http_status_precondition_failed">412</constant>
-    <constant name="http_status_too_many_requests">429</constant>
-    <constant name="http_status_internal_server_error">500</constant>
-    <constant name="http_status_not_implemented">501</constant>
-    <constant name="http_status_service_unavailable">503</constant>
+  <constants number="2">
     <constant name="FLOX_ID">"6nkPAV2gLb4u82dr"</constant>
     <constant name="FLOX_KEY">"OWqrbbJiwIArWLlY"</constant>
   </constants>

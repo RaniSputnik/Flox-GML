@@ -79,6 +79,11 @@
           <hidden>0</hidden>
         </constant>
         <constant>
+          <name>http_method_get</name>
+          <value>"GET"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
           <name>fx_public_access</name>
           <value>"publicAccess"</value>
           <hidden>0</hidden>
@@ -91,6 +96,26 @@
         <constant>
           <name>fx_no_access</name>
           <value>""</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_method_post</name>
+          <value>"POST"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_method_put</name>
+          <value>"PUT"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_method_delete</name>
+          <value>"DELETE"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_unknown</name>
+          <value>0</value>
           <hidden>0</hidden>
         </constant>
         <constant>
@@ -136,6 +161,76 @@
         <constant>
           <name>fx_owner_id</name>
           <value>"ownerId"</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_ok</name>
+          <value>200</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_accepted</name>
+          <value>200</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_no_content</name>
+          <value>204</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_not_modified</name>
+          <value>304</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_bad_request</name>
+          <value>400</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_unauthorized</name>
+          <value>401</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_forbidden</name>
+          <value>403</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_not_found</name>
+          <value>404</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_request_timeout</name>
+          <value>408</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_precondition_failed</name>
+          <value>412</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_too_many_requests</name>
+          <value>429</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_internal_server_error</name>
+          <value>500</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_not_implemented</name>
+          <value>501</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>http_status_service_unavailable</name>
+          <value>503</value>
           <hidden>0</hidden>
         </constant>
       </constants>
