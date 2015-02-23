@@ -11,11 +11,9 @@ var cache = i_flox_cache();
 
 // Remove the existing cache, freeing any data structures
 i_flox_cache_remove(path);
-// Set some debugging helpers on the maps
-map_meta_set_name(data,"[Cache] path="+path);
-map_meta_set_name(metadata,"[Cache Metadata] path="+path);
-// Make sure to set the correct data type
+// Add the new cached object
 map_set_map(cache,path,data);
+map_meta_set_name(data,"[Cache] path="+path);
 // Set the metadata too
 if map_exists(metadata) {
     var key = ds_map_find_first(metadata);
