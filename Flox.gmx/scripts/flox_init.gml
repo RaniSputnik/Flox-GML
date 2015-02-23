@@ -34,7 +34,6 @@ with flox_get() {
     
     // Initialize persistent data and rest service
     i_flox_persistent_load();
-    self._callbacks = list_create("[Flox] Callbacks");
     self._serviceRequests = map_create("[Flox] Service Requests");
     self._serviceBasePath = "www.flox.cc/api/";
     self._serviceRequestsAwaitingQueueCompletion = list_create("[Flox] Requests awaiting queue completion");

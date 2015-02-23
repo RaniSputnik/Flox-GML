@@ -41,4 +41,7 @@ i_flox_cache_clear();
 // Callback
 var callback = map_default(request,"loginOnComplete",noone);
 var context = map_default(request,"loginContext",noone);
-i_flox_callback(context,callback,player);
+with context {
+    if script_exists(callback)
+        then script_execute(callback,player);
+}
