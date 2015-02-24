@@ -35,9 +35,10 @@
         <script>scripts\flox_entity_has.gml</script>
         <script>scripts\flox_entity_get.gml</script>
         <script>scripts\flox_entity_set.gml</script>
-        <script>scripts\flox_entity_free.gml</script>
+        <script>scripts\flox_entity_load_type.gml</script>
         <script>scripts\flox_entity_save_queued.gml</script>
         <script>scripts\flox_entity_destroy_queued.gml</script>
+        <script>scripts\flox_entity_free.gml</script>
       </scripts>
       <scripts name="queries">
         <script>scripts\flox_query_begin.gml</script>
@@ -86,6 +87,7 @@
           <script>scripts\i_flox_service_queue_dequeue.gml</script>
           <script>scripts\i_flox_service_queue_process.gml</script>
           <script>scripts\i_flox_service_queue_finished.gml</script>
+          <script>scripts\i_flox_callback.gml</script>
         </scripts>
         <scripts name="perisistence">
           <script>scripts\i_flox_persistent_filepath_get.gml</script>
@@ -94,8 +96,11 @@
           <script>scripts\i_flox_persistent_invalidate.gml</script>
         </scripts>
         <scripts name="entities">
+          <script>scripts\i_flox_on_entity_load_complete.gml</script>
+          <script>scripts\i_flox_on_entity_load_error.gml</script>
           <script>scripts\i_flox_entity_from_map.gml</script>
           <script>scripts\i_flox_entity_to_map.gml</script>
+          <script>scripts\i_flox_entity_url.gml</script>
         </scripts>
         <scripts name="queries">
           <script>scripts\i_flox_on_query_complete.gml</script>
