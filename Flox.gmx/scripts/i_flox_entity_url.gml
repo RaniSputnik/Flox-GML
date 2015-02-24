@@ -3,4 +3,9 @@
  * Returns the endpoint for a given entity.
  */
  
-return "entities/"+string(argument0)+"/"+string(argument1);
+var entityType = string(argument0);
+var entityId = string(argument1);
+if entityType == "" then entityType = "<invalid>";
+if entityId == "" then entityId = "<invalid>";
+
+return "entities/"+entityType+"/"+entityId;
