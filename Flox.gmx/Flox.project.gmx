@@ -37,6 +37,7 @@
         <script>scripts\flox_entity_set.gml</script>
         <script>scripts\flox_entity_load_type.gml</script>
         <script>scripts\flox_entity_save_queued.gml</script>
+        <script>scripts\flox_entity_destroy_type.gml</script>
         <script>scripts\flox_entity_destroy_queued.gml</script>
         <script>scripts\flox_entity_free.gml</script>
       </scripts>
@@ -97,7 +98,8 @@
         </scripts>
         <scripts name="entities">
           <script>scripts\i_flox_on_entity_load_complete.gml</script>
-          <script>scripts\i_flox_on_entity_load_error.gml</script>
+          <script>scripts\i_flox_on_entity_destroy_complete.gml</script>
+          <script>scripts\i_flox_on_entity_error.gml</script>
           <script>scripts\i_flox_entity_from_map.gml</script>
           <script>scripts\i_flox_entity_to_map.gml</script>
           <script>scripts\i_flox_entity_url.gml</script>
@@ -174,6 +176,8 @@
       <scripts name="entities">
         <script>scripts\scrOnEntityLoadComplete.gml</script>
         <script>scripts\scrOnEntityLoadError.gml</script>
+        <script>scripts\scrOnEntityDestroyComplete.gml</script>
+        <script>scripts\scrOnEntityDestroyError.gml</script>
       </scripts>
       <scripts name="queries">
         <script>scripts\scrTestQueryBasic.gml</script>
@@ -205,6 +209,7 @@
       <object>objects\objTestEntity</object>
       <object>objects\objLoadEntity</object>
       <object>objects\objSaveEntityQueued</object>
+      <object>objects\objDestroyEntityType</object>
       <object>objects\objDestroyEntityQueued</object>
       <object>objects\objTestQuery</object>
       <object>objects\objButton</object>

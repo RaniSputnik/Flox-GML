@@ -1,12 +1,12 @@
 /**
- * flox_entity_load_type(String type, String id, 
- *                       Script(Entity entity) onComplete
- *                       Script(String error, Real httpStatus, Entity cachedCopy)
- * Loads an entity from the server by it's type and id.
- * This function is asynchronous and will execute either
- * onComplete or onError once it is finished.
+ * flox_entity_destroy_type(String type, String id,
+ *                          Script() onComplete,
+ *                          Script(String error, Real httpStatus, Entity cachedCopy)
+ * Destroys a given entity, freeing it then removing it from
+ * the server. This function is asynchronous and will execute
+ * either onComplete or onError when it is finished.
  */
-
+ 
 var entityType = string(argument0);
 var entityId   = string(argument1);
 var onComplete = argument2;
@@ -15,15 +15,15 @@ var context    = id;
 
 // Check id is not blank
 if not flox_assert(entityType != "",
-    "Can not load entity, entity type is blank") then return false;
+    "Can not destroy entity, entity type is blank") then return false;
 if not flox_assert(entityId != "",
-    "Can not load entity, entity id is blank") then return false;
+    "Can not destroy entity, entity id is blank") then return false;
 
 with flox_assert_initialized() {  
-    // Make the load request
+    // Make the request
     var path = i_flox_entity_url(entityType,entityId);
-    var req = i_flox_request(http_method_get,path,noone,
-        i_flox_on_entity_load_complete,i_flox_on_entity_error);
+    var req = i_flox_request(http_method_delete,path,noone,
+        i_flox_on_entity_destroy_complete,i_flox_on_entity_error);
     // Set the extra request parameters we will will need
     // in the callback scripts
     map_set(req,"entityType",entityType);
