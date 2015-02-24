@@ -35,6 +35,8 @@
         <script>scripts\flox_entity_has.gml</script>
         <script>scripts\flox_entity_get.gml</script>
         <script>scripts\flox_entity_set.gml</script>
+        <script>scripts\flox_entity_set_list.gml</script>
+        <script>scripts\flox_entity_set_map.gml</script>
         <script>scripts\flox_entity_load_type.gml</script>
         <script>scripts\flox_entity_save_queued.gml</script>
         <script>scripts\flox_entity_destroy_type.gml</script>
