@@ -16,11 +16,7 @@ if is_string(scores) then scores = noone;
 
 // Copy the response and add the correct meta data to the list/maps
 var scoresCopy = i_flox_leaderboard_scores(scores);
+// Callback
 var context = map_get(request,"lbContext");
 var onComplete = map_get(request,"lbOnComplete");
-
-// Callback
-with context {
-    if script_exists(onComplete)
-        script_execute(onComplete,scoresCopy);
-}
+i_flox_callback(context,onComplete,scoresCopy);

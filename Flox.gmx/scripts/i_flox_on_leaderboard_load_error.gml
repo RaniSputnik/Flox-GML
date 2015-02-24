@@ -13,9 +13,7 @@ if map_exists(cachedBody) {
     var scores = map_get(cachedBody,"default");
     scoresCopy = i_flox_leaderboard_scores(scores);
 }
+// Callback
 var context = map_get(request,"lbContext");
 var onError = map_get(request,"lbOnError");
-with context {
-    if script_exists(onError)
-        script_execute(onError,error,httpStatus,scoresCopy);
-}
+i_flox_callback(context,onError,error,httpStatus,scoresCopy);

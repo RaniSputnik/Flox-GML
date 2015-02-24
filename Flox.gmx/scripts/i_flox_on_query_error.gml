@@ -15,9 +15,7 @@ if not map_get(query,"abort") {
     map_set(query,"abort",true);
     var onError = map_get(query,"onError");
     var context = map_get(query,"context");
-    with context {
-        script_execute(onError,error,httpStatus);
-    }
+    i_flox_callback(context,onError,error,httpStatus);
 }
 
 // If the query failed while loading results
