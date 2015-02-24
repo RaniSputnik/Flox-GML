@@ -57,7 +57,7 @@ map_set(floxHeader,"bodyCompression","none"); // TODO add compression
 var ctime = i_flox_get_current_time_utc();
 map_set(floxHeader,"dispatchTime",flox_date_encode(ctime));
 var headers = map_create("request-headers");
-//map_set(headers,"Content-Type","application/json");
+map_set(headers,"Content-Type","application/json");
 map_set(headers,"X-Flox",json_encode(floxHeader));
 
 // Get the meta-data associated with the cached result

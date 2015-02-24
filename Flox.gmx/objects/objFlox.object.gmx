@@ -535,8 +535,8 @@ if map_has(self._serviceRequests,requestId) {
                 if script_exists(onError)
                     then script_execute(onError,requestInfo,error,httpStatus,cache);
             }  
+            map_destroy(response);
         }
-        map_destroy(response);
     }
     map_destroy(requestInfo);
     map_delete(self._serviceRequests,requestId);
