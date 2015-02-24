@@ -37,6 +37,7 @@
         <script>scripts\flox_entity_set.gml</script>
         <script>scripts\flox_entity_free.gml</script>
         <script>scripts\flox_entity_save_queued.gml</script>
+        <script>scripts\flox_entity_destroy_queued.gml</script>
       </scripts>
       <scripts name="queries">
         <script>scripts\flox_query_begin.gml</script>
@@ -190,6 +191,7 @@
       <object>objects\objLogout</object>
       <object>objects\objLeaderboardList</object>
       <object>objects\objLeaderboardPost</object>
+      <object>objects\objTestEntity</object>
       <object>objects\objSaveEntity</object>
       <object>objects\objTestQuery</object>
       <object>objects\objButton</object>
@@ -198,6 +200,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmInit</room>
+    <room>rooms\rmTestEntities</room>
     <room>rooms\rmTestQueryBasic</room>
     <room>rooms\rmTestQueryWhere</room>
     <room>rooms\rmTestLeaderboards</room>

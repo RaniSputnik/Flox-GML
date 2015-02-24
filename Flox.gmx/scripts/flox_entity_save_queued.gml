@@ -4,7 +4,8 @@
  */
  
 var entity = real(argument0);
-flox_assert(flox_entity_exists(entity),"Trying to save an entity that does not exist");
+if not flox_assert(flox_entity_exists(entity),
+    "Trying to save an entity that does not exist") then return false;
  
 with flox_assert_initialized() {
     var entityId = map_get(entity,fx_id);
@@ -16,3 +17,5 @@ with flox_assert_initialized() {
     i_flox_request_queued(http_method_put, path, data);
     map_destroy(data);
 }
+
+return true;
