@@ -43,8 +43,8 @@
         <script>scripts\flox_query_where.gml</script>
         <script>scripts\flox_query_limit.gml</script>
         <script>scripts\flox_query_offset.gml</script>
-        <script>scripts\flox_query_find.gml</script>
         <script>scripts\flox_query_order_by.gml</script>
+        <script>scripts\flox_query_find.gml</script>
       </scripts>
       <scripts name="leaderboards">
         <script>scripts\flox_leaderboard_post.gml</script>

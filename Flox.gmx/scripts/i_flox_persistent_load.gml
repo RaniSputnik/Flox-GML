@@ -53,6 +53,24 @@ if map_exists(previousSession) {
 }
 list_meta_set_name(map_get(contents,"serviceQueue"),"[Flox] Service Queue");
 map_meta_set_name(map_get(contents,"serviceCache"),"[Flox] Service Cache");
+// Set the display names for the cache
+var serviceCache = map_get(contents,"serviceCache");
+var path = ds_map_find_first(serviceCache);
+repeat map_size(serviceCache) {
+    if string_pos("eTag",path) < 1 {
+        var cachedMap = map_get(serviceCache,path);
+        map_meta_set_name(cachedMap,"[Cache] path="+path);
+        if string_pos("leaderboards",path) > 0 {
+            var leaderboardList = map_get(cachedMap,"default");
+            list_meta_set_name(leaderboardList,'[Flox] Leaderboard');
+            for (var i=0, n=list_size(leaderboardList); i<n; i++) {
+                var scoreData = ds_list_find_value(leaderboardList,i);
+                map_meta_set_name(scoreData,'[Flox] Score');
+            }
+        }        
+    }
+    path = ds_map_find_next(serviceCache,path);
+}
 
 // Set the persistent data
 self._persistentData = contents;

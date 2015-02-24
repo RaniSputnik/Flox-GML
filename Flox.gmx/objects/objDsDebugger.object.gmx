@@ -51,9 +51,13 @@ displayBg   = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if displayBg and displayMode != 0 {
+            <string>/// Draw the background overlay
+
+if displayBg and displayMode != 0 {
     draw_set_color(c_white);
+    draw_set_alpha(0.9);
     draw_rectangle(0,0,room_width,room_height,false);
+    draw_set_alpha(1);
 }
 </string>
           </argument>
@@ -75,14 +79,16 @@ displayBg   = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>/// Draw the text
+
 draw_set_font(fntCourierSmall);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_black);
 
-var yy = y;
-var w = 600;
+var xx = 0;
+var yy = 0;
+var w = room_width;
 var sep = 12;
 
 if (displayMode == 1) {
@@ -90,15 +96,16 @@ if (displayMode == 1) {
         if ds_exists(i,ds_type_map) {
             var mapname = map_meta_get_name(i);
             var str = "Map&lt;"+string(i)+"&gt; "+mapname;
-            draw_text_ext(x,yy,str,sep,w);
+            draw_text_ext(xx,yy,str,sep,w);
             yy += string_height_ext(str,sep,w);
         }
     }
+    
     for (var i = minTest; i &lt; maxTest; i++) {
         if ds_exists(i,ds_type_list) {
             var listname = list_meta_get_name(i);
             var str = "List&lt;"+string(i)+"&gt; "+listname;
-            draw_text_ext(x,yy,str,sep,w);
+            draw_text_ext(xx,yy,str,sep,w);
             yy += string_height_ext(str,sep,w);
         }
     }
@@ -108,7 +115,7 @@ else if (displayMode == 2) {
         if ds_exists(i,ds_type_map) {
             var mapname = map_meta_get_name(i);
             var str = "Map&lt;"+string(i)+"&gt; "+mapname+": "+json_encode(i);
-            draw_text_ext(x,yy,str,sep,w);
+            draw_text_ext(xx,yy,str,sep,w);
             yy += string_height_ext(str,sep,w) + sep;
         }
     }
@@ -116,7 +123,7 @@ else if (displayMode == 2) {
         if ds_exists(i,ds_type_list) {
             var mapname = list_meta_get_name(i);
             var str = "List&lt;"+string(i)+"&gt; "+mapname+": "+list_json_encode(i);
-            draw_text_ext(x,yy,str,sep,w);
+            draw_text_ext(xx,yy,str,sep,w);
             yy += string_height_ext(str,sep,w) + sep;
         }
     }

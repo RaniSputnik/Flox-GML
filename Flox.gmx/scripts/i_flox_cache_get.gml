@@ -5,9 +5,11 @@
  * otherwise the function will return noone;
  */
 
-var path     = argument0;
-var eTag     = argument1;
+var path     = string(argument0);
+var eTag     = string(argument1);
 var cache = i_flox_cache();
+
+flox_debug_message("Fetching from cache path="+path+", eTag="+eTag);
 // Cached object or noone (but don't write the 'noone' into the
 var cachedObject = map_default(cache,path,noone,false);
 if map_exists(cachedObject) {
