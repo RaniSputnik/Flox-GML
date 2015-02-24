@@ -192,7 +192,8 @@
       <object>objects\objLeaderboardList</object>
       <object>objects\objLeaderboardPost</object>
       <object>objects\objTestEntity</object>
-      <object>objects\objSaveEntity</object>
+      <object>objects\objSaveEntityQueued</object>
+      <object>objects\objDestroyEntityQueued</object>
       <object>objects\objTestQuery</object>
       <object>objects\objButton</object>
       <object>objects\objLoading</object>

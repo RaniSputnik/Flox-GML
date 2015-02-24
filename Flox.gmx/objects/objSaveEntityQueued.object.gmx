@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>objButton</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,14 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.message = "";
-self.disabled = false;
+            <string>/// Initialize
+
+self.message = "Save Entity Queued";
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,16 +50,38 @@ self.disabled = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw the button
+            <string>/// Enable when the entity exists
 
-var col = c_black;
-if self.disabled then col = c_dkgray;
-draw_sprite_ext(sprButton,0,x,y,image_xscale,image_yscale,image_angle,col,1);
+var obj = instance_find(objTestEntity,0);
+self.disabled = not flox_entity_exists(obj.entity);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Save the entity to the server
 
-draw_set_color(c_white);
-draw_set_halign(fa_left);
-draw_set_valign(fa_middle);
-draw_text(x+16,y+16,self.message);
+var obj = instance_find(objTestEntity,0);
+if flox_entity_exists(obj.entity) {
+    flox_entity_save_queued(obj.entity);
+}
 </string>
           </argument>
         </arguments>

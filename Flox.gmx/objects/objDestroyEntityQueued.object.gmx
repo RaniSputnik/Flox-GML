@@ -27,7 +27,33 @@
             <kind>1</kind>
             <string>/// Initialize
 
-self.message = "Save Entity";
+self.message = "Destroy Entity Queued";
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Enable when the entity exists
+
+var obj = instance_find(objTestEntity,0);
+self.disabled = not flox_entity_exists(obj.entity);
 </string>
           </argument>
         </arguments>
@@ -50,10 +76,17 @@ self.message = "Save Entity";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Save the player to the server
+            <string>/// Destroy the entitys
 
-var player = flox_player_get();
-flox_entity_save_queued(player);
+var obj = instance_find(objTestEntity,0);
+if flox_entity_exists(obj.entity) {
+    flox_entity_destroy_queued(obj.entity);
+    // A quick check to ensure flox entity exists returns
+    // false after the destroy is requested
+    if not flox_entity_exists(obj.entity) {
+        obj.entity = noone;
+    }
+}
 </string>
           </argument>
         </arguments>
