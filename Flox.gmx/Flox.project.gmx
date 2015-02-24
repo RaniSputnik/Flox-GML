@@ -171,13 +171,19 @@
       </scripts>
     </scripts>
     <scripts name="tests">
-      <script>scripts\scrLeaderboardLoadComplete.gml</script>
-      <script>scripts\scrLeaderboardLoadError.gml</script>
+      <scripts name="entities">
+        <script>scripts\scrOnEntityLoadComplete.gml</script>
+        <script>scripts\scrOnEntityLoadError.gml</script>
+      </scripts>
       <scripts name="queries">
         <script>scripts\scrTestQueryBasic.gml</script>
         <script>scripts\scrTestQueryWhere.gml</script>
         <script>scripts\scrOnQueryComplete.gml</script>
         <script>scripts\scrOnQueryError.gml</script>
+      </scripts>
+      <scripts name="leaderboards">
+        <script>scripts\scrLeaderboardLoadComplete.gml</script>
+        <script>scripts\scrLeaderboardLoadError.gml</script>
       </scripts>
     </scripts>
   </scripts>
@@ -197,6 +203,7 @@
       <object>objects\objLeaderboardList</object>
       <object>objects\objLeaderboardPost</object>
       <object>objects\objTestEntity</object>
+      <object>objects\objLoadEntity</object>
       <object>objects\objSaveEntityQueued</object>
       <object>objects\objDestroyEntityQueued</object>
       <object>objects\objTestQuery</object>
