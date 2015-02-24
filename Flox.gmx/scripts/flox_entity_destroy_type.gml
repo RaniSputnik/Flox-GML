@@ -2,7 +2,7 @@
  * flox_entity_destroy_type(String type, String id,
  *                          Script() onComplete,
  *                          Script(String error, Real httpStatus, Entity cachedCopy)
- * Destroys a given entity, freeing it then removing it from
+ * Destroys a given entity by type and id, removing it from
  * the server. This function is asynchronous and will execute
  * either onComplete or onError when it is finished.
  */

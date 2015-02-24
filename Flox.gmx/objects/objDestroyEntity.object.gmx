@@ -3,7 +3,7 @@
   <spriteName>sprButton</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>10</depth>
   <persistent>0</persistent>
   <parentName>objButton</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -41,10 +41,34 @@
             <kind>1</kind>
             <string>/// Initialize
 
-self.entity = noone;
-self.error = "";
-self.message = "Create Entity";
+self.dialogId = noone;
+self.message = "Destroy Entity";
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Enable when the entity exists
 
+var obj = instance_find(objTestEntity,0);
+self.disabled = not flox_entity_exists(obj.entity);
 </string>
           </argument>
         </arguments>
@@ -67,112 +91,17 @@ self.message = "Create Entity";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Create a new entity
+            <string>/// Destroy the current entity
 
-// destroy the entity if it already exists
-if flox_entity_exists(self.entity) {
-    flox_entity_free(self.entity);
-}
-self.error = "";
-self.entity = flox_entity_create("TestEntity");
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="5">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if flox_entity_exists(self.entity) {
-    flox_entity_free(self.entity);
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>604</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_inherited</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draw the entities properties
-
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-draw_set_color(c_black);
-
-var xx = x;
-var yy = y+sprite_height+8;
-var sep = -1;
-var w = room_width - xx;
-if self.error != "" {
-    draw_set_color(c_red);
-    draw_text_ext(xx,yy,self.error,sep,w);
-    yy += string_height(self.error);
-    draw_set_color(c_black);
-}
-else if flox_entity_exists(self.entity) {
-    draw_text_ext(xx,yy,"Entity:",sep,w);
-    yy += string_height("|");
-}
-else {
-    draw_text_ext(xx,yy,"Entity does not exist",sep,w);
-}
-
-if flox_entity_exists(self.entity) {
-    var prop = ds_map_find_first(self.entity);
-    repeat ds_map_size(self.entity) {
-        var val = ds_map_find_value(self.entity,prop);
-        var str = prop+" = "+string(val);
-        draw_text_ext(xx,yy,str,sep,w);
-        yy += string_height(str);
-        prop = ds_map_find_next(self.entity,prop);
+with objTestEntity {
+    if not flox_entity_exists(self.entity) then exit;
+    self.error = "";
+    flox_entity_destroy(self.entity,
+        scrOnEntityDestroyComplete,scrOnEntityDestroyError);
+    if not flox_entity_exists(self.entity) {
+        self.entity = noone;
     }
 }
-
 </string>
           </argument>
         </arguments>

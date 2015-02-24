@@ -38,6 +38,7 @@
         <script>scripts\flox_entity_load_type.gml</script>
         <script>scripts\flox_entity_save_queued.gml</script>
         <script>scripts\flox_entity_destroy_type.gml</script>
+        <script>scripts\flox_entity_destroy.gml</script>
         <script>scripts\flox_entity_destroy_queued.gml</script>
         <script>scripts\flox_entity_free.gml</script>
       </scripts>
@@ -210,6 +211,7 @@
       <object>objects\objLoadEntity</object>
       <object>objects\objSaveEntityQueued</object>
       <object>objects\objDestroyEntityType</object>
+      <object>objects\objDestroyEntity</object>
       <object>objects\objDestroyEntityQueued</object>
       <object>objects\objTestQuery</object>
       <object>objects\objButton</object>
