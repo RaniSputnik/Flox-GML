@@ -42,6 +42,7 @@
             <string>/// Initialize
 
 self.entity = noone;
+self.error = "";
 self.message = "Create Entity";
 
 </string>
@@ -147,9 +148,21 @@ var xx = x;
 var yy = y+sprite_height+8;
 var sep = -1;
 var w = room_width - xx;
-if flox_entity_exists(self.entity) {
+if self.error != "" {
+    draw_set_color(c_red);
+    draw_text_ext(xx,yy,self.error,sep,w);
+    yy += string_height(self.error);
+    draw_set_color(c_black);
+}
+else if flox_entity_exists(self.entity) {
     draw_text_ext(xx,yy,"Entity:",sep,w);
     yy += string_height("|");
+}
+else {
+    draw_text_ext(xx,yy,"Entity does not exist",sep,w);
+}
+
+if flox_entity_exists(self.entity) {
     var prop = ds_map_find_first(self.entity);
     repeat ds_map_size(self.entity) {
         var val = ds_map_find_value(self.entity,prop);
@@ -159,9 +172,7 @@ if flox_entity_exists(self.entity) {
         prop = ds_map_find_next(self.entity,prop);
     }
 }
-else {
-    draw_text_ext(xx,yy,"Entity does not exist",sep,w);
-}
+
 </string>
           </argument>
         </arguments>

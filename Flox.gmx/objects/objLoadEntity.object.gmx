@@ -96,6 +96,7 @@ if async_load[?"id"] == self.dialogId {
     self.dialogId = noone;
     if async_load[?"status"] {
         with objTestEntity {
+            self.error = "";
             var entityType = "TestEntity";
             var entityId = async_load[?"result"];
             flox_entity_load_type(entityType,entityId,
