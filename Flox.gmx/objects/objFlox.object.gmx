@@ -497,7 +497,9 @@ if map_has(self._serviceRequests,requestId) {
                     // If the status was NOT_MODIFIED then we can simply
                     // return the existing cached copy
                     if httpStatus == http_status_not_modified {
-                        response = cache;
+                        map_destroy(response);
+                        var cacheCopy = map_deep_copy(cache);
+                        response = cacheCopy;
                     }
                     // Otherwise if the entity has been modified then we need
                     // to update our cached copy 
