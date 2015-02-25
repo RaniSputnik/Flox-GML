@@ -170,7 +170,7 @@
         </constant>
         <constant>
           <name>http_status_accepted</name>
-          <value>200</value>
+          <value>202</value>
           <hidden>0</hidden>
         </constant>
         <constant>
