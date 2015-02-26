@@ -198,7 +198,6 @@
       </scripts>
     </scripts>
   </scripts>
-  <shaders name="shaders"/>
   <fonts name="fonts">
     <font>fonts\fntCourierSmall</font>
   </fonts>

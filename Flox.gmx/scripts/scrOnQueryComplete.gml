@@ -1,7 +1,7 @@
 // scrOnQueryComplete(List results)
 
 
-if ds_exists(self.results) {
+if ds_exists(self.results,ds_type_list) {
     ds_list_destroy(self.results);
 }
 self.results = argument0;
