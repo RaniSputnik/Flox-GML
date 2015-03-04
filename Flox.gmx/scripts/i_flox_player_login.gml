@@ -64,6 +64,7 @@ else {
     map_set(req,"loginOnComplete",onComplete);
     map_set(req,"loginOnError",onError);
     map_set(req,"loginContext",context);
+    map_destroy(authData);
     
     // Prevent any new requests while login is in process
     // TODO test what happens if persistent data is saved
