@@ -43,6 +43,7 @@
 
 self.dialogId = noone;
 self.message = "Login with Key";
+self.loadingIndicator = noone;
 </string>
           </argument>
         </arguments>
@@ -105,7 +106,12 @@ if async_load[?"id"] == self.dialogId {
     self.dialogId = noone;
     if async_load[?"status"] {
         var key = async_load[?"result"];
+        // Create the login request
         flox_player_login_key(key,scrOnLoginKeyComplete,scrOnLoginKeyError);
+        // Create the loading indicator
+        var xx = x + sprite_width - (sprite_height*0.5);
+        var yy = y + (sprite_height*0.5);
+        self.loadingIndicator = instance_create(xx,yy,objLoading);
     }
 }
 </string>
