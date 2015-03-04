@@ -20,6 +20,7 @@
         <script>scripts\flox_get.gml</script>
         <script>scripts\flox_init.gml</script>
         <script>scripts\flox_player_get.gml</script>
+        <script>scripts\flox_player_login_key.gml</script>
         <script>scripts\flox_player_logout.gml</script>
         <script>scripts\flox_flush_local_data.gml</script>
       </scripts>
@@ -73,6 +74,7 @@
           <script>scripts\i_flox_player_create.gml</script>
           <script>scripts\i_flox_player_login.gml</script>
           <script>scripts\i_flox_on_player_login_complete.gml</script>
+          <script>scripts\i_flox_on_player_login_error.gml</script>
           <script>scripts\i_flox_authentication_get.gml</script>
           <script>scripts\i_flox_authentication_create.gml</script>
           <script>scripts\i_flox_session_create.gml</script>
@@ -178,6 +180,10 @@
       </scripts>
     </scripts>
     <scripts name="tests">
+      <scripts name="login">
+        <script>scripts\scrOnLoginKeyComplete.gml</script>
+        <script>scripts\scrOnLoginKeyError.gml</script>
+      </scripts>
       <scripts name="entities">
         <script>scripts\scrOnEntityLoadComplete.gml</script>
         <script>scripts\scrOnEntityLoadError.gml</script>
@@ -209,6 +215,7 @@
     <objects name="tests">
       <object>objects\objTestNavigator</object>
       <object>objects\objForceServiceFailure</object>
+      <object>objects\objLoginKey</object>
       <object>objects\objLogout</object>
       <object>objects\objLeaderboardList</object>
       <object>objects\objLeaderboardPost</object>
@@ -226,6 +233,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmInit</room>
+    <room>rooms\rmTestLogin</room>
     <room>rooms\rmTestEntities</room>
     <room>rooms\rmTestQueryBasic</room>
     <room>rooms\rmTestQueryWhere</room>

@@ -41,28 +41,32 @@ if authType == fx_guest {
 }
 else {
     // If we are logging in as anything else then we need to make a request to flox
-    /*var player = flox_get_player();
+    var player = flox_player_get();
     var authData = map_create("login-auth-data");
     map_set(authData,"authType",authType);
     map_set(authData,"authId",authId);
-    if (authToken != flox_null) 
+    if authToken != fx_null
         then map_set(authData,"authToken",authToken);
     // If the current player is a guest, then we should login with their
     // Player id, and associate any data gathered on the guest player with
     // the 'real' player 
-    if map_get(player,"authType") == flox_guest
+    if map_get(player,"authType") == fx_guest
         then map_set(authData,"id",map_get(player,"id"));
     
-    var req = i_flox_service_request('POST',"authenticate",authData,
+    // Perform the request
+    var req = i_flox_request(http_method_post,"authenticate",authData,
                         i_flox_on_player_login_complete,i_flox_on_player_login_error);
     map_set(req,"loginAuthType",authType);
     map_set(req,"loginAuthId",authId);
     map_set(req,"loginAuthToken",authToken);
-    if (map_exists(previousAuth)) 
+    if map_exists(previousAuth)
         then map_set(req,"loginPreviousAuth",previousAuth);
     map_set(req,"loginOnComplete",onComplete);
     map_set(req,"loginOnError",onError);
     map_set(req,"loginContext",context);
     
-    map_delete(_persistentData,"authentication"); // Prevent any new requests while login is in process*/
+    // Prevent any new requests while login is in process
+    // TODO test what happens if persistent data is saved
+    // without authentication
+    map_delete(self._persistentData,"authentication"); 
 }
