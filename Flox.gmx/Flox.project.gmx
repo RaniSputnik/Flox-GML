@@ -21,6 +21,7 @@
         <script>scripts\flox_init.gml</script>
         <script>scripts\flox_player_get.gml</script>
         <script>scripts\flox_player_login_key.gml</script>
+        <script>scripts\flox_player_login_email.gml</script>
         <script>scripts\flox_player_logout.gml</script>
         <script>scripts\flox_flush_local_data.gml</script>
       </scripts>
@@ -216,6 +217,7 @@
       <object>objects\objTestNavigator</object>
       <object>objects\objForceServiceFailure</object>
       <object>objects\objLoginKey</object>
+      <object>objects\objLoginEmail</object>
       <object>objects\objLogout</object>
       <object>objects\objLeaderboardList</object>
       <object>objects\objLeaderboardPost</object>
