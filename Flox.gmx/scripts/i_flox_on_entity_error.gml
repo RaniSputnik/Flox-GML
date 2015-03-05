@@ -1,6 +1,6 @@
 /**
- * i_flox_on_entity_error(Map request, Map response, Real httpStatus, Map cachedResponse)
- * Called whenever an entity request (save/load/destroy) fails.
+ * i_flox_on_entity_load_error(Map request, Map response, Real httpStatus, Map cachedResponse)
+ * Called whenever entity requests (load/destroy) fail.
  */
 
 var request    = argument0;

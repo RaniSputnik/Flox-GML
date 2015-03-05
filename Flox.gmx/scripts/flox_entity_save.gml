@@ -19,13 +19,15 @@ with flox_assert_initialized() {
     var path = i_flox_entity_url(entityType,entityId);
     var data = i_flox_entity_to_map(entity);
     var req = i_flox_request(http_method_put, path, data,
-        i_flox_on_entity_save_complete,i_flox_on_entity_error);
+        i_flox_on_entity_save_complete,i_flox_on_entity_save_error);
     map_destroy(data);
     
     // Copy the entity so that even if it is freed
     // we still will have an entity to call-back with
     var entityCopy = map_deep_copy(entity);
     map_meta_set_name(entityCopy,"[Entity] "+entityType);
+    // Do not use map_set_map -> this will ensure the entity
+    // is not removed when the request is freed.
     map_set(req,"entity",entityCopy);
     map_set(req,"entityOnComplete",onComplete);
     map_set(req,"entityOnError",onError);

@@ -55,9 +55,10 @@
     <instance objName="objSaveEntityQueued" x="32" y="320" name="inst_03E30447" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objDestroyEntityQueued" x="32" y="544" name="inst_8ADC245B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objLoadEntity" x="32" y="224" name="inst_88DF7901" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDestroyEntityType" x="32" y="480" name="inst_BF2ECAF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objDestroyEntity" x="32" y="512" name="inst_7558ADB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDestroyEntityType" x="32" y="448" name="inst_BF2ECAF4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objDestroyEntity" x="32" y="480" name="inst_7558ADB2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objSaveEntity" x="32" y="288" name="inst_6EA5781D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objRefreshEntity" x="32" y="384" name="inst_0DD5DE32" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

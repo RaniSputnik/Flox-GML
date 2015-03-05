@@ -23,7 +23,7 @@ with flox_assert_initialized() {
     // Make the load request
     var path = i_flox_entity_url(entityType,entityId);
     var req = i_flox_request(http_method_get,path,noone,
-        i_flox_on_entity_load_complete,i_flox_on_entity_error);
+        i_flox_on_entity_load_complete,i_flox_on_entity_load_error);
     // Set the extra request parameters we will will need
     // in the callback scripts
     map_set(req,"entityType",entityType);
