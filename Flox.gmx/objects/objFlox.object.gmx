@@ -511,8 +511,8 @@ if map_has(self._serviceRequests,requestId) {
                 else if method == http_method_put {
                     var dataCopy = map_deep_copy(data);
                     if map_has(response,fx_created_at) and map_has(response,fx_updated_at) {
-                        var createdAt = flox_date_decode(map_get(response,fx_created_at));
-                        var updatedAt = flox_date_decode(map_get(response,fx_updated_at));
+                        var createdAt = map_get(response,fx_created_at);
+                        var updatedAt = map_get(response,fx_updated_at);
                         map_set(dataCopy,fx_created_at,createdAt);
                         map_set(dataCopy,fx_updated_at,updatedAt);
                     }

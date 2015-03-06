@@ -31,8 +31,7 @@ currentMatch = noone;
 
 // Replace these with values from your flox control panel
 // @https://www.flox.cc/panel
-//flox_init("YOUR_GAME_ID","YOUR_GAME_KEY","0.1");
-flox_init("3InEzh30AO5U7wCQ","e4emP8zuiN5A0zbh","0.4.0");
+flox_init("YOUR_GAME_ID","YOUR_GAME_KEY","0.1");
 </string>
           </argument>
         </arguments>

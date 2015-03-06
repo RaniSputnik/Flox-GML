@@ -31,11 +31,13 @@ if authType == fx_guest {
     var result = map_create("login-fake-result");
     map_set(result,"id",map_get(player,fx_id));
     map_set(result,"type",map_get(player,fx_type));
-    map_set_map(result,"entity",player);
+    var playerData = i_flox_entity_to_map(player);
+    map_set_map(result,"entity",playerData);
     // Notify that the login is complete (it can not fail, and the status is over 9000)
     i_flox_on_player_login_complete(req,result,90001);
     // Destroy the phoney maps that we created
     map_destroy(player);
+    map_destroy(playerData);
     map_destroy(req);
     map_destroy(result);
 }
