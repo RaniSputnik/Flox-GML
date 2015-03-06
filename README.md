@@ -16,8 +16,14 @@ is just a matter of minutes. More information about Flox can be found here:
 ## Installing the Extension 
 
 1. Sign up to [Flox](http://www.flox.cc/panel/register). Add your game when prompted.
-2. Get the extension on the [GameMaker Marketplace](https://marketplace.yoyogames.com/assets/574/flox-gm). 
+2. Get the extension on the [GameMaker Marketplace](https://marketplace.yoyogames.com/assets/574/flox-gm)
+or download and import all the resources from the [downloads page](https://bitbucket.org/RaniSputnik/flox-gml/downloads).
 3. Congratulations! You're ready to start using Flox!
+
+You will notice that the extension is paid on the marketplace and yet the library is open source
+and freely downloadable. I want the library to be accessible to anyone, however I do need to eat!
+By all means download for free but ***please*** consider purchasing the library on the 
+marketplace. It supports the project and ensures that I can keep giving away code!
 
 ## How to use the GML SDK
 
@@ -39,3 +45,7 @@ This is just the tip of the iceberg, though! Use Flox to store custom Entities, 
 ## Where to go from here?
 * Visit [Flox.cc](http://www.flox.cc) for more information about Flox.
 * Check out the extension topic on the [Game Maker Community](http://gmc.yoyogames.com/index.php?showtopic=619114#entry4550823)
+
+## Building the library
+
+Run the build.py script (requires python 3.4)
