@@ -11,7 +11,7 @@ var onError = argument2;
 var context = id;
 
 if not flox_assert(flox_entity_exists(entity),
-    "Can not destroy entity '"+string(entity)+"', entity does not exist") then return false;
+    "Can not save entity '"+string(entity)+"', entity does not exist") then return false;
 
 with flox_assert_initialized() {
     var entityId = map_get(entity,fx_id);

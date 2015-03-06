@@ -7,6 +7,9 @@
 var str = argument0;
 var originalStr = argument0;
 
+if not flox_assert(is_string(str),
+    "Can not decode date, invalid string '"+string(str)+"'") then exit;
+
 // Parse timezone info
 var offsetHours, offsetMinutes;
 var timeStr = string_copy(str,string_pos("T",str)+1,string_length(str));
