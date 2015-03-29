@@ -195,6 +195,8 @@
       <scripts name="login">
         <script>scripts\scrOnLoginKeyComplete.gml</script>
         <script>scripts\scrOnLoginKeyError.gml</script>
+        <script>scripts\scrOnLoginResetComplete.gml</script>
+        <script>scripts\scrOnLoginResetError.gml</script>
       </scripts>
       <scripts name="entities">
         <script>scripts\scrOnEntityLoadComplete.gml</script>
@@ -231,6 +233,8 @@
       <object>objects\objForceServiceFailure</object>
       <object>objects\objLoginKey</object>
       <object>objects\objLoginEmail</object>
+      <object>objects\objLoginEmailPassword</object>
+      <object>objects\objResetEmailPassword</object>
       <object>objects\objLogout</object>
       <object>objects\objLeaderboardList</object>
       <object>objects\objLeaderboardPost</object>

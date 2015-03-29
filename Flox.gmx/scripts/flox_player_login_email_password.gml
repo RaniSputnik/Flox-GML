@@ -25,7 +25,7 @@
  
 var email = string(argument0);
 var password = string(argument1);
-var loginOnly = !!argument2; 
+var loginOnly = argument2; 
 var onComplete = argument3;
 var onError = argument4;
 
@@ -33,6 +33,6 @@ var authData = map_create("player-login-auth-data");
 map_set(authData,"authType",fx_email_password);
 map_set(authData,"authId", email);
 map_set(authData,"authToken", password);
-map_set(authData,"loginOnly", loginOnly);
+map_set(authData,"loginOnly", !!loginOnly);
 i_flox_player_login_auth_data(authData,onComplete,onError);
 map_destroy(authData);

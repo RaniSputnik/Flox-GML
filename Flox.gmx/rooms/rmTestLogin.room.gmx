@@ -54,6 +54,8 @@
     <instance objName="objLoginKey" x="32" y="32" name="inst_48FF6B56" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objLogout" x="32" y="288" name="inst_CD353FF8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objLoginEmail" x="32" y="96" name="inst_B0DF3FE6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLoginEmailPassword" x="32" y="160" name="inst_9FCF3E74" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objResetEmailPassword" x="32" y="224" name="inst_2C74CF79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

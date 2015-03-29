@@ -3,6 +3,10 @@
  * Called when a password reset request completes successfully.
  */
  
+var request = argument0;
+var response = argument1;
+var httpStatus = argument2; 
+
 // Callback
 var callback = map_default(request,"emailResetOnComplete",noone);
 var context = map_default(request,"emailResetContext",noone);

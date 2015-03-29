@@ -3,6 +3,7 @@
  * Called when a password reset request fails to complete.
  */
 
+var request = argument0;
 var error = argument1;
 var httpStatus = argument2;
 
