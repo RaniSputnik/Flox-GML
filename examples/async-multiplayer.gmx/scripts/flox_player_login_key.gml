@@ -7,12 +7,6 @@
  * previously authenticated with a third-party eg. Facebook.
  */
  
-var key = string(argument0);
-var onComplete = argument1;
-var onError = argument2;
-var context = id;
+i_flox_player_login(fx_key,argument0,fx_null,argument1,argument2);
 
-with flox_assert_initialized() {
-    i_flox_player_login(fx_key,key,fx_null,onComplete,onError,context);
-}
 

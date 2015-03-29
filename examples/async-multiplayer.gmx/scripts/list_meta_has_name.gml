@@ -6,3 +6,4 @@
 var list = argument0;
 var key = string(list)+"-name";
 return ds_map_exists(global.__listInfo,key)
+

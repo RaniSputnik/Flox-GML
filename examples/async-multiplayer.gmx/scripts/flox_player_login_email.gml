@@ -6,14 +6,10 @@
  * device. They will be sent a confirmation email to allow
  * them to control which devices they are playing on.
  */
- 
-var email = string(argument0);
-var onComplete = argument1;
-var onError = argument2;
-var context = id;
 
-with flox_assert_initialized() {
+with flox_assert_initialized() { 
     var installationID = map_get(self._persistentData,"installationID");
-    i_flox_player_login(fx_email,email,installationID,onComplete,onError,context);
 }
+i_flox_player_login(fx_email,argument0,installationID,argument1,argument2);
+
 

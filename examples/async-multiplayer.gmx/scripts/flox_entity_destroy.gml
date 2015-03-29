@@ -17,4 +17,3 @@ var entityType = map_get(entity,fx_type);
 var entityId = map_get(entity,fx_id);
 flox_entity_free(entity);
 return flox_entity_destroy_type(entityType,entityId,onComplete,onError);
-

@@ -38,4 +38,3 @@ with flox_assert_initialized() {
 }
 
 return true;
-

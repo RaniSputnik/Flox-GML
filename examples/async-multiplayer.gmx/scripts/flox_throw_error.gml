@@ -20,4 +20,3 @@ var fx = flox_get();
 fx._fatalErrorOccurred = true;
 
 return false;
-

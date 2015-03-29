@@ -5,3 +5,4 @@
  */
  
 self._persistentDataInvalid = true;
+

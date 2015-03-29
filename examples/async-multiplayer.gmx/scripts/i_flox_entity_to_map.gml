@@ -22,4 +22,3 @@ map_set(map,fx_created_at,flox_date_encode(createdAt));
 map_set(map,fx_updated_at,flox_date_encode(updatedAt));
 return map;
 
-

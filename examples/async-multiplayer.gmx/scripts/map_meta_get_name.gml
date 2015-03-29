@@ -9,3 +9,4 @@ if ds_map_exists(global.__mapInfo,key) {
     return global.__mapInfo[? key];
 }
 else return "<Unknown>";
+

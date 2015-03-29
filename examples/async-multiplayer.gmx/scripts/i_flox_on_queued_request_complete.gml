@@ -8,3 +8,4 @@
 self._serviceProcessingQueue = false;
 i_flox_service_queue_dequeue();
 self._serviceQueueShouldProcess = true;
+
