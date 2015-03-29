@@ -64,7 +64,7 @@
           <hidden>0</hidden>
         </constant>
         <constant>
-          <name>fx_email_and_password</name>
+          <name>fx_email_password</name>
           <value>"emailPwd"</value>
           <hidden>0</hidden>
         </constant>
