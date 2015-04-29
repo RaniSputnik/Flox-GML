@@ -3,4 +3,4 @@
  * Gets the current Flox authentication information
  */
  
-return map_get(self._persistentData,"authentication");
+return map_default(self._persistentData,"authentication",noone,false);

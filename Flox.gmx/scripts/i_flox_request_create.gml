@@ -24,10 +24,13 @@ if map_exists(data) {
     map_meta_set_name(dataCopy,"queued-requests-data-copy");
     map_set_map(request,"data",dataCopy);
 }
-// Add the authentication 
-var authCopy = map_deep_copy(auth);
-map_meta_set_name(authCopy,"queued-requests-auth-copy");
-map_set_map(request,"authentication",authCopy);
+// Add the authentication (if it exists)
+if map_exists(auth) {
+    var authCopy = map_deep_copy(auth);
+    map_meta_set_name(authCopy,"queued-requests-auth-copy");
+    map_set_map(request,"authentication",authCopy);
+}
+else map_set(request,"authentication",noone);
 // Add the on complete callback
 if script_exists(onComplete) {
     map_set(request,"onComplete",onComplete);

@@ -47,7 +47,8 @@ map_set(floxSDK,"type","gml");
 map_set(floxSDK,"version",fx_sdk_version);
 // Player Header
 var floxPlayer = map_create("request-headers-flox-player");
-map_copy(floxPlayer,auth);
+// TODO temp workaround - we will fail before here if no auth is provided
+if map_exists(auth) then map_copy(floxPlayer,auth);
 // Flox header
 var floxHeader = map_create("request-headers-flox");
 map_set_map(floxHeader,"sdk",floxSDK);
