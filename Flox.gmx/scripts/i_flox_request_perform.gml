@@ -26,6 +26,17 @@ var requestId    = noone;
 
 flox_debug_message("Making Request","Method="+method,"Path="+path);
 
+// If a fatal error has occurred, then fail the request
+if self._fatalErrorOccurred {
+    flox_debug_message("WARNING! Request will fail, a fatal error has already occurred and Flox has been shut down");
+    return i_flox_response_fake_failure(request,"A fatal error occurred",http_status_unknown);
+}
+// If we are attempting to make a request while login is in process
+else if not map_exists(auth) {
+    flox_debug_message("WARNING! Request will fail, attempting request while login in process");
+    return i_flox_response_fake_failure(request,"Cannot make request while login is in process",http_status_forbidden);
+}
+
 // If the method is get, encode a url
 if method == http_method_get and map_exists(data) {
     path += "?" + i_flox_encode_map_for_uri(data);
@@ -38,6 +49,12 @@ if method == http_method_get and i_flox_cache_contains(path) {
     flox_debug_message("Cache contains previous response",json_encode(cachedResult));
     // Do not use ds_map_add_map because otherwise the cached result will be removed
     if map_exists(cachedResult) then map_set(request,"cachedResult",cachedResult);
+}
+
+// Fail if we have indicated we want all requests to fail
+if self.forceServiceFailure {
+    flox_debug_message("WARNING! Request will fail, 'forceServiceFailure' is enabled");
+    return i_flox_response_fake_failure(request,"Force service failure is enabled",http_status_unknown);
 }
 
 // Headers for the request
@@ -71,24 +88,6 @@ if map_exists(cachedResult) {
 var protocol = "http://";
 if self.secure then protocol = "https://";
 var basePath = self._serviceBasePath;
-// Fail if we have indicated we want all requests to fail
-if self.forceServiceFailure {
-    flox_debug_message("WARNING! Request will fail, 'forceServiceFailure' is enabled");
-    basePath = 'invalid.flox.cc/api';
-    map_set(request,"cachedResult",noone);
-}
-// Otherwise, if we are attempting to make a request while login is in process
-else if not map_exists(auth) {
-    flox_debug_message("WARNING! Request will fail, attempting request while login in process");
-    basePath = 'invalid.flox.cc/api';
-    map_set(request,"cachedResult",noone);
-}
-// If a fatal error has occurred, then fail the request
-else if self._fatalErrorOccurred {
-    flox_debug_message("WARNING! Request will fail, a fatal error has already occurred and Flox has been shut down");
-    basePath = 'invalid.flox.cc/api';
-    map_set(request,"cachedResult",noone);
-}
 var fullURL = protocol + basePath + "games/" + string(self.gameID) + "/" + path;
 
 // Perform the request

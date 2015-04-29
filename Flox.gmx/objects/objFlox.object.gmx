@@ -409,6 +409,37 @@ if self._serviceQueueShouldProcess {
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// Process any fake responses
+
+// We process one at a time to prevent a pile up
+// TODO perhaps spread this so that if an async_load event
+// is triggered this waits until next frame?
+if ds_list_size(self._fakeResponses) &gt; 0 {
+    var nextResponse = ds_list_find_value(self._fakeResponses,0);
+    i_flox_response_process(nextResponse);
+    map_destroy(nextResponse);
+    ds_list_delete(self._fakeResponses,0);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// Write data to disk if the persistent data has changed
 
 if self._persistentDataInvalid {

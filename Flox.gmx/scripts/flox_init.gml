@@ -37,6 +37,12 @@ with flox_get() {
     self._serviceRequests = map_create("[Flox] Service Requests");
     self._serviceBasePath = "www.flox.cc/api/";
     self._serviceRequestsAwaitingQueueCompletion = list_create("[Flox] Requests awaiting queue completion");
+    // Prepare to send phoney responses if we detect any issues with a request
+    self._fakeResponses = list_create("[Flox] Service Responses");
+    // The fake id of the next request, uses negatives to avoid
+    // conflicts with valid responses from the server
+    // starts at -5 to avoid noone constant
+    self._nextFakeResponseId = -5;
     
     // Log in a new guest player if there wasn't a player in the cache
     var player = flox_player_get();
