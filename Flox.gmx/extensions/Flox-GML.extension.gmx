@@ -233,6 +233,36 @@
           <value>503</value>
           <hidden>0</hidden>
         </constant>
+        <constant>
+          <name>fx_log_silly</name>
+          <value>5</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_log_verbose</name>
+          <value>4</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_log_debug</name>
+          <value>3</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_log_warn</name>
+          <value>2</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_log_error</name>
+          <value>1</value>
+          <hidden>0</hidden>
+        </constant>
+        <constant>
+          <name>fx_log_none</name>
+          <value>0</value>
+          <hidden>0</hidden>
+        </constant>
       </constants>
     </file>
   </files>

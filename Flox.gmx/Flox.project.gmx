@@ -69,6 +69,7 @@
         <script>scripts\flox_http_status_is_success.gml</script>
         <script>scripts\flox_http_status_is_transient_error.gml</script>
         <script>scripts\flox_debug_message.gml</script>
+        <script>scripts\flox_log.gml</script>
         <script>scripts\flox_throw_error.gml</script>
         <script>scripts\flox_assert.gml</script>
         <script>scripts\flox_assert_initialized.gml</script>

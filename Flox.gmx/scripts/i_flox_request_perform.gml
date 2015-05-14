@@ -24,16 +24,16 @@ var onError = map_get(request,"onError");
 var cachedResult = noone;
 var requestId    = noone;
 
-flox_debug_message("Making Request","Method="+method,"Path="+path);
+flox_log(fx_log_verbose,"Making Request","Method="+method,"Path="+path);
 
 // If a fatal error has occurred, then fail the request
 if self._fatalErrorOccurred {
-    flox_debug_message("WARNING! Request will fail, a fatal error has already occurred and Flox has been shut down");
+    flox_log(fx_log_warn,"WARNING! Request will fail, a fatal error has already occurred and Flox has been shut down");
     return i_flox_response_fake_failure(request,"A fatal error occurred",http_status_unknown);
 }
 // If we are attempting to make a request while login is in process
 else if not map_exists(auth) {
-    flox_debug_message("WARNING! Request will fail, attempting request while login in process");
+    flox_log(fx_log_warn,"WARNING! Request will fail, attempting request while login in process");
     return i_flox_response_fake_failure(request,"Cannot make request while login is in process",http_status_forbidden);
 }
 
@@ -41,19 +41,19 @@ else if not map_exists(auth) {
 if method == http_method_get and map_exists(data) {
     path += "?" + i_flox_encode_map_for_uri(data);
     map_set(request,"path",path);
-    flox_debug_message("Encoded data for url",path);
+    flox_log(fx_log_silly,"Encoded data for url",path);
 }
 // Get the cached result from last time (if there is one)
 if method == http_method_get and i_flox_cache_contains(path) {
     cachedResult = i_flox_cache_get(path,fx_null);
-    flox_debug_message("Cache contains previous response",json_encode(cachedResult));
+    flox_log(fx_log_silly,"Cache contains previous response",json_encode(cachedResult));
     // Do not use ds_map_add_map because otherwise the cached result will be removed
     if map_exists(cachedResult) then map_set(request,"cachedResult",cachedResult);
 }
 
 // Fail if we have indicated we want all requests to fail
 if self.forceServiceFailure {
-    flox_debug_message("WARNING! Request will fail, 'forceServiceFailure' is enabled");
+    flox_log(fx_log_warn,"WARNING! Request will fail, 'forceServiceFailure' is enabled");
     return i_flox_response_fake_failure(request,"Force service failure is enabled",http_status_unknown);
 }
 
@@ -87,9 +87,8 @@ if map_exists(cachedResult) {
 var protocol = "http";
 if self.secure {
     if os_type == os_android and os_version < 10 {
-        flox_debug_message("WARNING: Attempting to make a 'secure' request on Android version < 3.0, will fall back to http. "
+        flox_log(fx_log_warn,"WARNING: Attempting to make a 'secure' request on Android version < 3.0, will fall back to http. "
             + "Read more about this issue here https://bitbucket.org/RaniSputnik/flox-gml/wiki/Attempting%20Secure%20Request%20on%20Android%20Version%20%3C%203.0");
-        
     }
     else {
         protocol = "https";
@@ -103,9 +102,7 @@ var body = '';
 if map_exists(data) and method != http_method_get {
     body = json_encode(data);
 }
-flox_debug_message("Headers",json_encode(headers));
-flox_debug_message("Body",body);
-flox_debug_message("Full URL",fullURL);
+flox_log(fx_log_silly,"Headers",json_encode(headers),"Body",body,"Full URL",fullURL);
 requestId = http_request(fullURL,method,headers,body);
 
 // Clean up the maps, nested maps not destroyed in HTML5

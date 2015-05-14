@@ -22,9 +22,6 @@ if map_has(self._serviceRequests,requestId) {
     var httpStatus = map_get(response,"http_status");
     var headers = map_get(response,"response_headers");
     var body = map_get(response,"result");
-    // Print out debug messages if necessary
-    flox_debug_message("Processing response");
-    flox_debug_message("Response",json_encode(response));
 
     // Find the basic request info
     var requestInfo = map_get(self._serviceRequests,requestId);
@@ -35,9 +32,13 @@ if map_has(self._serviceRequests,requestId) {
     var onComplete  = map_default(requestInfo,"onComplete",noone);
     var onError     = map_default(requestInfo,"onError",noone);
 
+    // Print out debug messages if necessary
+    flox_log(fx_log_verbose,"Processing response for path = "+path);
+    flox_log(fx_log_silly,"Response",json_encode(response));
+    
     // If we couldn't contact the server for any odd/unknown reasons
     if status < 0 and not map_exists(headers) {
-        flox_debug_message("Flox server unreachable");
+        flox_log(fx_log_warn,"Flox server unreachable");
         if script_exists(onError)
             then script_execute(onError,requestInfo,"Flox server unreachable",http_status_unknown,cache);
     }
@@ -48,7 +49,7 @@ if map_has(self._serviceRequests,requestId) {
         var response = json_decode(body);
         // Respond to parse errors
         if not map_exists(response) {
-            flox_debug_message("Invalid response from Flox server");
+            flox_log(fx_log_warn,"Invalid response from Flox server");
             var error = "Invalid response from Flox server: "+body;
             if script_exists(onError)
                 then script_execute(onError,requestInfo,error,httpStatus,cache);
@@ -57,6 +58,7 @@ if map_has(self._serviceRequests,requestId) {
         else {
             // If the request was successful
             if flox_http_status_is_success(httpStatus) {
+                flox_log(fx_log_verbose,"Flox request successful");
                 // If it is a get request then we cache and return
                 if method == http_method_get {
                     // If the status was NOT_MODIFIED then we can simply
@@ -97,7 +99,7 @@ if map_has(self._serviceRequests,requestId) {
                 // Try and determine the error message
                 if map_exists(response) and map_has(response,"message")
                     then error = map_get(response,"message");
-                flox_debug_message("Request was not successful, error = "+error);
+                flox_log(fx_log_warn,"Request was not successful, error = "+error);
                 // Call the onError script
                 if script_exists(onError)
                     then script_execute(onError,requestInfo,error,httpStatus,cache);

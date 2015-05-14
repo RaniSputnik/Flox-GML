@@ -14,7 +14,7 @@ if not flox_assert(map_exists(authData),
     "Can not log in, auth data provided is invalid") then return false;
 
 with flox_assert_initialized() {
-    flox_debug_message("Logging in with auth data "+json_encode(authData));
+    flox_log(fx_log_silly,"Logging in with auth data = "+json_encode(authData));
     var previousAuth = i_flox_authentication_get();
     var authType = map_get(authData,"authType");
 
