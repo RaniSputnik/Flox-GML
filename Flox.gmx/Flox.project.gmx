@@ -251,6 +251,7 @@
       <object>objects\objDestroyEntity</object>
       <object>objects\objDestroyEntityQueued</object>
       <object>objects\objTestQuery</object>
+      <object>objects\objTestSimultaneousRequests</object>
       <object>objects\objButton</object>
       <object>objects\objLoading</object>
     </objects>
