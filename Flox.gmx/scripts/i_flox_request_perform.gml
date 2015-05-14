@@ -64,8 +64,7 @@ map_set(floxSDK,"type","gml");
 map_set(floxSDK,"version",fx_sdk_version);
 // Player Header
 var floxPlayer = map_create("request-headers-flox-player");
-// TODO temp workaround - we will fail before here if no auth is provided
-if map_exists(auth) then map_copy(floxPlayer,auth);
+map_copy(floxPlayer,auth);
 // Flox header
 var floxHeader = map_create("request-headers-flox");
 map_set_map(floxHeader,"sdk",floxSDK);
@@ -84,11 +83,20 @@ if map_exists(cachedResult) {
     map_set(headers,"If-None-Match",eTag);
 }
 
-// Create the full url, we set an invalid url if the request has any issues
-var protocol = "http://";
-if self.secure then protocol = "https://";
+// Create the full url
+var protocol = "http";
+if self.secure {
+    if os_type == os_android and os_version < 10 {
+        flox_debug_message("WARNING: Attempting to make a 'secure' request on Android version < 3.0, will fall back to http. "
+            + "Read more about this issue here https://bitbucket.org/RaniSputnik/flox-gml/wiki/Attempting%20Secure%20Request%20on%20Android%20Version%20%3C%203.0");
+        
+    }
+    else {
+        protocol = "https";
+    }
+}
 var basePath = self._serviceBasePath;
-var fullURL = protocol + basePath + "games/" + string(self.gameID) + "/" + path;
+var fullURL = protocol + "://" + basePath + "games/" + string(self.gameID) + "/" + path;
 
 // Perform the request
 var body = '';
