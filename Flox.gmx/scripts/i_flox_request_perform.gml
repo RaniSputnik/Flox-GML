@@ -57,25 +57,20 @@ if self.forceServiceFailure {
     return i_flox_response_fake_failure(request,"Force service failure is enabled",http_status_unknown);
 }
 
-// Headers for the request
-// Auth header
-var floxSDK = map_create("request-headers-flox-sdk");
-map_set(floxSDK,"type","gml");
-map_set(floxSDK,"version",fx_sdk_version);
-// Player Header
-var floxPlayer = map_create("request-headers-flox-player");
-map_copy(floxPlayer,auth);
-// Flox header
-var floxHeader = map_create("request-headers-flox");
-map_set_map(floxHeader,"sdk",floxSDK);
-map_set_map(floxHeader,"player",floxPlayer);
-map_set(floxHeader,"gameKey",self.gameKey);
-map_set(floxHeader,"bodyCompression","none"); // TODO add compression
+// Construct the XFlox Header
+// Note: There is an issue with using json_encode to encode a header for android
+// so we must manually construct the header ourselves
+var XFloxPlayer = '{"id":"'+map_get(auth,"id")+'","authType":"'+map_get(auth,"authType")+'"';
+if map_has(auth,"authId") then XFloxPlayer += ',"authId":"'+map_get(auth,"authId")+'"';
+if map_has(auth,"authToken") then XFloxPlayer += ',"authToken":"'+map_get(auth,"authToken")+'"'; 
+XFloxPlayer += "}";
+var XFloxSDK = '{"type":"gml","version":"'+fx_sdk_version+'"}';
 var ctime = i_flox_get_current_time_utc();
-map_set(floxHeader,"dispatchTime",flox_date_encode(ctime));
+var XFlox = '{"player":'+XFloxPlayer+',"dispatchTime":"'+flox_date_encode(ctime)+'","sdk":'+XFloxSDK+',"bodyCompression":"none","gameKey":"'+self.gameKey+'"}';
+
 var headers = map_create("request-headers");
 map_set(headers,"Content-Type","application/json");
-map_set(headers,"X-Flox",json_encode(floxHeader));
+map_set(headers,"X-Flox",XFlox);
 
 // Get the meta-data associated with the cached result
 if map_exists(cachedResult) {
@@ -108,10 +103,7 @@ flox_debug_message("Body",body);
 flox_debug_message("Full URL",fullURL);
 requestId = http_request(fullURL,method,headers,body);
 
-// Clean up the maps, nested maps not destroyed in HTML5
-map_destroy(floxSDK);
-map_destroy(floxPlayer);
-map_destroy(floxHeader);
+// Clean up any maps we created
 map_destroy(headers);
 // Finally register the request in the requests being performed
 map_set_map(self._serviceRequests,requestId,request);
