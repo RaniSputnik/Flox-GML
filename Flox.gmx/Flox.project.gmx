@@ -9,6 +9,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\sprButton</sprite>
+    <sprite>sprites\sprNextPrev</sprite>
     <sprite>sprites\sprLoading</sprite>
     <sprite>sprites\sprCheckbox</sprite>
   </sprites>
@@ -220,6 +221,8 @@
         <script>scripts\scrLeaderboardLoadComplete.gml</script>
         <script>scripts\scrLeaderboardLoadError.gml</script>
       </scripts>
+      <script>scripts\scrPrevTest.gml</script>
+      <script>scripts\scrNextTest.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -252,6 +255,8 @@
       <object>objects\objTestQuery</object>
       <object>objects\objButton</object>
       <object>objects\objLoading</object>
+      <object>objects\objNext</object>
+      <object>objects\objPrev</object>
     </objects>
   </objects>
   <rooms name="rooms">
