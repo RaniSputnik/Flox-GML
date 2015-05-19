@@ -23,6 +23,18 @@ with flox_assert_initialized() {
     var entityType = map_get(_query,"type");
     var path = "entities"+"/"+string(entityType);
     // Make the request
+    show_debug_message(json_encode(self._query));
+    var offset = map_get(self._query,"offset");
+    var limit = map_get(self._query,"limit");
+    var queryJSON = '{"offset":'+string(offset)+',"limit":'+string(limit);
+    if map_has(self._query,"where") {
+        queryJSON += ',"where":"'+map_get(self._query,"where")+'"';
+    }
+    if map_has(self._query,"orderBy") {
+        queryJSON += ',"orderBy":"'+map_get(self._query,"orderBy")+'"';
+    }
+    queryJSON += '}';
+    show_debug_message(queryJSON);
     var req = i_flox_request(http_method_post,path,self._query,
         i_flox_on_query_complete,i_flox_on_query_error);
     map_set(self._query,"onComplete",onComplete);

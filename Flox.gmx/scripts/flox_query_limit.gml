@@ -4,8 +4,7 @@
  * by the query, default is 50.
  */
 
-// Use string(round(limit)) to force ints when json_encoding
-var limit = string(round(argument0));
+var limit = round(argument0);
 with flox_assert_initialized {
     if not i_flox_assert_query_building() then return false;
     map_set(self._query,"limit",limit);

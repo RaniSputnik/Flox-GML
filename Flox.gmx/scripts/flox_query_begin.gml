@@ -14,6 +14,6 @@ with flox_assert_initialized() {
     map_set(self._query,"type",entityType);
     // Use strings for integers otherwise GameMaker's json_encode
     // adds a bunch of zeros to them, stuffing the server
-    map_set(self._query,"offset","0");
-    map_set(self._query,"limit","50");
+    map_set(self._query,"offset",0);
+    map_set(self._query,"limit",50);
 }
