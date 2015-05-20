@@ -3,7 +3,7 @@
  * Returns whether or not a map with the given id exists
  */
 
-if argument0 == 0 or argument0 == global.__mapInfo then return false; // Catch for ZERO MAP
+if argument0 == global.__mapInfo then return false; // Catch for meta info map
 
 // TODO in debug mode check deleted maps list
 
