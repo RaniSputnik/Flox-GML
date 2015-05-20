@@ -72,6 +72,7 @@
       <script>scripts\flox_http_status_is_success.gml</script>
       <script>scripts\flox_http_status_is_transient_error.gml</script>
       <script>scripts\flox_debug_message.gml</script>
+      <script>scripts\flox_log.gml</script>
       <script>scripts\flox_throw_error.gml</script>
       <script>scripts\flox_assert.gml</script>
       <script>scripts\flox_assert_initialized.gml</script>
@@ -95,6 +96,8 @@
       <script>scripts\i_flox_request_queued.gml</script>
       <script>scripts\i_flox_on_queued_request_complete.gml</script>
       <script>scripts\i_flox_on_queued_request_error.gml</script>
+      <script>scripts\i_flox_response_process.gml</script>
+      <script>scripts\i_flox_response_fake_failure.gml</script>
       <script>scripts\i_flox_cache_response.gml</script>
       <script>scripts\i_flox_service_queue_enqueue.gml</script>
       <script>scripts\i_flox_service_queue_dequeue.gml</script>
@@ -201,8 +204,8 @@
     <room>rooms\rmMatchList</room>
     <room>rooms\rmMatch</room>
   </rooms>
-  <constants number="39">
-    <constant name="fx_sdk_version">"0.4.0"</constant>
+  <constants number="45">
+    <constant name="fx_sdk_version">"0.4.3"</constant>
     <constant name="fx_null">"null"</constant>
     <constant name="fx_guest">"guest"</constant>
     <constant name="fx_key">"key"</constant>
@@ -241,6 +244,12 @@
     <constant name="http_status_internal_server_error">500</constant>
     <constant name="http_status_not_implemented">501</constant>
     <constant name="http_status_service_unavailable">503</constant>
+    <constant name="fx_log_silly">5</constant>
+    <constant name="fx_log_verbose">4</constant>
+    <constant name="fx_log_debug">3</constant>
+    <constant name="fx_log_warn">2</constant>
+    <constant name="fx_log_error">1</constant>
+    <constant name="fx_log_none">0</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

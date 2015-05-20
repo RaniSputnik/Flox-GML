@@ -7,7 +7,8 @@ var path    = argument0;
 var headers = argument1;
 var result  = argument2;
 
-flox_debug_message("Caching with headers: "+json_encode(headers));
+flox_log(fx_log_verbose,"Caching response for path = "+path);
+flox_log(fx_log_silly,"Headers = "+json_encode(headers));
 
 // Copy the result as the original will be discarded when the request is cleaned up
 var resultCopy = map_deep_copy(result);

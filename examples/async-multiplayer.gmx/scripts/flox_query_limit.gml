@@ -4,11 +4,15 @@
  * by the query, default is 50.
  */
 
-// Use string(round(limit)) to force ints when json_encoding
-var limit = string(round(argument0));
-with flox_assert_initialized {
+var limit = round(argument0);
+with flox_assert_initialized() {
+    if os_type == os_windows and limit > 8 {
+        flox_log(fx_log_warn,"WARNING: You're query limit has been capped to '8' on Windows. "+
+            "Read more about this issue here https://bitbucket.org/RaniSputnik/flox-gml/wiki/Limit%20of%208%20for%20Queries%20on%20Windows");
+    }
     if not i_flox_assert_query_building() then return false;
     map_set(self._query,"limit",limit);
 }
 
 return true;
+

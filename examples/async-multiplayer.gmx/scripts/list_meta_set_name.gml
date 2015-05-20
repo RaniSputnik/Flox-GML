@@ -7,4 +7,3 @@ var list = argument0;
 var key = string(argument0)+"-name";
 var name = argument1;
 global.__listInfo[? key] = name;
-

@@ -8,7 +8,7 @@ var message = string(argument0);
 // Ensure flox is initialized
 with flox_assert_initialized() {
     // Print a message on the console
-    flox_debug_message("[Info] "+message);
+    flox_log(fx_log_verbose,"[Info] "+message);
     // Create the map to store the data for the log entry
     var entry = map_create("[Log] Info:"+message);
     map_set(entry,"message",message);
@@ -17,5 +17,3 @@ with flox_assert_initialized() {
     // DO NOT FREE THE MAP MEMORY
     // i_flox_session_add_log_entry does not copy the map
 }
-
-

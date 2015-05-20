@@ -20,4 +20,3 @@ var numResults = map_get(query,"numResults");
 if (numLoaded == numResults) {
     i_flox_query_finish(query);
 }
-

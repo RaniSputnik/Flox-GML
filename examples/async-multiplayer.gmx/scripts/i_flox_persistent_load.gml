@@ -5,28 +5,31 @@
  * Returns the persistent data in a map.
  */
 
-flox_debug_message("Loading persistent data"); 
+flox_log(fx_log_verbose,"Loading persistent data"); 
 // Create a map that the data will be stored in
 var contents = noone;
 // Read the contents of the persistent file
 if not self.preventPersistentDataLoad {
     var path = i_flox_persistent_filepath_get(self.gameID);
-    var file = file_text_open_read(path);
-    if file > -1 {
-        var str  = file_text_read_string(file);
-        file_text_close(file);
-        flox_debug_message("Data",str);
-        // Add the contents into the map
-        contents = json_decode(str);
-        if map_exists(contents) {
-            map_meta_set_name(contents,"[Flox] Persistent Data");
-            flox_debug_message("Loaded persistent data successfully");
+    if file_exists(path) {
+        var file = file_text_open_read(path);
+        if file > -1 {
+            var str  = file_text_read_string(file);
+            file_text_close(file);
+            flox_log(fx_log_silly,"Data",str);
+            // Add the contents into the map
+            contents = json_decode(str);
+            if map_exists(contents) {
+                map_meta_set_name(contents,"[Flox] Persistent Data");
+                flox_log(fx_log_verbose,"Loaded persistent data successfully");
+            }
+            else flox_log(fx_log_warn,"Failed to parse persisted data!");
         }
-        else flox_debug_message("Failed to parse JSON",contents);
+        else flox_log(fx_log_warn,"Failed to open persisted data file for reading '"+path+"'");
     }
-    else flox_debug_message("WARNING! Failed to open file for reading '"+path+"'");
+    else flox_log(fx_log_warn,"No persistent data found, this is likely to be the first time this game has run");
 }
-else flox_debug_message("WARNING! Data will not be loaded, 'preventPersistentDataLoad' is enabled");
+else flox_log(fx_log_warn,"Data will not be loaded, 'preventPersistentDataLoad' is enabled");
 // Create an empty contents map if none was loaded
 if not map_exists(contents) 
     then contents = map_create("[Flox] Persistent Data");
