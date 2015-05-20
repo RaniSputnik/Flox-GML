@@ -28,6 +28,7 @@ if map_has(self._serviceRequests,requestId) {
     var method      = map_get(requestInfo,"method");
     var path        = map_get(requestInfo,"path");
     var data        = map_default(requestInfo,"data",noone);
+    if is_string(data) flox_log(fx_log_verbose,data);
     var cache       = map_default(requestInfo,"cachedResult",noone);
     var onComplete  = map_default(requestInfo,"onComplete",noone);
     var onError     = map_default(requestInfo,"onError",noone);
@@ -76,14 +77,23 @@ if map_has(self._serviceRequests,requestId) {
                 // server. We take the more accurated createdAt / updatedAt times
                 // and apply them to our object to cache
                 else if method == http_method_put {
-                    var dataCopy = map_deep_copy(data);
-                    if map_has(response,fx_created_at) and map_has(response,fx_updated_at) {
-                        var createdAt = map_get(response,fx_created_at);
-                        var updatedAt = map_get(response,fx_updated_at);
-                        map_set(dataCopy,fx_created_at,createdAt);
-                        map_set(dataCopy,fx_updated_at,updatedAt);
+                    if is_string(data) {
+                        // TODO - work out how to best make this work with data
+                        // when data is a string
+                        flox_log(fx_log_warn,"You made a put request with pre-encoded data, "+
+                            "but we don't update pre-encoded data with correct timestamps from server. "+
+                            "You may want to fix that...");
                     }
-                    i_flox_cache_response(path,headers,dataCopy);
+                    else map_exists(data) {
+                        var dataCopy = map_deep_copy(data);
+                        if map_has(response,fx_created_at) and map_has(response,fx_updated_at) {
+                            var createdAt = map_get(response,fx_created_at);
+                            var updatedAt = map_get(response,fx_updated_at);
+                            map_set(dataCopy,fx_created_at,createdAt);
+                            map_set(dataCopy,fx_updated_at,updatedAt);
+                        }
+                        i_flox_cache_response(path,headers,dataCopy);
+                    }
                 }
                 // If it is a delete request, delete the local copy too :)
                 else if method == http_method_delete {

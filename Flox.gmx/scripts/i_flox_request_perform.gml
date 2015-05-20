@@ -38,10 +38,15 @@ else if not map_exists(auth) {
 }
 
 // If the method is get, encode a url
-if method == http_method_get and map_exists(data) {
-    path += "?" + i_flox_encode_map_for_uri(data);
-    map_set(request,"path",path);
-    flox_log(fx_log_silly,"Encoded data for url",path);
+if method == http_method_get {
+    if is_string(data) {
+        data = json_decode(data);
+    }
+    if map_exists(data) {
+        path += "?" + i_flox_encode_map_for_uri(data);
+        map_set(request,"path",path);
+        flox_log(fx_log_silly,"Encoded data for url",path);
+    }
 }
 // Get the cached result from last time (if there is one)
 if method == http_method_get and i_flox_cache_contains(path) {
@@ -94,8 +99,12 @@ var fullURL = protocol + "://" + basePath + "games/" + string(self.gameID) + "/"
 
 // Perform the request
 var body = '';
-if map_exists(data) and method != http_method_get {
-    body = json_encode(data);
+if method != http_method_get {
+    if is_string(data) {
+        body = data;
+    } else if map_exists(data) {
+        body = json_encode(data);
+    }
 }
 flox_log(fx_log_silly,"Headers",json_encode(headers),"Body",body,"Full URL",fullURL);
 requestId = http_request(fullURL,method,headers,body);

@@ -19,7 +19,14 @@ var request = map_create("queued-request: method="+method+", path="+path);
 map_set(request,"method",method);
 map_set(request,"path",path);
 // Add the data if it exists
-if map_exists(data) {
+// If the data is pre-encoded, it will be a string
+if is_string(data) {
+    flox_log(fx_log_verbose,data);
+    map_set(request,"data",data);
+}
+// Otherwise we have a map of data to encode
+else if map_exists(data) {
+    flox_log(fx_log_warn,"Request created with map, this will soon be removed");
     var dataCopy = map_deep_copy(data);
     map_meta_set_name(dataCopy,"queued-requests-data-copy");
     map_set_map(request,"data",dataCopy);

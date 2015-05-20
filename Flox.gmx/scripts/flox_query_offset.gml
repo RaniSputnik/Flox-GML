@@ -6,7 +6,7 @@
  */
 
 var offset = round(argument0);
-with flox_assert_initialized {
+with flox_assert_initialized() {
     if not i_flox_assert_query_building() return false;
     map_set(self._query,"offset",offset);
 }
