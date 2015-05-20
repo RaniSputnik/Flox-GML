@@ -199,6 +199,7 @@
       <scripts name="login">
         <script>scripts\scrOnLoginKeyComplete.gml</script>
         <script>scripts\scrOnLoginKeyError.gml</script>
+        <script>scripts\scrOnLoginEmailError.gml</script>
         <script>scripts\scrOnLoginResetComplete.gml</script>
         <script>scripts\scrOnLoginResetError.gml</script>
       </scripts>
@@ -240,6 +241,7 @@
       <object>objects\objLoginKey</object>
       <object>objects\objLoginEmail</object>
       <object>objects\objLoginEmailPassword</object>
+      <object>objects\objRegisterEmailPassword</object>
       <object>objects\objResetEmailPassword</object>
       <object>objects\objLogout</object>
       <object>objects\objNoAuth</object>
