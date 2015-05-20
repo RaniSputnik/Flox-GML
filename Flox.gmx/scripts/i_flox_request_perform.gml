@@ -86,7 +86,7 @@ if map_exists(cachedResult) {
 // Create the full url
 var protocol = "http";
 if self.secure {
-    if os_type == os_android and os_version < 10 {
+    if os_type == os_android and os_version <= 10 {
         flox_log(fx_log_warn,"WARNING: Attempting to make a 'secure' request on Android version < 3.0, will fall back to http. "
             + "Read more about this issue here https://bitbucket.org/RaniSputnik/flox-gml/wiki/Attempting%20Secure%20Request%20on%20Android%20Version%20%3C%203.0");
     }

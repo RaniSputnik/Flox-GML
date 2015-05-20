@@ -38,7 +38,7 @@ if map_has(self._serviceRequests,requestId) {
     flox_log(fx_log_silly,"Response",json_encode(response));
     
     // If we couldn't contact the server for any odd/unknown reasons
-    if status < 0 and not map_exists(headers) {
+    if not map_exists(headers) {
         flox_log(fx_log_warn,"Flox server unreachable");
         if script_exists(onError)
             then script_execute(onError,requestInfo,"Flox server unreachable",http_status_unknown,cache);
