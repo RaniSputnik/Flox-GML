@@ -34,8 +34,22 @@ with flox_assert_initialized() {
         // the 'real' player 
         if currentAuthType == fx_guest
             then map_set(authData,"id",currentId);
+        
+        // Construct the request JSON
+        var authDataStr = '{"authType":"'+map_get(authData,"authType")+'"';
+        if map_has(authData,"id") then authDataStr += ',"id":"'+map_get(authData,"id")+'"';
+        if map_has(authData,"authId") then authDataStr += ',"authId":"'+map_get(authData,"authId")+'"';
+        if map_has(authData,"authToken") then authDataStr += ',"authToken":"'+map_get(authData,"authToken")+'"';
+        if map_has(authData,"loginOnly") {
+            var loginOnly = map_get(authData,"loginOnly");
+            var loginOnlyStr = "false";
+            if loginOnly then loginOnlyStr = "true";
+            authDataStr += ',"loginOnly":'+loginOnlyStr;
+        }
+        authDataStr += '}';
+        
         // Perform the request
-        var req = i_flox_request(http_method_post,"authenticate",authData,
+        var req = i_flox_request(http_method_post,"authenticate",authDataStr,
                         i_flox_on_player_login_complete,i_flox_on_player_login_error);
         var authDataCopy = map_deep_copy(authData);
         map_set(req,"loginPreviousAuth",previousAuth);
