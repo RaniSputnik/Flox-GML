@@ -101,8 +101,8 @@ print(">> Flox version calculated as "+extversion)
 print("Zipping up output...")
 zippath = os.path.join(builddir,OUTPUT_ZIP_NAME+'.'+extversion+'.zip')
 with zipfile.ZipFile(zippath, 'w') as z:
-	z.write(constpath)
-	z.write(objpath)
-	z.write(scriptpath)
+	z.write(constpath,OUTPUT_CONST_NAME+".constants.txt")
+	z.write(objpath,OUTPUT_OBJ_NAME+".object.gmx")
+	z.write(scriptpath,OUTPUT_SCRIPTS_NAME+".scripts.gml")
 	z.close()
 	
