@@ -16,5 +16,10 @@ for (var i = 0; i < n; i++) {
     str += strVal;
 }
 str += "]";
+str = string_replace_all(str,"[","\[");
+str = string_replace_all(str,"]","\]");
+str = string_replace_all(str,":","\:");
+str = string_replace_all(str,",","\,");
+str = string_replace_all(str,'"','\"');
 
 return str;
