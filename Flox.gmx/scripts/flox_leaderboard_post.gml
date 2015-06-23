@@ -1,7 +1,6 @@
-/**
- * flox_leaderboard_post(String leaderboardID, Number score, String playerName)
- * Posts a score to the given leaderboard.
- */
+/// flox_leaderboard_post(leaderboardID,score,playerName)
+//
+// Posts a score to the given leaderboard.
  
 var leaderboardID = string(argument0);
 var value = argument1;

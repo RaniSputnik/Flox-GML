@@ -1,9 +1,8 @@
-/**
- * flox_query_offset(Real offset)
- * Offsets the results by a given amount, can be used to
- * paginate. ie. you fetch the first 50 results, then
- * offset by 50 and fetch the next batch of results.
- */
+/// flox_query_offset(offset)
+//
+//  Offsets the results by a given amount, can be used to
+//  paginate. ie. you fetch the first 50 results, then
+//  offset by 50 and fetch the next batch of results.
 
 var offset = round(argument0);
 with flox_assert_initialized() {

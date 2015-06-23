@@ -1,9 +1,7 @@
-/**
- * flox_entity_save(Entity entity, Script(Entity entity) onComplete,
- *                  Script(String error, Real httpStatus, Entity cachedCopy) onError)
- * Saves an entity to the server. This function is asynchronous
- * and will execute either onComplete or onError when it is finished.
- */
+/// flox_entity_save(entity,onComplete,onError)
+//
+//  Saves an entity to the server. This function is asynchronous
+//  and will execute either onComplete or onError when it is finished.
  
 var entity = argument0;
 var onComplete = argument1;

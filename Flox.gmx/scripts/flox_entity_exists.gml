@@ -1,7 +1,6 @@
-/**
- * flox_entity_exists(Entity entity) Boolean
- * Returns whether or not the specified entity exists
- */
+/// flox_entity_exists(entity)
+//
+//  Returns whether or not the specified entity exists
  
 var entity = argument0;
 
@@ -14,5 +13,4 @@ return
     map_has(entity,fx_id) and
     map_has(entity,fx_type);
     
-
 

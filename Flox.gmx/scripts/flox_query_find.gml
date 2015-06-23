@@ -1,10 +1,8 @@
-/**
- * flox_query_find(Script(List results) onComplete,
- *                 Script(String error, Real httpStatus) onError)
- * Use this script after building a query to find the results.
- * This script is asychronous and will execute either
- * onComplete or onError when it is finished.
- */
+/// flox_query_find(onComplete,onError)
+//
+//  Use this script after building a query to find the results.
+//  This script is asychronous and will execute either
+//  onComplete or onError when it is finished.
 
 var onComplete = argument0;
 var onError    = argument1;

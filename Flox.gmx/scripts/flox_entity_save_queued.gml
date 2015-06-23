@@ -1,7 +1,6 @@
-/**
- * flox_entity_save_queued(Entity entity)
- * Saves an entity to the server at the next available moment.
- */
+/// flox_entity_save_queued(entity)
+//
+//  Saves an entity to the server at the next available moment.
  
 var entity = real(argument0);
 if not flox_assert(flox_entity_exists(entity),

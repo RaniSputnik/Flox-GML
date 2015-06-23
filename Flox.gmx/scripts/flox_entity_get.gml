@@ -1,7 +1,6 @@
-/**
- * flox_entity_get(Entity entity, String property) Any
- * Returns the value of a given entity property
- */
+/// flox_entity_get(entity,prop)
+//
+//  Returns the value of a given entity property
 
 var entity       = argument0;
 var prop         = argument1;

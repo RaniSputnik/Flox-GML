@@ -1,8 +1,7 @@
-/**
- * flox_date_decode(String date) DateTime
- * Takes a xs:DateTime string and parses it into a valid GameMaker datetime
- * eg: 2014-12-27T11:23:04.976Z
- */
+/// flox_date_decode(date)
+//
+//  Takes a xs:DateTime string and parses it into a valid GameMaker datetime
+//  eg: 2014-12-27T11:23:04.976Z
  
 var str = argument0;
 var originalStr = argument0;

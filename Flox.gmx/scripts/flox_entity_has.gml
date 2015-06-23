@@ -1,7 +1,6 @@
-/**
- * flox_entity_has(Entity entity, String prop) Boolean
- * Returns whether or not an entity has a given property
- */
+/// flox_entity_has(entity,prop)
+// 
+//  Returns whether or not an entity has a given property
 
 var entity = argument0;
 var prop   = argument1;

@@ -1,11 +1,9 @@
-/**
- * flox_log_error(String errorType, String message)
- * Adds an error to the session log
- * ErrorType is used to group errors together in the control panel
- * so try and use only a few error types and be descriptive with the
- * message.
- */
- 
+/// flox_log_error(errorType,message)
+//
+//  Adds an error to the session log
+//  ErrorType is used to group errors together in the control panel
+//  so try and use only a few error types.
+
 var errorType = string(argument0);
 var message = string(argument1);
 

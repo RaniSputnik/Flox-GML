@@ -1,7 +1,6 @@
-/**
- * flox_entity_set(Entity entity, String property, Real/String value)
- * Sets a property on the given entity to the specified value
- */
+/// flox_entity_set(entity,prop,value)
+//
+//  Sets a property on the given entity to the specified value
 
 var entity = argument0;
 var prop   = argument1;

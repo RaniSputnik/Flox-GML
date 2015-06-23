@@ -1,11 +1,8 @@
-/**
- * flox_entity_load_type(String type, String id, 
- *                       Script(Entity entity) onComplete
- *                       Script(String error, Real httpStatus, Entity cachedCopy)
- * Loads an entity from the server by it's type and id.
- * This function is asynchronous and will execute either
- * onComplete or onError once it is finished.
- */
+/// flox_entity_load_type(type,id,onComplete,onError) 
+//
+//  Loads an entity from the server by it's type and id.
+//  This function is asynchronous and will execute either
+//  onComplete or onError once it is finished.
 
 var entityType = string(argument0);
 var entityId   = string(argument1);

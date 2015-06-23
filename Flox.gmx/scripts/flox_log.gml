@@ -1,9 +1,8 @@
-/**
- * flox_log(Real logLevel, Any message...) String
- * Prints a messages to the console if the current log level
- * is equal or more verbose than the log level specified
- * Returns the message that was printed
- */
+/// flox_log(logLevel,message...)
+//
+//  Prints a messages to the console if the current log level
+//  is equal or more verbose than the log level specified
+//  Returns the message that was printed
 
 // Only print the message if verbose is true
 var fx = flox_get();

@@ -1,11 +1,8 @@
-/**
- * flox_init(String gameID, String gameKey, String version)
- * Initializes flox with the given gameId, key and version
- * Your gameId and Key are given to you when you create your game in
- * the flox control panel www.flox.cc/panel
- * The version can be any string you like, analytics can be segregated
- * by version so this is just for your own organisation
- */
+/// flox_init(gameID,gameKey,version)
+// 
+//  Initializes flox with the given gameId, key and version
+//  Your game id and key are given to you when you create your game in
+//  the flox control panel www.flox.cc/panel
 
 // Initialize our custom data structure handling 
 // (because otherwise debugging is a mish)

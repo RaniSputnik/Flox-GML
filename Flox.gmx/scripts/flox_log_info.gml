@@ -1,7 +1,6 @@
-/**
- * flox_log_info(String message)
- * Writes a new message into the session log
- */
+/// flox_log_info(message)
+// 
+//  Writes a new message into the session log
  
 var message = string(argument0);
 

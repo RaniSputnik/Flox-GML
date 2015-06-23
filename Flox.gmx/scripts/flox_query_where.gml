@@ -1,8 +1,7 @@
-/**
- * flox_query_where(constraints,...params)
- * Adds a where clause to the query.
- * Subsequent where clauses will override previous constraints.
- */
+/// flox_query_where(constraints,params...)
+//
+//  Adds a where clause to the query.
+//  Subsequent where clauses will override previous constraints.
 
 var constraints = string(argument[0]);
 var numPlaceholders = string_count("?",constraints);

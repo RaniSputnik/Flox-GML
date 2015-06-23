@@ -1,7 +1,6 @@
-/**
- * flox_query_begin(String entityType)
- * Begins a query for the given entity type.
- */
+/// flox_query_begin(entityType)
+//
+//  Begins a query for the given entity type.
 
 var entityType = string(argument0);
  

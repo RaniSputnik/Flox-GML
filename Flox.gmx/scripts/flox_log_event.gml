@@ -1,9 +1,7 @@
- /**
- * flox_log_event(String eventType, Map properties)
- * Adds an event to the session log, events can have
- * properties bundled with them using the eventData
- * parameter.
- */
+/// flox_log_event(eventType,properties)
+//
+//  Adds an event to the session log, events can have
+//  properties bundled with them using the eventData parameter.
  
 var eventType = string(argument0);
 var props = argument1;
@@ -28,4 +26,3 @@ with flox_assert_initialized() {
     // DO NOT FREE THE MAP MEMORY
     // i_flox_session_add_log_entry does not copy the map
 }
-

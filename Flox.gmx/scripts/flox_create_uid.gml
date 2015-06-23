@@ -1,9 +1,8 @@
-/**
- * flox_create_uid([Optional] Number length)
- * Generates a UID (unique identifier) that can be used for Entity IDs. 
- * Per default, the UID is 16 characters long. 
- * Note: do not use this function for security-critical hashing.
- */
+/// flox_create_uid(length)
+//
+//  Generates a UID (unique identifier) that can be used for Entity IDs. 
+//  If length is not specified, a default of 16 is used.
+//  Note: do not use this function for security-critical hashing.
 
 var length = 16;
 if argument_count > 0 length = argument[0];

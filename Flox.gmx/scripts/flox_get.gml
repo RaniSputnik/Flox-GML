@@ -1,7 +1,7 @@
-/**
- * flox_get() objFlox
- * Gets the flox singleton
- */
+/// flox_get()
+//
+//  Gets the objFlox singleton. If the flox instance 
+//  doesn't exist yet this function will create it
 
 // Make sure there is at lease one flox instance
 if instance_number(objFlox) == 0 then instance_create(0,0,objFlox);

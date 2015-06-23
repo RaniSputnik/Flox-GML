@@ -1,7 +1,6 @@
-/**
- * flox_entity_destroy_queued(Entity entity)
- * Removes an entity to the server at the next available moment.
- */
+/// flox_entity_destroy_queued(entity)
+//
+//  Removes an entity to the server at the next available moment.
  
 var entity = real(argument0);
 if not flox_assert(flox_entity_exists(entity),

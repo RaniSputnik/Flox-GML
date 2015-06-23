@@ -1,7 +1,7 @@
-/**
- * flox_entity_set_list(Entity entity, String property, List list)
- * Sets a property on the given entity to the specified list
- */
+/// flox_entity_set_list(entity,prop,list)
+//
+// Sets a property on the given entity to the specified list
+
 
 var entity = argument0;
 var prop   = string(argument1);

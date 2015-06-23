@@ -1,11 +1,8 @@
-/**
- * flox_player_reset_email_password(String email,
- *                      Script() onComplete,
- *                      Script(String error, Real httpStatus))
- * Causes the server to send a password-reset e-mail to the given
- * e-mail address. If that address is unknown to the server, it 
- * will yield an error with http_status_not_found.
- */
+/// flox_player_reset_email_password(email,onComplete,onError)
+//
+//  Causes the server to send a password-reset e-mail to the given
+//  e-mail address. If that address is unknown to the server, it 
+//  will yield an error with http_status_not_found.
 
 var email = string(argument0);
 var onComplete = argument1;

@@ -1,10 +1,8 @@
-/**
- * flox_entity_destroy(Entity entity, Script() onComplete,
- *                     Script(String error, Real httpStatus, Entity cachedCopy) onError)
- * Destroys a given entity, first by freeing it and then
- * removing it from the server. This function is asynchronous 
- * and will execute either onComplete or onError when it is finished.
- */
+/// flox_entity_destroy(entity,onComplete,onError)
+//
+//  Destroys a given entity, first by freeing it and then
+//  removing it from the server. This function is asynchronous 
+//  and will execute either onComplete or onError when it is finished.
  
 var entity = argument0;
 var onComplete = argument1;

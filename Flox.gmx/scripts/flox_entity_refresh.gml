@@ -1,8 +1,7 @@
-/**
- * flox_entity_refresh(Entity entity, Script(Entity entity) onComplete,
- *                     Script(String error, Real httpStatus) onError)
- * Updates the properties of an entity.
- */
+/// flox_entity_refresh(entity,onComplete,onError)
+//
+//  Updates the properties of an entity with the copy from
+//  the server.
 
 var entity     = argument0;
 var onComplete = argument1;

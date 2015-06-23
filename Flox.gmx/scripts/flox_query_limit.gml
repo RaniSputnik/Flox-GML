@@ -1,8 +1,7 @@
-/**
- * flox_query_limit(Real limit)
- * Sets the maximum number of results that can be returned
- * by the query, default is 50.
- */
+/// flox_query_limit(limit)
+//
+//  Sets the maximum number of results that can be returned
+//  by the query, default is 50.
 
 var limit = round(argument0);
 with flox_assert_initialized() {

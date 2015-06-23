@@ -1,7 +1,6 @@
-/**
- * flox_entity_set_map(Entity entity, String property, Map map)
- * Sets a property on the given entity to the specified map
- */
+/// flox_entity_set_map(entity,prop,map)
+//
+//  Sets a property on the given entity to the specified map
 
 var entity = argument0;
 var prop   = string(argument1);

@@ -1,9 +1,8 @@
-/** 
- * flox_throw_error(String message)
- * Registers that an error has occurred and prints/displays it to the developer
- * After an error has occurred flox will not persist the session to disk or make
- * any more requests.
- */
+/// flox_throw_error(message)
+//
+//  Registers that an error has occurred and prints/displays it to the developer
+//  After an error has occurred flox will not persist the session to disk or make
+//  any more requests as data could end up in an invalid state.
 
 var message = argument0;
 

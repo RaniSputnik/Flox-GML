@@ -1,7 +1,6 @@
-/**
- * flox_log_warning(String message)
- * Writes a new warning message into the session log
- */
+/// flox_log_warning(message)
+//
+//  Writes a new warning message into the session log
  
 var message = string(argument0);
 

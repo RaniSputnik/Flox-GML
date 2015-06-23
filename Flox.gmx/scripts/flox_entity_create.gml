@@ -1,9 +1,8 @@
-/**
- * flox_entity_create(String entityType) Entity
- * Creates a new Flox entity, note that this method DOESN'T hit the
- * server, you must create a flox entity and then save it for the data
- * to be stored on Flox.
- */
+/// flox_entity_create(entityType)
+//
+//  Creates a new Flox entity, note that this method DOESN'T hit the
+//  server, you must create a flox entity and then save it for the data
+//  to be stored on Flox.
 
 var entityType = argument0;
 if not flox_assert(is_string(entityType),"Entity type must be a valid string '"+string(entityType)+"'") return noone;
