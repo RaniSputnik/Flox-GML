@@ -15,16 +15,10 @@ if not self._fatalErrorOccurred {
     if not self.preventPersistentDataSave {
         flox_log(fx_log_silly,"Data",str);
         var path = i_flox_persistent_filepath_get(self.gameID);
-        var file = file_text_open_write(path);
-        if file > -1 {
-            file_text_write_string(file,str);
-            file_text_close(file);
-            flox_log(fx_log_verbose,"Persisted data successfully");
-        }
-        else { 
-            flox_log(fx_log_warn,"Failed to open persistent data file for writing '"+path+"'");
-            result = false;
-        }
+        var map = map_create("persistent secure");
+        map_set(map,self.gameKey,str);
+        ds_map_secure_save(map,path);
+        map_destroy(map);
     }
     else {
         flox_log(fx_log_warn,"Data will not be saved, 'preventPersistentDataSave' is enabled");
