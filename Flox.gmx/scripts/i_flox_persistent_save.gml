@@ -17,7 +17,9 @@ if not self._fatalErrorOccurred {
         var path = i_flox_persistent_filepath_get(self.gameID);
         var map = map_create("persistent secure");
         map_set(map,self.gameKey,str);
-        ds_map_secure_save(map,path);
+        if not ds_map_secure_save(map,path) {
+            flox_log(fx_log_warn,"Failed to save persistent data '"+path+"'");
+        }
         map_destroy(map);
     }
     else {

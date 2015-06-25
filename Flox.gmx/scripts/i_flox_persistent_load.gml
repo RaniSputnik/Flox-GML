@@ -13,16 +13,19 @@ if not self.preventPersistentDataLoad {
     var path = i_flox_persistent_filepath_get(self.gameID);
     if file_exists(path) {
         var map = ds_map_secure_load(path);
-        var str = map_get(map,self.gameKey);
-        map_destroy(map);
-        flox_log(fx_log_silly,"Data",str);
-        // Add the contents into the map
-        contents = json_decode(str);
-        if map_exists(contents) {
-            map_meta_set_name(contents,"[Flox] Persistent Data");
-            flox_log(fx_log_verbose,"Loaded persistent data successfully");
+        if map_exists(map) and map_has(map,self.gameKey) {
+            var str = map_get(map,self.gameKey);
+            map_destroy(map);
+            flox_log(fx_log_silly,"Data",str);
+            // Add the contents into the map
+            contents = json_decode(str);
+            if map_exists(contents) {
+                map_meta_set_name(contents,"[Flox] Persistent Data");
+                flox_log(fx_log_verbose,"Loaded persistent data successfully");
+            }
+            else flox_log(fx_log_warn,"Failed to parse persisted data!");
         }
-        else flox_log(fx_log_warn,"Failed to parse persisted data!");
+        else flox_log(fx_log_warn,"Failed to load persisted data! Malformed data file.");
     }
     else flox_log(fx_log_warn,"No persistent data found, this is likely to be the first time this game has run");
 }
