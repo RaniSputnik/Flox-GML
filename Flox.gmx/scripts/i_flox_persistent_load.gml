@@ -65,10 +65,12 @@ repeat map_size(serviceCache) {
         map_meta_set_name(cachedMap,"[Cache] path="+path);
         if string_pos("leaderboards",path) > 0 {
             var leaderboardList = map_get(cachedMap,"default");
-            list_meta_set_name(leaderboardList,'[Flox] Leaderboard');
-            for (var i=0, n=list_size(leaderboardList); i<n; i++) {
-                var scoreData = ds_list_find_value(leaderboardList,i);
-                map_meta_set_name(scoreData,'[Flox] Score');
+            if list_exists(leaderboardList) {
+                list_meta_set_name(leaderboardList,'[Flox] Leaderboard');
+                for (var i=0, n=list_size(leaderboardList); i<n; i++) {
+                    var scoreData = ds_list_find_value(leaderboardList,i);
+                    map_meta_set_name(scoreData,'[Flox] Score');
+                }
             }
         }        
     }
