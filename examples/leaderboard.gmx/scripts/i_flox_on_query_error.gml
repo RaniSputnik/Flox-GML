@@ -32,3 +32,4 @@ if map_has(query,"numLoaded") {
 // The query failed before it found any results
 // therefore it is finished and we can destroy it.
 else map_destroy(query);
+

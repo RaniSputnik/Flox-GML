@@ -14,3 +14,4 @@ map_set(auth,"authType",authType);
 if authId != fx_null then map_set(auth,"authId",authId);
 if token != fx_null then map_set(auth,"authToken",token);
 return auth;
+

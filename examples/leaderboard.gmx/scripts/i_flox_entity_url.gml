@@ -9,3 +9,4 @@ if entityType == "" then entityType = "<invalid>";
 if entityId == "" then entityId = "<invalid>";
 
 return "entities/"+entityType+"/"+entityId;
+

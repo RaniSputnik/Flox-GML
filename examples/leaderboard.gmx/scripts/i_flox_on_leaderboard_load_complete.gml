@@ -20,3 +20,4 @@ var scoresCopy = i_flox_leaderboard_scores(scores);
 var context = map_get(request,"lbContext");
 var onComplete = map_get(request,"lbOnComplete");
 i_flox_callback(context,onComplete,scoresCopy);
+

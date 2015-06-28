@@ -1,11 +1,8 @@
-/**
- * flox_entity_load_type(String type, String id, 
- *                       Script(Entity entity) onComplete
- *                       Script(String error, Real httpStatus, Entity cachedCopy)
- * Loads an entity from the server by it's type and id.
- * This function is asynchronous and will execute either
- * onComplete or onError once it is finished.
- */
+/// flox_entity_load_type(type,id,onComplete,onError) 
+//
+//  Loads an entity from the server by it's type and id.
+//  This function is asynchronous and will execute either
+//  onComplete or onError once it is finished.
 
 var entityType = string(argument0);
 var entityId   = string(argument1);
@@ -14,12 +11,12 @@ var onError    = argument3;
 var context    = id;
 
 // Check id is not blank
-if not flox_assert(entityType != "",
+if not i_flox_assert(entityType != "",
     "Can not load entity, entity type is blank") then return false;
-if not flox_assert(entityId != "",
+if not i_flox_assert(entityId != "",
     "Can not load entity, entity id is blank") then return false;
 
-with flox_assert_initialized() {  
+with i_flox_assert_initialized() {  
     // Make the load request
     var path = i_flox_entity_url(entityType,entityId);
     var req = i_flox_request(http_method_get,path,noone,
@@ -35,3 +32,4 @@ with flox_assert_initialized() {
     return true;
 }
 return false;
+

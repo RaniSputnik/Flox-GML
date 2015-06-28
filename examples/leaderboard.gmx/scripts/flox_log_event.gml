@@ -1,19 +1,17 @@
- /**
- * flox_log_event(String eventType, Map properties)
- * Adds an event to the session log, events can have
- * properties bundled with them using the eventData
- * parameter.
- */
+/// flox_log_event(eventType,properties)
+//
+//  Adds an event to the session log, events can have
+//  properties bundled with them using the eventData parameter.
  
 var eventType = string(argument0);
 var props = argument1;
 var hasProps = map_exists(props);
 
 // Ensure flox is initialized
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     // Print a message on the console
-    if hasProps then flox_log(fx_log_verbose,"[Event] "+eventType+" : "+json_encode(props));
-    else flox_log(fx_log_verbose,"[Event] "+eventType);
+    if hasProps then i_flox_debug_message(fx_log_verbose,"[Event] "+eventType+" : "+json_encode(props));
+    else i_flox_debug_message(fx_log_verbose,"[Event] "+eventType);
     // Create the map to store the data for the log entry
     var entry = map_create("[Log] "+eventType);
     map_set(entry,"name",eventType);
@@ -28,3 +26,4 @@ with flox_assert_initialized() {
     // DO NOT FREE THE MAP MEMORY
     // i_flox_session_add_log_entry does not copy the map
 }
+

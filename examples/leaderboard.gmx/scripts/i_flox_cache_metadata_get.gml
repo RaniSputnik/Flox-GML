@@ -14,3 +14,4 @@ if map_has(cache,metaPath) {
     return map_get(cache,metaPath);
 }
 else return def;
+

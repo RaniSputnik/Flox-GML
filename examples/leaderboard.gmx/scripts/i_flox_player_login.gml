@@ -18,3 +18,4 @@ if authId != fx_null then map_set(authData,"authId",authId);
 if token != fx_null then map_set(authData,"authToken",token);
 i_flox_player_login_auth_data(authData,onComplete,onError);
 map_destroy(authData);
+

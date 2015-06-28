@@ -53,3 +53,4 @@ if reportAnalytics {
 map_set_map(self._persistentData,"session",newSession);
 // Invalidate the persistent data so that it saves at the next opportunity
 i_flox_persistent_invalidate();
+

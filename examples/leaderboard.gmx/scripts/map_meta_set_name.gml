@@ -7,3 +7,4 @@ var map = argument0;
 var key = string(argument0)+"-name";
 var name = argument1;
 global.__mapInfo[? key] = name;
+

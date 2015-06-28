@@ -20,3 +20,4 @@ show_debug_message("Removing map from session log");
 list_destroy(sessionLog);
 // Finally remove the session
 map_destroy(session);
+

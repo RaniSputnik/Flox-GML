@@ -9,3 +9,4 @@ if argument_count > 0 {
     map_meta_set_name(mapid,argument[0]);
 }
 return mapid;
+

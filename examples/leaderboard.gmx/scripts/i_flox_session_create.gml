@@ -21,3 +21,4 @@ map_set_list(session,"log",list_create("[Session] log"));
 map_set(session,"numErrors",0);
 
 return session;
+

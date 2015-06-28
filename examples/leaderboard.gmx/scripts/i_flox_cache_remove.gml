@@ -20,3 +20,4 @@ repeat n {
 }
 // We've modified the cache so mark that it needs to be saved
 i_flox_persistent_invalidate();
+

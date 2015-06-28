@@ -6,3 +6,4 @@
 var list = argument0;
 var key = string(list) + "-name";
 ds_map_delete(global.__listInfo,key);
+

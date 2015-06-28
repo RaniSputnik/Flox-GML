@@ -4,3 +4,4 @@
  */
  
 return map_default(self._persistentData,"authentication",noone,false);
+

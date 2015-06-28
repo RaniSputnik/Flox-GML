@@ -29,3 +29,4 @@ else if attemptedAuthType == fx_email_password {
 // Otherwise we can simply callback
 else i_flox_callback(context,onError,message,status);
 map_destroy(authDataCopy);
+

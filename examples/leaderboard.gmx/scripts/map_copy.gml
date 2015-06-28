@@ -13,3 +13,4 @@ repeat ds_map_size(from) {
     map_set(to,key,ds_map_find_value(from,key));
     key = ds_map_find_next(from,key);
 }
+

@@ -26,3 +26,4 @@ var player = i_flox_entity_from_map(playerType,playerId,entity);
 
 i_flox_on_authenticated(player,authDataCopy,prevAuth,onComplete,context);
 map_destroy(authDataCopy);
+

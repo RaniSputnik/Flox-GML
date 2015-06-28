@@ -6,7 +6,7 @@
 
 var map = argument0;
 var key = argument1;
-if not flox_assert(map_exists(map),"Can not delete key '"+string(key)+"' from map '"+string(map) + "', map does not exist") 
+if not i_flox_assert(map_exists(map),"Can not delete key '"+string(key)+"' from map '"+string(map) + "', map does not exist") 
     return false;
 
 // If the map has the key we are trying to delete, delete it and return true
@@ -16,3 +16,4 @@ if map_has(map,key) {
 }
 // Otherwise return false;
 else return false;
+

@@ -28,3 +28,4 @@ if not self._serviceProcessingQueue {
 }
 
 return self._serviceProcessingQueue;
+

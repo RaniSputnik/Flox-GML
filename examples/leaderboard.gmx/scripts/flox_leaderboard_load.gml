@@ -1,15 +1,12 @@
-/**
- * flox_leaderboard_load(String leaderboardID, String timeScope || List playerIds
- *                       Script(List scores) onComplete,
- *                       Script(String error, Real httpStatus, List cachedScores) onError)
- * Loads all scores on a leaderboard in the given constraints.
- * You may either specify a timescope (flox_today, flox_this_week, flox_all_time)
- * Or you can specify a list of player ids that will be selected from the leaderboard
- * The scores list is a list of maps, similar to a json object. 
- * The maps contain five properties, "playerId", "playerName", "value", "date" and "country"
- * Returns a request id that can be used with flox_completed and flox_failed to determine
- * when the request complets.
- */
+/// flox_leaderboard_load(leaderboardID,timeScope|playerIds,onComplete,onError)
+//
+//  Loads all scores on a leaderboard in the given constraints.
+//  You may either specify a timescope (flox_today, flox_this_week, flox_all_time)
+//  Or you can specify a list of player ids that will be selected from the leaderboard
+//  The scores list is a list of maps, similar to a json object. 
+//  The maps contain five properties, "playerId", "playerName", "value", "date" and "country"
+//  Returns a request id that can be used with flox_completed and flox_failed to determine
+//  when the request complets.
  
 var leaderboardID = string(argument0);
 var scope = argument1;
@@ -18,7 +15,7 @@ var onError = argument3;
 var context = id;
 
 // Make sure that flox is initialized
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     var path = "leaderboards"+"/"+string(leaderboardID);
     var data = map_create("load-scores-data");
     // If scope is a string, we presume it is one of the timescope values
@@ -32,7 +29,7 @@ with flox_assert_initialized() {
         map_set_list(data,"p",scope);
     }
     else {
-        flox_throw_error("Invalid scope argument, must be timescope or list of player id's");
+        flox_die("Invalid scope argument, must be timescope or list of player id's");
         return false;
     }
     // Perform the request

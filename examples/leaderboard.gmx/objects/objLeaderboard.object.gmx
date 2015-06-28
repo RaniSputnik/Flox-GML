@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>/// Initialize Flox
 
-var gameId = "6nkPAV2gLb4u82dr";
-var gameKey = "OWqrbbJiwIArWLlY";
+var gameId = "YOUR_GAME_ID";
+var gameKey = "YOUR_GAME_KEY";
 // This can be whatever you like, it is used to keep track
 // of what version of your game players are playing.
 var gameVersion = "0.1";

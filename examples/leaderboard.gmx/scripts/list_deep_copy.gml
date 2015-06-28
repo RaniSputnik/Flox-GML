@@ -20,3 +20,4 @@ if list_meta_has_name(list) {
 }
 
 return newList;
+

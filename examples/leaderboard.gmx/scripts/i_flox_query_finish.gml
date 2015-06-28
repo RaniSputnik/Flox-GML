@@ -12,3 +12,4 @@ if not map_get(query,"abort") {
 }
 // Free up the query
 map_destroy(query);
+

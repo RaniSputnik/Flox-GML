@@ -1,12 +1,11 @@
-/**
- * flox_entity_create(String entityType) Entity
- * Creates a new Flox entity, note that this method DOESN'T hit the
- * server, you must create a flox entity and then save it for the data
- * to be stored on Flox.
- */
+/// flox_entity_create(entityType)
+//
+//  Creates a new Flox entity, note that this method DOESN'T hit the
+//  server, you must create a flox entity and then save it for the data
+//  to be stored on Flox.
 
 var entityType = argument0;
-if not flox_assert(is_string(entityType),"Entity type must be a valid string '"+string(entityType)+"'") return noone;
+if not i_flox_assert(is_string(entityType),"Entity type must be a valid string '"+string(entityType)+"'") return noone;
 // TODO check there are no invalid characters in the entityType
 
 var entity = map_create("[Entity] "+entityType);
@@ -25,3 +24,4 @@ else map_set(entity,fx_owner_id,noone);
 // TODO apply any type information for the entity
 
 return entity;
+

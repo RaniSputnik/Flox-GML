@@ -8,8 +8,9 @@ var map = argument[0];
 var reason = "";
 if argument_count > 1 then reason = argument[1];
 
-if not flox_assert(map_exists(map),"Can not destroy map '"+string(map)+"', map does not exist")
+if not i_flox_assert(map_exists(map),"Can not destroy map '"+string(map)+"', map does not exist")
     return false;
 
 ds_map_destroy(map);
 map_meta_delete(map);
+

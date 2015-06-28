@@ -1,19 +1,17 @@
-/**
- * flox_entity_save(Entity entity, Script(Entity entity) onComplete,
- *                  Script(String error, Real httpStatus, Entity cachedCopy) onError)
- * Saves an entity to the server. This function is asynchronous
- * and will execute either onComplete or onError when it is finished.
- */
+/// flox_entity_save(entity,onComplete,onError)
+//
+//  Saves an entity to the server. This function is asynchronous
+//  and will execute either onComplete or onError when it is finished.
  
 var entity = argument0;
 var onComplete = argument1;
 var onError = argument2;
 var context = id;
 
-if not flox_assert(flox_entity_exists(entity),
+if not i_flox_assert(flox_entity_exists(entity),
     "Can not save entity '"+string(entity)+"', entity does not exist") then return false;
 
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     var entityId = map_get(entity,fx_id);
     var entityType = map_get(entity,fx_type);
     var path = i_flox_entity_url(entityType,entityId);
@@ -36,3 +34,4 @@ with flox_assert_initialized() {
     return true;
 }
 return false;
+

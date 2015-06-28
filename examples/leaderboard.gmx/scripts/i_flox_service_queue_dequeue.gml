@@ -9,3 +9,4 @@ map_destroy(requestCopy);
 ds_list_delete(queue,0);
 // Invalidate the persistent data so it is updated
 i_flox_persistent_invalidate();
+

@@ -5,31 +5,31 @@
  * Returns the persistent data in a map.
  */
 
-flox_log(fx_log_verbose,"Loading persistent data"); 
+i_flox_debug_message(fx_log_verbose,"Loading persistent data"); 
 // Create a map that the data will be stored in
 var contents = noone;
 // Read the contents of the persistent file
 if not self.preventPersistentDataLoad {
     var path = i_flox_persistent_filepath_get(self.gameID);
     if file_exists(path) {
-        var file = file_text_open_read(path);
-        if file > -1 {
-            var str  = file_text_read_string(file);
-            file_text_close(file);
-            flox_log(fx_log_silly,"Data",str);
+        var map = ds_map_secure_load(path);
+        if map_exists(map) and map_has(map,self.gameKey) {
+            var str = map_get(map,self.gameKey);
+            map_destroy(map);
+            i_flox_debug_message(fx_log_silly,"Data",str);
             // Add the contents into the map
             contents = json_decode(str);
             if map_exists(contents) {
                 map_meta_set_name(contents,"[Flox] Persistent Data");
-                flox_log(fx_log_verbose,"Loaded persistent data successfully");
+                i_flox_debug_message(fx_log_verbose,"Loaded persistent data successfully");
             }
-            else flox_log(fx_log_warn,"Failed to parse persisted data!");
+            else i_flox_debug_message(fx_log_warn,"Failed to parse persisted data!");
         }
-        else flox_log(fx_log_warn,"Failed to open persisted data file for reading '"+path+"'");
+        else i_flox_debug_message(fx_log_warn,"Failed to load persisted data! Malformed data file.");
     }
-    else flox_log(fx_log_warn,"No persistent data found, this is likely to be the first time this game has run");
+    else i_flox_debug_message(fx_log_warn,"No persistent data found, this is likely to be the first time this game has run");
 }
-else flox_log(fx_log_warn,"Data will not be loaded, 'preventPersistentDataLoad' is enabled");
+else i_flox_debug_message(fx_log_warn,"Data will not be loaded, 'preventPersistentDataLoad' is enabled");
 // Create an empty contents map if none was loaded
 if not map_exists(contents) 
     then contents = map_create("[Flox] Persistent Data");
@@ -65,7 +65,7 @@ repeat map_size(serviceCache) {
         map_meta_set_name(cachedMap,"[Cache] path="+path);
         if string_pos("leaderboards",path) > 0 {
             var leaderboardList = map_get(cachedMap,"default");
-            if is_real(leaderboardList) {
+            if list_exists(leaderboardList) {
                 list_meta_set_name(leaderboardList,'[Flox] Leaderboard');
                 for (var i=0, n=list_size(leaderboardList); i<n; i++) {
                     var scoreData = ds_list_find_value(leaderboardList,i);
@@ -79,3 +79,4 @@ repeat map_size(serviceCache) {
 
 // Set the persistent data
 self._persistentData = contents;
+

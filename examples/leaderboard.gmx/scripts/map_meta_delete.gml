@@ -6,3 +6,4 @@
 var map = argument0;
 var key = string(map) + "-name";
 ds_map_delete(global.__mapInfo,key);
+

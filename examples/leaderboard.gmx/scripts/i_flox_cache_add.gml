@@ -25,3 +25,4 @@ if map_exists(metadata) {
 }
 // We've modified the cache so mark it to be saved on the next step
 i_flox_persistent_invalidate();
+

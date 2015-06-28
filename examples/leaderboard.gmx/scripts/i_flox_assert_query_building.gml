@@ -3,5 +3,6 @@
  * Assert to check that a query is currently being constructed/
  */
  
-return flox_assert(map_exists(self._query),
+return i_flox_assert(map_exists(self._query),
     "Can not find query, no query exists");
+

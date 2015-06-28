@@ -30,3 +30,4 @@ while list_size(self._serviceRequestsAwaitingQueueCompletion) > 0 {
     ds_list_delete(self._serviceRequestsAwaitingQueueCompletion,0);
     map_destroy(request);
 }
+

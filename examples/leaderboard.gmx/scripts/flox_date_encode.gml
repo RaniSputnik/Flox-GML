@@ -1,12 +1,11 @@
-/**
- * flox_date_encode(DateTime date) String
- * Takes a GameMaker datetime and turns it into a xs:DateTime string
- * eg: 2014-12-27T11:23:04.976Z
- */
+/// flox_date_encode(date)
+//
+//  Takes a GameMaker datetime and turns it into a xs:DateTime string
+//  eg: 2014-12-27T11:23:04.976Z
  
 var date = argument0;
 
-if not flox_assert(is_real(date),
+if not i_flox_assert(is_real(date),
     "Can not encode date, invalid date-time '"+string(date)+"'") then exit;
 
 var tz = date_get_timezone();
@@ -45,3 +44,4 @@ sb += "Z"; //instead of: sb += "-00:00";
 
 date_set_timezone(tz); // Don't modify the timezone
 return sb; // Return the resulting string
+

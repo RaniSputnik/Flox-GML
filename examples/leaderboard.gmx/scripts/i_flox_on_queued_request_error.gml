@@ -24,3 +24,4 @@ else {
     i_flox_service_queue_dequeue();
     self._serviceQueueShouldProcess = true;
 }
+

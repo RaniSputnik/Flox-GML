@@ -16,3 +16,4 @@ var entity = i_flox_entity_from_map(entityType,entityId,body);
 
 // Add the entity to the query results
 i_flox_query_add_entity(query,position,entity);
+

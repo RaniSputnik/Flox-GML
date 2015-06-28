@@ -37,3 +37,4 @@ if map_exists(prevAuth) then map_destroy(prevAuth);
 i_flox_persistent_invalidate();
 // Callback
 i_flox_callback(context,onComplete,player);
+

@@ -11,3 +11,4 @@ list_add_map(queue,request);
 self._serviceQueueShouldProcess = true;
 // Invalidate the persistent data so it is updated
 i_flox_persistent_invalidate();
+

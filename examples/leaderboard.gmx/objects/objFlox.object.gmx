@@ -93,7 +93,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>fx_log_silly</string>
+            <string>fx_log_verbose</string>
           </argument>
         </arguments>
       </action>
@@ -312,7 +312,7 @@
             <string>/// Internal setup
 
 // Make sure there isn't more than one flox instance
-flox_assert(instance_number(objFlox == 1),"You have created more than one objFlox instance, you do not need to include this object in your rooms, it will be instantiated for you");
+i_flox_assert(instance_number(objFlox == 1),"You have created more than one objFlox instance, you do not need to include this object in your rooms, it will be instantiated for you");
 
 // Deprecated property - Here for old times sake
 self.verbose = false;

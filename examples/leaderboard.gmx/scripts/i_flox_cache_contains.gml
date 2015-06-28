@@ -5,3 +5,4 @@
 
 var cache = i_flox_cache();
 return map_has(cache,argument0);
+

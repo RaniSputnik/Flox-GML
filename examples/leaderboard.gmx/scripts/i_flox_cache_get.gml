@@ -9,7 +9,7 @@ var path     = string(argument0);
 var eTag     = string(argument1);
 var cache = i_flox_cache();
 
-flox_log(fx_log_verbose,"Fetching from cache path="+path+", eTag="+eTag);
+i_flox_debug_message(fx_log_verbose,"Fetching from cache path="+path+", eTag="+eTag);
 // Cached object or noone (but don't write the 'noone' into the
 var cachedObject = map_default(cache,path,noone,false);
 if map_exists(cachedObject) {
@@ -19,3 +19,4 @@ if map_exists(cachedObject) {
     }
 }
 return noone;
+

@@ -1,13 +1,12 @@
-/**
- * flox_date_decode(String date) DateTime
- * Takes a xs:DateTime string and parses it into a valid GameMaker datetime
- * eg: 2014-12-27T11:23:04.976Z
- */
+/// flox_date_decode(date)
+//
+//  Takes a xs:DateTime string and parses it into a valid GameMaker datetime
+//  eg: 2014-12-27T11:23:04.976Z
  
 var str = argument0;
 var originalStr = argument0;
 
-if not flox_assert(is_string(str),
+if not i_flox_assert(is_string(str),
     "Can not decode date, invalid string '"+string(str)+"'") then exit;
 
 // Parse timezone info
@@ -79,5 +78,6 @@ if date_valid_datetime(year,month,day,hour,minute,second) {
 date_set_timezone(tz);
 
 // Return the result
-if datetime == noone return flox_throw_error("Error decoding date string, datetime not valid '"+originalStr+"'");
+if datetime == noone return flox_die("Error decoding date string, datetime not valid '"+originalStr+"'");
 else return datetime;
+

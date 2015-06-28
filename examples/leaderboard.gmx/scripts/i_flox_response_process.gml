@@ -28,18 +28,18 @@ if map_has(self._serviceRequests,requestId) {
     var method      = map_get(requestInfo,"method");
     var path        = map_get(requestInfo,"path");
     var data        = map_default(requestInfo,"data",noone);
-    if is_string(data) flox_log(fx_log_verbose,data);
+    if is_string(data) i_flox_debug_message(fx_log_verbose,data);
     var cache       = map_default(requestInfo,"cachedResult",noone);
     var onComplete  = map_default(requestInfo,"onComplete",noone);
     var onError     = map_default(requestInfo,"onError",noone);
 
     // Print out debug messages if necessary
-    flox_log(fx_log_verbose,"Processing response for path = "+path);
-    flox_log(fx_log_silly,"Response",json_encode(response));
+    i_flox_debug_message(fx_log_verbose,"Processing response for path = "+path);
+    i_flox_debug_message(fx_log_silly,"Response",json_encode(response));
     
     // If we couldn't contact the server for any odd/unknown reasons
     if not map_exists(headers) {
-        flox_log(fx_log_warn,"Flox server unreachable");
+        i_flox_debug_message(fx_log_warn,"Flox server unreachable");
         if script_exists(onError)
             then script_execute(onError,requestInfo,"Flox server unreachable",http_status_unknown,cache);
     }
@@ -50,7 +50,7 @@ if map_has(self._serviceRequests,requestId) {
         var response = json_decode(body);
         // Respond to parse errors
         if not map_exists(response) {
-            flox_log(fx_log_warn,"Invalid response from Flox server");
+            i_flox_debug_message(fx_log_warn,"Invalid response from Flox server");
             var error = "Invalid response from Flox server: "+body;
             if script_exists(onError)
                 then script_execute(onError,requestInfo,error,httpStatus,cache);
@@ -59,7 +59,7 @@ if map_has(self._serviceRequests,requestId) {
         else {
             // If the request was successful
             if flox_http_status_is_success(httpStatus) {
-                flox_log(fx_log_verbose,"Flox request successful");
+                i_flox_debug_message(fx_log_verbose,"Flox request successful");
                 // If it is a get request then we cache and return
                 if method == http_method_get {
                     // If the status was NOT_MODIFIED then we can simply
@@ -80,7 +80,7 @@ if map_has(self._serviceRequests,requestId) {
                     if is_string(data) {
                         // TODO - work out how to best make this work with data
                         // when data is a string
-                        flox_log(fx_log_warn,"You made a put request with pre-encoded data, "+
+                        i_flox_debug_message(fx_log_warn,"You made a put request with pre-encoded data, "+
                             "but we don't update pre-encoded data with correct timestamps from server. "+
                             "You may want to fix that...");
                     }
@@ -109,7 +109,7 @@ if map_has(self._serviceRequests,requestId) {
                 // Try and determine the error message
                 if map_exists(response) and map_has(response,"message")
                     then error = map_get(response,"message");
-                flox_log(fx_log_warn,"Request was not successful, error = "+error);
+                i_flox_debug_message(fx_log_warn,"Request was not successful, error = "+error);
                 // Call the onError script
                 if script_exists(onError)
                     then script_execute(onError,requestInfo,error,httpStatus,cache);
@@ -120,3 +120,4 @@ if map_has(self._serviceRequests,requestId) {
     map_destroy(requestInfo);
     map_delete(self._serviceRequests,requestId);
 }
+

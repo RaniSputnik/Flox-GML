@@ -15,3 +15,4 @@ map_set(player,fx_public_access,fx_read_only);
 // for preventing player modification
 
 return player;
+
