@@ -23,6 +23,10 @@ or not flox_assert(is_string(gameVersion), "Game version must be a valid string 
 with flox_get() {
     if not flox_assert(not self._initialized,"Flox is already initialized!") then return false;
 
+    // Change the random seed so that we don't end up
+    // using the same id each time.
+    randomize();
+    
     self._initialized = true;
 
     self.gameID = gameID;
