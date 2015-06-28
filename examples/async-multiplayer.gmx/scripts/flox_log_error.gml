@@ -1,18 +1,16 @@
-/**
- * flox_log_error(String errorType, String message)
- * Adds an error to the session log
- * ErrorType is used to group errors together in the control panel
- * so try and use only a few error types and be descriptive with the
- * message.
- */
- 
+/// flox_log_error(errorType,message)
+//
+//  Adds an error to the session log
+//  ErrorType is used to group errors together in the control panel
+//  so try and use only a few error types.
+
 var errorType = string(argument0);
 var message = string(argument1);
 
 // Ensure flox is initialized
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     // Print a message on the console
-    flox_log(fx_log_error,"[Error] "+errorType+" : "+message);
+    i_flox_debug_message(fx_log_error,"[Error] "+errorType+" : "+message);
     // Create the map to store the data for the log entry
     var entry = map_create("[Log] "+errorType+" : "+message);
     map_set(entry,"name",errorType);
@@ -30,4 +28,3 @@ with flox_assert_initialized() {
     // Invalidate the persistent data so that it gets saved at the next opportunity
     i_flox_persistent_invalidate();
 }
-

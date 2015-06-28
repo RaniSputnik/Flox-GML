@@ -40,7 +40,7 @@
       <constants>
         <constant>
           <name>fx_sdk_version</name>
-          <value>"0.4.3"</value>
+          <value>"0.5.0"</value>
           <hidden>0</hidden>
         </constant>
         <constant>

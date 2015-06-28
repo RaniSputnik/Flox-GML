@@ -1,23 +1,21 @@
-/**
- * flox_query_find(Script(List results) onComplete,
- *                 Script(String error, Real httpStatus) onError)
- * Use this script after building a query to find the results.
- * This script is asychronous and will execute either
- * onComplete or onError when it is finished.
- */
+/// flox_query_find(onComplete,onError)
+//
+//  Use this script after building a query to find the results.
+//  This script is asychronous and will execute either
+//  onComplete or onError when it is finished.
 
 var onComplete = argument0;
 var onError    = argument1;
 var context    = id;
 
 // Ensure that the callbacks provided are valid
-if not flox_assert(script_exists(onComplete),
+if not i_flox_assert(script_exists(onComplete),
     "'"+string(onComplete)+"' is not a valid script") then exit;
-if not flox_assert(script_exists(onError),
+if not i_flox_assert(script_exists(onError),
     "'"+string(onError)+"' is not a valid script") then exit;
 
 // Perform the request
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     if not i_flox_assert_query_building() return false;
     // Get the properties of the query
     var entityType = map_get(_query,"type");
@@ -33,7 +31,7 @@ with flox_assert_initialized() {
         queryJSON += ',"orderBy":"'+map_get(self._query,"orderBy")+'"';
     }
     queryJSON += '}';
-    flox_log(fx_log_silly,"Constructed query: "+queryJSON);
+    i_flox_debug_message(fx_log_silly,"Constructed query: "+queryJSON);
     var req = i_flox_request(http_method_post,path,queryJSON,
         i_flox_on_query_complete,i_flox_on_query_error);
     map_set(self._query,"onComplete",onComplete);

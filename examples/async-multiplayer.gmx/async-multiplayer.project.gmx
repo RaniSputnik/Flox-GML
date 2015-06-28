@@ -71,11 +71,7 @@
       <script>scripts\flox_date_encode.gml</script>
       <script>scripts\flox_http_status_is_success.gml</script>
       <script>scripts\flox_http_status_is_transient_error.gml</script>
-      <script>scripts\flox_debug_message.gml</script>
-      <script>scripts\flox_log.gml</script>
-      <script>scripts\flox_throw_error.gml</script>
-      <script>scripts\flox_assert.gml</script>
-      <script>scripts\flox_assert_initialized.gml</script>
+      <script>scripts\flox_die.gml</script>
       <script>scripts\i_flox_player_create.gml</script>
       <script>scripts\i_flox_player_login.gml</script>
       <script>scripts\i_flox_player_login_auth_data.gml</script>
@@ -171,6 +167,9 @@
       <script>scripts\i_flox_get_display_resolution.gml</script>
       <script>scripts\i_flox_encode_map_for_uri.gml</script>
       <script>scripts\i_flox_get_current_time_utc.gml</script>
+      <script>scripts\i_flox_debug_message.gml</script>
+      <script>scripts\i_flox_assert.gml</script>
+      <script>scripts\i_flox_assert_initialized.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -205,7 +204,7 @@
     <room>rooms\rmMatch</room>
   </rooms>
   <constants number="45">
-    <constant name="fx_sdk_version">"0.4.3"</constant>
+    <constant name="fx_sdk_version">"0.5.0"</constant>
     <constant name="fx_null">"null"</constant>
     <constant name="fx_guest">"guest"</constant>
     <constant name="fx_key">"key"</constant>

@@ -38,13 +38,13 @@ for (var i = 0; i < numResults; i++) {
     var entityPath = i_flox_entity_url(entityType,entityId);
     var cachedEntity = i_flox_cache_get(entityPath,eTag);
     if map_exists(cachedEntity) {
-        flox_log(fx_log_silly,"Retrieved entity from cache");
+        i_flox_debug_message(fx_log_silly,"Retrieved entity from cache");
         var entity = i_flox_entity_from_map(entityType,entityId,cachedEntity);
         i_flox_query_add_entity(query,i,entity);
     }
     // If it's not there then load it straight up
     else {
-        flox_log(fx_log_silly,"Requesting entity from server");
+        i_flox_debug_message(fx_log_silly,"Requesting entity from server");
         var req = i_flox_request(http_method_get,entityPath,noone,
             i_flox_on_query_entity_load_complete,i_flox_on_query_error);
         map_set(req,"entityType",entityType);

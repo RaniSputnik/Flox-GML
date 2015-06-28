@@ -1,11 +1,8 @@
-/**
- * flox_entity_destroy_type(String type, String id,
- *                          Script() onComplete,
- *                          Script(String error, Real httpStatus, Entity cachedCopy)
- * Destroys a given entity by type and id, removing it from
- * the server. This function is asynchronous and will execute
- * either onComplete or onError when it is finished.
- */
+/// flox_entity_destroy_type(type,id,onComplete,onError)
+// 
+//  Destroys a given entity by type and id, removing it from
+//  the server. This function is asynchronous and will execute
+//  either onComplete or onError when it is finished.
  
 var entityType = string(argument0);
 var entityId   = string(argument1);
@@ -14,12 +11,12 @@ var onError    = argument3;
 var context    = id;
 
 // Check id is not blank
-if not flox_assert(entityType != "",
+if not i_flox_assert(entityType != "",
     "Can not destroy entity, entity type is blank") then return false;
-if not flox_assert(entityId != "",
+if not i_flox_assert(entityId != "",
     "Can not destroy entity, entity id is blank") then return false;
 
-with flox_assert_initialized() {  
+with i_flox_assert_initialized() {  
     // Make the request
     var path = i_flox_entity_url(entityType,entityId);
     var req = i_flox_request(http_method_delete,path,noone,

@@ -1,18 +1,17 @@
-/**
- * flox_entity_refresh(Entity entity, Script(Entity entity) onComplete,
- *                     Script(String error, Real httpStatus) onError)
- * Updates the properties of an entity.
- */
+/// flox_entity_refresh(entity,onComplete,onError)
+//
+//  Updates the properties of an entity with the copy from
+//  the server.
 
 var entity     = argument0;
 var onComplete = argument1;
 var onError    = argument2;
 var context    = id;
 
-if not flox_assert(flox_entity_exists(entity),
+if not i_flox_assert(flox_entity_exists(entity),
     "Can not refresh entity, entity does not exist") then return false;
 
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     var entityType = map_get(entity,fx_type);
     var entityId = map_get(entity,fx_id);
     var path = i_flox_entity_url(entityType,entityId);

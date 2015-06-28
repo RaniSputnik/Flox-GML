@@ -1,13 +1,12 @@
-/**
- * flox_entity_save_queued(Entity entity)
- * Saves an entity to the server at the next available moment.
- */
+/// flox_entity_save_queued(entity)
+//
+//  Saves an entity to the server at the next available moment.
  
 var entity = real(argument0);
-if not flox_assert(flox_entity_exists(entity),
+if not i_flox_assert(flox_entity_exists(entity),
     "Trying to save an entity that does not exist") then return false;
  
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     var entityId = map_get(entity,fx_id);
     var entityType = map_get(entity,fx_type);
     // Find the REST endpoint
