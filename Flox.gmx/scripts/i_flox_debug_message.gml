@@ -1,4 +1,4 @@
-/// flox_log(logLevel,message...)
+/// i_flox_debug_message(logLevel,message...)
 //
 //  Prints a messages to the console if the current log level
 //  is equal or more verbose than the log level specified

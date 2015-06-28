@@ -31,7 +31,7 @@ with flox_assert_initialized() {
         queryJSON += ',"orderBy":"'+map_get(self._query,"orderBy")+'"';
     }
     queryJSON += '}';
-    flox_log(fx_log_silly,"Constructed query: "+queryJSON);
+    i_flox_debug_message(fx_log_silly,"Constructed query: "+queryJSON);
     var req = i_flox_request(http_method_post,path,queryJSON,
         i_flox_on_query_complete,i_flox_on_query_error);
     map_set(self._query,"onComplete",onComplete);

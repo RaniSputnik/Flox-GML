@@ -7,7 +7,7 @@ var message = string(argument0);
 // Ensure flox is initialized
 with flox_assert_initialized() {
     // Print a message on the console
-    flox_log(fx_log_verbose,"[Info] "+message);
+    i_flox_debug_message(fx_log_verbose,"[Info] "+message);
     // Create the map to store the data for the log entry
     var entry = map_create("[Log] Info:"+message);
     map_set(entry,"message",message);

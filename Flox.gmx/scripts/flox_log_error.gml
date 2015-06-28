@@ -10,7 +10,7 @@ var message = string(argument1);
 // Ensure flox is initialized
 with flox_assert_initialized() {
     // Print a message on the console
-    flox_log(fx_log_error,"[Error] "+errorType+" : "+message);
+    i_flox_debug_message(fx_log_error,"[Error] "+errorType+" : "+message);
     // Create the map to store the data for the log entry
     var entry = map_create("[Log] "+errorType+" : "+message);
     map_set(entry,"name",errorType);

@@ -10,8 +10,8 @@ var hasProps = map_exists(props);
 // Ensure flox is initialized
 with flox_assert_initialized() {
     // Print a message on the console
-    if hasProps then flox_log(fx_log_verbose,"[Event] "+eventType+" : "+json_encode(props));
-    else flox_log(fx_log_verbose,"[Event] "+eventType);
+    if hasProps then i_flox_debug_message(fx_log_verbose,"[Event] "+eventType+" : "+json_encode(props));
+    else i_flox_debug_message(fx_log_verbose,"[Event] "+eventType);
     // Create the map to store the data for the log entry
     var entry = map_create("[Log] "+eventType);
     map_set(entry,"name",eventType);
