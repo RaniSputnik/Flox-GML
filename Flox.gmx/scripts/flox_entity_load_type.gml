@@ -11,12 +11,12 @@ var onError    = argument3;
 var context    = id;
 
 // Check id is not blank
-if not flox_assert(entityType != "",
+if not i_flox_assert(entityType != "",
     "Can not load entity, entity type is blank") then return false;
-if not flox_assert(entityId != "",
+if not i_flox_assert(entityId != "",
     "Can not load entity, entity id is blank") then return false;
 
-with flox_assert_initialized() {  
+with i_flox_assert_initialized() {  
     // Make the load request
     var path = i_flox_entity_url(entityType,entityId);
     var req = i_flox_request(http_method_get,path,noone,

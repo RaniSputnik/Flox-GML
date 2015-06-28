@@ -9,7 +9,7 @@ var onComplete = argument1;
 var onError = argument2;
 var context = id;
  
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     // We make the request, sending the email in the request data
     var data = map_create("password-reset-data");
     map_set(data,"email",email);

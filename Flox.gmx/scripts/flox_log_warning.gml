@@ -5,7 +5,7 @@
 var message = string(argument0);
 
 // Ensure flox is initialized
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     // Print a message on the console
     i_flox_debug_message(fx_log_warn,"[Warning] "+message);
     // Create the map to store the data for the log entry

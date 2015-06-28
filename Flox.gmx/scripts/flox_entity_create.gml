@@ -5,7 +5,7 @@
 //  to be stored on Flox.
 
 var entityType = argument0;
-if not flox_assert(is_string(entityType),"Entity type must be a valid string '"+string(entityType)+"'") return noone;
+if not i_flox_assert(is_string(entityType),"Entity type must be a valid string '"+string(entityType)+"'") return noone;
 // TODO check there are no invalid characters in the entityType
 
 var entity = map_create("[Entity] "+entityType);

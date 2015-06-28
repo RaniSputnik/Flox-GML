@@ -5,7 +5,7 @@
  */
  
 var entity = argument0;
-if not flox_assert(flox_entity_exists(entity),"Attempting to convert an entity to a map that does not exist") exit;
+if not i_flox_assert(flox_entity_exists(entity),"Attempting to convert an entity to a map that does not exist") exit;
 var map = map_deep_copy(entity);
 map_meta_set_name(map,"entity-data");
 
@@ -21,4 +21,3 @@ var updatedAt = map_get(map,fx_updated_at);
 map_set(map,fx_created_at,flox_date_encode(createdAt));
 map_set(map,fx_updated_at,flox_date_encode(updatedAt));
 return map;
-

@@ -6,7 +6,7 @@ var leaderboardID = string(argument0);
 var value = argument1;
 var playerName = string(argument2);
  
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     // Find the REST endpoint
     var path = "leaderboards"+"/"+string(leaderboardID);
     // Create the request data

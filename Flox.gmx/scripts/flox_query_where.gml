@@ -7,10 +7,10 @@ var constraints = string(argument[0]);
 var numPlaceholders = string_count("?",constraints);
 
 // Check that the number of ?'s matches the number of arguments provided
-if not flox_assert(numPlaceholders == argument_count-1,
+if not i_flox_assert(numPlaceholders == argument_count-1,
     "'With' constraints invalid, number of placeholders does not match the number of arguments") then return false;
 
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     if not i_flox_assert_query_building() return false;
     // Add constraints
     var lastArgPos = 1;
@@ -21,7 +21,7 @@ with flox_assert_initialized() {
         // argument into a list so that the dev's don't gotta remember
         var inPos = string_pos("IN",curString);
         if inPos != 0 {
-            if not flox_assert(list_exists(argument[i]),
+            if not i_flox_assert(list_exists(argument[i]),
                 "'"+string(argument[i])+"' is not a valid list and can not be used for an IN constraint") return false;
             else argument[i] = i_flox_query_list_string(argument[i]);
         }

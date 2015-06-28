@@ -3,6 +3,6 @@
 //  Gets the current Flox player
 
 
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     return map_get(self._persistentData,"currentPlayer");
 }

@@ -12,7 +12,7 @@ var def = argument[2];
 var shouldWrite = true;
 if argument_count > 3 then shouldWrite = argument[3] == true;
 // Ensure the map exists
-if not flox_assert(map_exists(map),"Can not use default value for key '"+string(key)+"' of map '"+string(map)+"', map does not exist")
+if not i_flox_assert(map_exists(map),"Can not use default value for key '"+string(key)+"' of map '"+string(map)+"', map does not exist")
     return false;
 // If the map doesn't have the key then return/write the default
 if not map_has(map,key) {

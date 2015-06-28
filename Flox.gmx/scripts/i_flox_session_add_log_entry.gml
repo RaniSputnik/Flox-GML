@@ -8,7 +8,7 @@ var data = argument1;
 
 // Get the current session
 var session = map_get(self._persistentData,"session");
-if not flox_assert(session,"Can not add log, no current session") then exit;
+if not i_flox_assert(session,"Can not add log, no current session") then exit;
 // Add additional information to the log data
 map_set(data,"type",type);
 map_set(data,"time",flox_date_encode(i_flox_get_current_time_utc()));

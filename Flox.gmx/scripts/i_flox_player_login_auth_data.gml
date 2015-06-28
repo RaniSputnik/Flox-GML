@@ -10,10 +10,10 @@ var onComplete = argument1;
 var onError = argument2;
 var context = id;
 
-if not flox_assert(map_exists(authData),
+if not i_flox_assert(map_exists(authData),
     "Can not log in, auth data provided is invalid") then return false;
 
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     i_flox_debug_message(fx_log_silly,"Logging in with auth data = "+json_encode(authData));
     var previousAuth = i_flox_authentication_get();
     var authType = map_get(authData,"authType");

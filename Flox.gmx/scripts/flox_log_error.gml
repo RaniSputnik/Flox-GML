@@ -8,7 +8,7 @@ var errorType = string(argument0);
 var message = string(argument1);
 
 // Ensure flox is initialized
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     // Print a message on the console
     i_flox_debug_message(fx_log_error,"[Error] "+errorType+" : "+message);
     // Create the map to store the data for the log entry

@@ -8,7 +8,7 @@ var props = argument1;
 var hasProps = map_exists(props);
 
 // Ensure flox is initialized
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     // Print a message on the console
     if hasProps then i_flox_debug_message(fx_log_verbose,"[Event] "+eventType+" : "+json_encode(props));
     else i_flox_debug_message(fx_log_verbose,"[Event] "+eventType);

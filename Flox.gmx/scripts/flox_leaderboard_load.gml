@@ -15,7 +15,7 @@ var onError = argument3;
 var context = id;
 
 // Make sure that flox is initialized
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     var path = "leaderboards"+"/"+string(leaderboardID);
     var data = map_create("load-scores-data");
     // If scope is a string, we presume it is one of the timescope values

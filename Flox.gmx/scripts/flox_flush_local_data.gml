@@ -4,6 +4,6 @@
 //  so most of the time you wont have to worry, however you can flush local data
 //  at regular intervals to get more accurate session durations.
 
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     i_flox_persistent_save(id);
 }

@@ -6,7 +6,7 @@
 var str = argument0;
 var originalStr = argument0;
 
-if not flox_assert(is_string(str),
+if not i_flox_assert(is_string(str),
     "Can not decode date, invalid string '"+string(str)+"'") then exit;
 
 // Parse timezone info

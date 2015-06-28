@@ -5,7 +5,7 @@
  
 var date = argument0;
 
-if not flox_assert(is_real(date),
+if not i_flox_assert(is_real(date),
     "Can not encode date, invalid date-time '"+string(date)+"'") then exit;
 
 var tz = date_get_timezone();

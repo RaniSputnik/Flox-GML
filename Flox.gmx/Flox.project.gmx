@@ -70,8 +70,6 @@
         <script>scripts\flox_http_status_is_success.gml</script>
         <script>scripts\flox_http_status_is_transient_error.gml</script>
         <script>scripts\flox_die.gml</script>
-        <script>scripts\flox_assert.gml</script>
-        <script>scripts\flox_assert_initialized.gml</script>
       </scripts>
       <scripts name="internal">
         <scripts name="core">
@@ -191,6 +189,8 @@
           <script>scripts\i_flox_encode_map_for_uri.gml</script>
           <script>scripts\i_flox_get_current_time_utc.gml</script>
           <script>scripts\i_flox_debug_message.gml</script>
+          <script>scripts\i_flox_assert.gml</script>
+          <script>scripts\i_flox_assert_initialized.gml</script>
         </scripts>
       </scripts>
     </scripts>

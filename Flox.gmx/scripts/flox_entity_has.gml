@@ -5,5 +5,5 @@
 var entity = argument0;
 var prop   = argument1;
 
-if not flox_assert(flox_entity_exists(entity),"Can not get entity property '"+prop+"', entity does not exist") return false;
+if not i_flox_assert(flox_entity_exists(entity),"Can not get entity property '"+prop+"', entity does not exist") return false;
 return map_has(entity,prop);

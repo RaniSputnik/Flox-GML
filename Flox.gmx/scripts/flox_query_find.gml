@@ -9,13 +9,13 @@ var onError    = argument1;
 var context    = id;
 
 // Ensure that the callbacks provided are valid
-if not flox_assert(script_exists(onComplete),
+if not i_flox_assert(script_exists(onComplete),
     "'"+string(onComplete)+"' is not a valid script") then exit;
-if not flox_assert(script_exists(onError),
+if not i_flox_assert(script_exists(onError),
     "'"+string(onError)+"' is not a valid script") then exit;
 
 // Perform the request
-with flox_assert_initialized() {
+with i_flox_assert_initialized() {
     if not i_flox_assert_query_building() return false;
     // Get the properties of the query
     var entityType = map_get(_query,"type");

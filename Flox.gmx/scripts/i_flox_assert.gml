@@ -1,4 +1,4 @@
-/// flox_assert(condition,message) 
+/// i_flox_assert(condition,message) 
 //
 //  Checks the given condition is true, if it isn't then
 //  a flox error will be thrown with the given message.

@@ -8,7 +8,7 @@ var entity = argument0;
 var onComplete = argument1;
 var onError = argument2;
 
-if not flox_assert(flox_entity_exists(entity),
+if not i_flox_assert(flox_entity_exists(entity),
     "Can not destroy entity '"+string(entity)+"', entity does not exist") then return false;
     
 var entityType = map_get(entity,fx_type);
