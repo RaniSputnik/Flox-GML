@@ -78,5 +78,5 @@ if date_valid_datetime(year,month,day,hour,minute,second) {
 date_set_timezone(tz);
 
 // Return the result
-if datetime == noone return flox_throw_error("Error decoding date string, datetime not valid '"+originalStr+"'");
+if datetime == noone return flox_die("Error decoding date string, datetime not valid '"+originalStr+"'");
 else return datetime;

@@ -8,6 +8,6 @@
 var condition = argument0;
 var message = argument1;
 if not condition == true {
-    flox_throw_error(message);
+    flox_die(message);
 }
 return condition;

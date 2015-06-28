@@ -1,4 +1,4 @@
-/// flox_throw_error(message)
+/// flox_die(message)
 //
 //  Registers that an error has occurred and prints/displays it to the developer
 //  After an error has occurred flox will not persist the session to disk or make

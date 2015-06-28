@@ -29,7 +29,7 @@ with flox_assert_initialized() {
         map_set_list(data,"p",scope);
     }
     else {
-        flox_throw_error("Invalid scope argument, must be timescope or list of player id's");
+        flox_die("Invalid scope argument, must be timescope or list of player id's");
         return false;
     }
     // Perform the request
