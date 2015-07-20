@@ -127,8 +127,8 @@ var yy = y;
 if self.error != "" {
     draw_set_color(c_red);
     draw_set_halign(fa_left);
-    draw_text_ext(xx,yy,self.error,0,room_width-xx*2);
-    yy += string_height_ext(self.error,0,room_width-xx*2);
+    draw_text_ext(xx,yy,self.error,-1,room_width-xx*2);
+    yy += string_height_ext(self.error,-1,room_width-xx*2);
     yy += 4;
 }
 draw_set_color(c_black);
