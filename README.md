@@ -29,12 +29,10 @@ marketplace. It supports the project and ensures that I can keep giving away cod
 
 Just by **starting up Flox**, you will already generate several interesting analytics charts in the web interface.
 ```
-#!javascript
 flox_init("gameID", "gameKey", "1.0");
 ```
 With **Events**, you can collect more finegrained data about how players are using your game. Pass custom properties to get a nice visualization of the details.
 ```
-#!javascript
 var event = ds_map_create();
 ds_map_add(event,"from","MainMenu");
 ds_map_add(event,"to","SettingsMenu");
