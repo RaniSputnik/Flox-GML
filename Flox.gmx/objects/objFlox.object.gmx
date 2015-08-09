@@ -312,7 +312,7 @@
             <string>/// Internal setup
 
 // Make sure there isn't more than one flox instance
-i_flox_assert(instance_number(objFlox == 1),"You have created more than one objFlox instance, you do not need to include this object in your rooms, it will be instantiated for you");
+i_flox_assert(instance_number(objFlox &lt;= 1),"You have created more than one objFlox instance, you do not need to include this object in your rooms, it will be instantiated for you");
 
 // Deprecated property - Here for old times sake
 self.verbose = false;
