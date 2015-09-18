@@ -5,6 +5,8 @@
 
 var response = argument0;
 var requestId = map_get(response,"id");
+// Print out the response that was received
+i_flox_debug_message(fx_log_silly,"Response",json_encode(response));
 // Sometimes we can receive multiple responses for a single id,
 // if this isn't the final response ignore it
 if not map_has(response,"http_status") then exit;
@@ -35,10 +37,9 @@ if map_has(self._serviceRequests,requestId) {
 
     // Print out debug messages if necessary
     i_flox_debug_message(fx_log_verbose,"Processing response for path = "+path);
-    i_flox_debug_message(fx_log_silly,"Response",json_encode(response));
     
     // If we couldn't contact the server for any odd/unknown reasons
-    if not map_exists(headers) {
+    if not map_exists(headers) and status < 0 {
         i_flox_debug_message(fx_log_warn,"Flox server unreachable");
         if script_exists(onError)
             then script_execute(onError,requestInfo,"Flox server unreachable",http_status_unknown,cache);
@@ -117,6 +118,7 @@ if map_has(self._serviceRequests,requestId) {
             map_destroy(response);
         }
     }
+    // Clean up the request "metadata" map
     map_destroy(requestInfo);
     map_delete(self._serviceRequests,requestId);
 }
