@@ -226,6 +226,7 @@
       <script>scripts\scrNextTest.gml</script>
     </scripts>
   </scripts>
+  <shaders name="shaders"/>
   <fonts name="fonts">
     <font>fonts\fntCourierSmall</font>
   </fonts>
@@ -235,6 +236,7 @@
       <object>objects\objDsDebugger</object>
     </objects>
     <objects name="tests">
+      <object>objects\objProps</object>
       <object>objects\objTestNavigator</object>
       <object>objects\objForceServiceFailure</object>
       <object>objects\objLoginKey</object>
