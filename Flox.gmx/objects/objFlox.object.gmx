@@ -317,6 +317,9 @@ i_flox_assert(instance_number(objFlox) &lt;= 1,"You have created more than one o
 // Deprecated property - Here for old times sake
 self.verbose = false;
 
+// firstRun will be set to true if this is the first time the game has been run
+self.firstRun = false;
+
 // Whether or not flox has been initialized
 self._initialized = false;
 // Whether or not a fatal error has occurred, used to prevent
