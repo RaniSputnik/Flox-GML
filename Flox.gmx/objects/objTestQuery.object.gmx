@@ -156,8 +156,12 @@ if ds_exists(self.results,ds_type_list) {
     var yy = y + sprite_height+16;
     for (var i=0, n=ds_list_size(self.results); i&lt;n; i++) {
         var player = ds_list_find_value(self.results,i);
-        var playerId = flox_entity_get(player,fx_id);
-        draw_text(x,yy,string(i+1)+": "+playerId);
+        if is_string(player) {
+            draw_text(x,yy,string(i+1)+": "+player);
+        } else {
+            var playerId = flox_entity_get(player,fx_id);
+            draw_text(x,yy,string(i+1)+": "+playerId);
+        }
         yy += string_height("|");
     }
 }

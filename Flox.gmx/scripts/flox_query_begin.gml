@@ -12,6 +12,7 @@ with i_flox_assert_initialized() {
     self._query = map_create("[Query] "+entityType);
     map_set(self._query,"type",entityType);
     map_set(self._query,"offset",0);
+    map_set(self._query,"idsOnly",false);
     var defaultLimit = 50;
     if os_type == os_windows then defaultLimit = 8;
     map_set(self._query,"limit",defaultLimit);

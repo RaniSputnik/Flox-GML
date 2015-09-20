@@ -57,6 +57,7 @@
         <script>scripts\flox_query_limit.gml</script>
         <script>scripts\flox_query_offset.gml</script>
         <script>scripts\flox_query_order_by.gml</script>
+        <script>scripts\flox_query_ids_only.gml</script>
         <script>scripts\flox_query_find.gml</script>
       </scripts>
       <scripts name="leaderboards">
@@ -213,6 +214,8 @@
         <script>scripts\scrOnEntityRefreshError.gml</script>
       </scripts>
       <scripts name="queries">
+        <script>scripts\scrTestQueryIdsOnly.gml</script>
+        <script>scripts\scrTestQueryEmpty.gml</script>
         <script>scripts\scrTestQueryBasic.gml</script>
         <script>scripts\scrTestQueryWhere.gml</script>
         <script>scripts\scrOnQueryComplete.gml</script>
@@ -226,7 +229,6 @@
       <script>scripts\scrNextTest.gml</script>
     </scripts>
   </scripts>
-  <shaders name="shaders"/>
   <fonts name="fonts">
     <font>fonts\fntCourierSmall</font>
   </fonts>
