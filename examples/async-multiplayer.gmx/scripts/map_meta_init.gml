@@ -6,3 +6,4 @@
 
 global.__mapInfo = ds_map_create();
 map_meta_set_name(global.__mapInfo,"<MapMeta>");
+

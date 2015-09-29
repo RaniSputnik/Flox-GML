@@ -14,3 +14,4 @@ if not ds_exists(0,ds_type_list) {
     var ZEROLIST = ds_list_create();
     list_meta_set_name(ZEROLIST,"<ZEROLIST>");
 }
+

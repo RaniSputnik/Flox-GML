@@ -28,3 +28,4 @@ with i_flox_assert_initialized() {
     // Invalidate the persistent data so that it gets saved at the next opportunity
     i_flox_persistent_invalidate();
 }
+

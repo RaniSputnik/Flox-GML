@@ -17,3 +17,4 @@ var log = map_get(session,"log");
 list_add_map(log,data);
 // Now the persistent data has changed, write it to disk
 i_flox_persistent_invalidate();
+

@@ -15,3 +15,4 @@ for (var i = 1; i < argument_count; i++) {
 }
 show_debug_message("Flox:"+str);
 return str;
+

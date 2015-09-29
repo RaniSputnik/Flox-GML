@@ -33,3 +33,4 @@ map_set(authData,"authToken", password);
 map_set(authData,"loginOnly", !!loginOnly);
 i_flox_player_login_auth_data(authData,onComplete,onError);
 map_destroy(authData);
+

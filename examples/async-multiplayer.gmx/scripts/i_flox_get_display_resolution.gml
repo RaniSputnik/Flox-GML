@@ -7,3 +7,4 @@
 var resW = string(display_get_width());
 var resH = string(display_get_height());
 return resW+"x"+resH;
+
