@@ -18,3 +18,4 @@ switch (os_type) {
     case os_tizen: return "Tizen";
     default: return "Unknown";
 }
+

@@ -40,3 +40,4 @@ with i_flox_assert_initialized() {
     // Remove the data
     map_destroy(data);
 }
+

@@ -22,3 +22,4 @@ do {
 until endChar != " " and endChar != "}";
 // Return the result
 return str;
+

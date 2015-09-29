@@ -312,10 +312,13 @@
             <string>/// Internal setup
 
 // Make sure there isn't more than one flox instance
-i_flox_assert(instance_number(objFlox == 1),"You have created more than one objFlox instance, you do not need to include this object in your rooms, it will be instantiated for you");
+i_flox_assert(instance_number(objFlox) &lt;= 1,"You have created more than one objFlox instance, you do not need to include this object in your rooms, it will be instantiated for you");
 
 // Deprecated property - Here for old times sake
 self.verbose = false;
+
+// firstRun will be set to true if this is the first time the game has been run
+self.firstRun = false;
 
 // Whether or not flox has been initialized
 self._initialized = false;

@@ -53,6 +53,7 @@
       <script>scripts\flox_query_limit.gml</script>
       <script>scripts\flox_query_offset.gml</script>
       <script>scripts\flox_query_order_by.gml</script>
+      <script>scripts\flox_query_ids_only.gml</script>
       <script>scripts\flox_query_find.gml</script>
       <script>scripts\flox_leaderboard_post.gml</script>
       <script>scripts\flox_leaderboard_load.gml</script>
@@ -179,7 +180,7 @@
     <room>rooms\rmLeaderboard</room>
   </rooms>
   <constants number="45">
-    <constant name="fx_sdk_version">"0.5.0"</constant>
+    <constant name="fx_sdk_version">"0.5.1"</constant>
     <constant name="fx_null">"null"</constant>
     <constant name="fx_guest">"guest"</constant>
     <constant name="fx_key">"key"</constant>
