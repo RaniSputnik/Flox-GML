@@ -5,6 +5,8 @@
 //  The result of the condition is returned for easy use
 //  eg. if not flox_assert(alive,"You must be alive") return false;
 
+if not fx_include_assertions return true;
+
 var condition = argument0;
 var message = argument1;
 if not condition == true {

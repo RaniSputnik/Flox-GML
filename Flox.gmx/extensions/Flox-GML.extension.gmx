@@ -408,6 +408,11 @@
           <value>0</value>
           <hidden>0</hidden>
         </constant>
+        <constant>
+          <name>fx_include_assertions</name>
+          <value>true</value>
+          <hidden>0</hidden>
+        </constant>
       </constants>
     </file>
   </files>
