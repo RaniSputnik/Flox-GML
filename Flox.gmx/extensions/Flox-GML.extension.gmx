@@ -3,7 +3,7 @@
   <name>Flox-GML</name>
   <version>0.5.1</version>
   <packageID>com.ranisputnik.GMFlox</packageID>
-  <ProductID>2B392E41F11A043072A0B6173169CC23</ProductID>
+  <ProductID></ProductID>
   <date>28/12/14</date>
   <license>Free to use, also for commercial games.</license>
   <description></description>
@@ -19,6 +19,7 @@
   <maclinkerflags></maclinkerflags>
   <maccompilerflags></maccompilerflags>
   <androidinject></androidinject>
+  <gradleinject></gradleinject>
   <iosSystemFrameworks/>
   <iosThirdPartyFrameworks/>
   <androidPermissions/>
