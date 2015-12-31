@@ -5,9 +5,12 @@
  * otherwise the function will return noone;
  */
 
-var path     = string(argument0);
-var eTag     = string(argument1);
+var path     = argument0;
+var eTag     = argument1;
 var cache = i_flox_cache();
+
+if not i_flox_assert(is_string(path),"Cache path '"+string(path)+"' is invalid!") return noone;
+if not i_flox_assert(is_string(eTag),"Cache eTag '"+string(eTag)+"' is invalid!") return noone;
 
 i_flox_debug_message(fx_log_verbose,"Fetching from cache path="+path+", eTag="+eTag);
 // Cached object or noone (but don't write the 'noone' into the
