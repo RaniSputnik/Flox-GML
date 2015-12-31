@@ -11,6 +11,8 @@ if not i_flox_assert(flox_entity_exists(entity),
     "Can not set entity property '"+prop+"', entity does not exist") return false;
 if not i_flox_assert(list_exists(list),
     "Can not set entity property '"+prop+"' to list '"+string(list)+"', list does not exist") return false;
-
+if not i_flox_assert(string(prop),
+    "Can not set entity property '"+prop+"', property must be a string value") return false;
+    
 map_set_list(entity,prop,list);
 return true;
