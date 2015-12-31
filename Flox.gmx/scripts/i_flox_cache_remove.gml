@@ -13,7 +13,7 @@ map_delete(cache,path);
 var key = ds_map_find_first(cache);
 var n = map_size(cache);
 repeat n {
-    if string_pos(path+"-",key) > 0 {
+    if string_pos(path+"-",string(key)) > 0 {
         map_delete(cache,key); 
     }
     key = ds_map_find_next(cache,key);
