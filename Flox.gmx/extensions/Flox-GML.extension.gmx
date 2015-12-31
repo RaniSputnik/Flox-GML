@@ -413,6 +413,11 @@
           <value>true</value>
           <hidden>0</hidden>
         </constant>
+        <constant>
+          <name>fx_limit_windows_queries</name>
+          <value>true</value>
+          <hidden>0</hidden>
+        </constant>
       </constants>
     </file>
   </files>

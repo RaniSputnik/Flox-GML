@@ -5,7 +5,9 @@
 
 var limit = round(argument0);
 with i_flox_assert_initialized() {
-    if os_type == os_windows and limit > 8 {
+    // In previous versions of GameMaker, windows could only make 
+    // a maximum of 8 requests simultaneously.
+    if fx_limit_windows_queries and os_type == os_windows and limit > 8 {
         i_flox_debug_message(fx_log_warn,"WARNING: You're query limit has been capped to '8' on Windows. "+
             "Read more about this issue here https://bitbucket.org/RaniSputnik/flox-gml/wiki/Limit%20of%208%20for%20Queries%20on%20Windows");
     }
