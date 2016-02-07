@@ -185,7 +185,7 @@
       <constants>
         <constant>
           <name>fx_sdk_version</name>
-          <value>"0.5.1"</value>
+          <value>"0.5.2"</value>
           <hidden>0</hidden>
         </constant>
         <constant>
