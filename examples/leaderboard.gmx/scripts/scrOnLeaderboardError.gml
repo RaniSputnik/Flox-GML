@@ -3,7 +3,6 @@
 var error = argument0;
 var httpStatus = argument1;
 var cachedScores = argument2;
-show_message(cachedScores);
 
 var leaderboard = instance_find(objLeaderboard,0);
 // Pass the error message to objLeaderboard
