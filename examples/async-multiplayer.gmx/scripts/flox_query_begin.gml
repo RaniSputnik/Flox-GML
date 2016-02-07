@@ -14,7 +14,9 @@ with i_flox_assert_initialized() {
     map_set(self._query,"offset",0);
     map_set(self._query,"idsOnly",false);
     var defaultLimit = 50;
-    if os_type == os_windows then defaultLimit = 8;
+    // In previous versions of GameMaker, windows could only make 
+    // a maximum of 8 requests simultaneously.
+    if fx_limit_windows_queries and os_type == os_windows then defaultLimit = 8;
     map_set(self._query,"limit",defaultLimit);
 }
 

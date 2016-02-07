@@ -18,7 +18,7 @@ map_meta_set_name(data,"[Cache] path="+path);
 if map_exists(metadata) {
     var key = ds_map_find_first(metadata);
     repeat ds_map_size(metadata) {
-        var metakey = path + "-" + key;
+        var metakey = path + "-" + string(key);
         map_set(cache,metakey,map_get(metadata,key));
         key = ds_map_find_next(metadata,key);
     }

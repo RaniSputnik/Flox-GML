@@ -204,8 +204,8 @@
     <room>rooms\rmMatchList</room>
     <room>rooms\rmMatch</room>
   </rooms>
-  <constants number="45">
-    <constant name="fx_sdk_version">"0.5.1"</constant>
+  <constants number="47">
+    <constant name="fx_sdk_version">"0.5.2"</constant>
     <constant name="fx_null">"null"</constant>
     <constant name="fx_guest">"guest"</constant>
     <constant name="fx_key">"key"</constant>
@@ -250,6 +250,8 @@
     <constant name="fx_log_warn">2</constant>
     <constant name="fx_log_error">1</constant>
     <constant name="fx_log_none">0</constant>
+    <constant name="fx_include_assertions">true</constant>
+    <constant name="fx_limit_windows_queries">true</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

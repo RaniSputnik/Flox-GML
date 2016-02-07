@@ -28,4 +28,3 @@ if instance_number(objFlox) == 0 then instance_create(0,0,objFlox);
 
 // Return the flox singleton
 return instance_find(objFlox,0);
-
