@@ -20,6 +20,7 @@
       <scripts name="core">
         <script>scripts\flox_get.gml</script>
         <script>scripts\flox_init.gml</script>
+        <script>scripts\flox_get_time.gml</script>
         <script>scripts\flox_player_get.gml</script>
         <script>scripts\flox_player_login_key.gml</script>
         <script>scripts\flox_player_login_email.gml</script>
@@ -88,6 +89,8 @@
           <script>scripts\i_flox_session_start.gml</script>
           <script>scripts\i_flox_session_add_log_entry.gml</script>
           <script>scripts\i_flox_session_destroy.gml</script>
+          <script>scripts\i_flox_on_get_time_complete.gml</script>
+          <script>scripts\i_flox_on_get_time_error.gml</script>
         </scripts>
         <scripts name="restservice">
           <script>scripts\i_flox_request_perform.gml</script>
@@ -196,6 +199,10 @@
       </scripts>
     </scripts>
     <scripts name="tests">
+      <scripts name="time">
+        <script>scripts\scrOnGetTimeComplete.gml</script>
+        <script>scripts\scrOnGetTimeError.gml</script>
+      </scripts>
       <scripts name="login">
         <script>scripts\scrOnLoginKeyComplete.gml</script>
         <script>scripts\scrOnLoginKeyError.gml</script>
@@ -241,6 +248,7 @@
       <object>objects\objProps</object>
       <object>objects\objTestNavigator</object>
       <object>objects\objForceServiceFailure</object>
+      <object>objects\objTestGetTime</object>
       <object>objects\objLoginKey</object>
       <object>objects\objLoginEmail</object>
       <object>objects\objLoginEmailPassword</object>
@@ -268,6 +276,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rmInit</room>
+    <room>rooms\rmTestMisc</room>
     <room>rooms\rmTestLogin</room>
     <room>rooms\rmTestEntities</room>
     <room>rooms\rmTestQueryBasic</room>
