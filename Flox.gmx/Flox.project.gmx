@@ -266,6 +266,7 @@
       <object>objects\objDestroyEntityType</object>
       <object>objects\objDestroyEntity</object>
       <object>objects\objDestroyEntityQueued</object>
+      <object>objects\objFreeEntity</object>
       <object>objects\objTestQuery</object>
       <object>objects\objTestSimultaneousRequests</object>
       <object>objects\objButton</object>
