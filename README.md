@@ -41,6 +41,7 @@ flox_log_event("MenuNavigation",event);
 This is just the tip of the iceberg, though! Use Flox to store custom Entities, make Player Logins via a simple e-mail verification or a social network, browse your game's logs, assign custom permissions, and much more.
 
 ## Where to go from here?
+* Check out [the wiki](https://github.com/RaniSputnik/Flox-GML/wiki) for information on how to use the library.
 * Visit [Flox.cc](http://www.flox.cc) for more information about Flox.
 * Check out the extension topic on the [Game Maker Community](http://gmc.yoyogames.com/index.php?showtopic=619114#entry4550823)
 
