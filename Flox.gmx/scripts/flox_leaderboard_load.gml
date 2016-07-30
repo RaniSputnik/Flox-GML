@@ -24,9 +24,7 @@ with i_flox_assert_initialized() {
     // We make a copy of the list as it is not a list handled by flox
     // And this list will be destroyed
     else if list_exists(scope) {
-        var listCopy = list_create("load-scores-playerIds-copy");
-        ds_list_copy(listCopy,scope);
-        map_set_list(data,"p",scope);
+        map_set(data,"p",list_join(scope,","));
     }
     else {
         flox_die("Invalid scope argument, must be timescope or list of player id's");

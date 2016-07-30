@@ -184,6 +184,7 @@
             <script>scripts\list_replace_map.gml</script>
             <script>scripts\list_exists.gml</script>
             <script>scripts\list_size.gml</script>
+            <script>scripts\list_join.gml</script>
             <script>scripts\list_destroy.gml</script>
           </scripts>
         </scripts>
