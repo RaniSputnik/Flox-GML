@@ -257,6 +257,7 @@
       <object>objects\objLogout</object>
       <object>objects\objNoAuth</object>
       <object>objects\objLeaderboardList</object>
+      <object>objects\objLeaderboardListFriends</object>
       <object>objects\objLeaderboardPost</object>
       <object>objects\objTestEntity</object>
       <object>objects\objLoadEntity</object>
