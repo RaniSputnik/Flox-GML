@@ -24,7 +24,12 @@ with i_flox_assert_initialized() {
     // We make a copy of the list as it is not a list handled by flox
     // And this list will be destroyed
     else if list_exists(scope) {
-        map_set(data,"p",list_join(scope,","));
+        // Here we use a bit of a hack to get the scope parameter to work correctly
+        // The url must be in the form /{leaderboardId}?p={playerId}&p={playerId}
+        // So we join the list here. It must be done in this way because GameMaker
+        // has no way to determine if a map value is a list or not. So when we encode
+        // the URL vars, we can't tell that the p argument is a list.
+        map_set(data,"p",list_join(scope,"&p="));
     }
     else {
         flox_die("Invalid scope argument, must be timescope or list of player id's");
