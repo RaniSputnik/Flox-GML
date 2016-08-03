@@ -37,6 +37,7 @@ var event = ds_map_create();
 ds_map_add(event,"from","MainMenu");
 ds_map_add(event,"to","SettingsMenu");
 flox_log_event("MenuNavigation",event);
+ds_map_destroy(event);
 ```
 This is just the tip of the iceberg, though! Use Flox to store custom Entities, make Player Logins via a simple e-mail verification or a social network, browse your game's logs, assign custom permissions, and much more.
 
