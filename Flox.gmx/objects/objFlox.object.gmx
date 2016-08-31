@@ -314,6 +314,11 @@
 // Make sure there isn't more than one flox instance
 i_flox_assert(instance_number(objFlox) &lt;= 1,"You have created more than one objFlox instance, you do not need to include this object in your rooms, it will be instantiated for you");
 
+// Initialize game settings
+self.gameID = "&lt;GAME_ID_NOT_SET&gt;";
+self.gameKey = "&lt;GAME_KEY_NOT_SET&gt;";
+self.gameVersion = "&lt;GAME_VERSION_NOT_SET&gt;";
+
 // Deprecated property - Here for old times sake
 self.verbose = false;
 
