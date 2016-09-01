@@ -17,7 +17,7 @@ is just a matter of minutes. More information about Flox can be found here:
 
 1. Sign up to [Flox](http://www.flox.cc/panel/register). Add your game when prompted.
 2. Get the extension on the [GameMaker Marketplace](https://marketplace.yoyogames.com/assets/574/flox-gm)
-or download and import all the resources from the [downloads page](https://bitbucket.org/RaniSputnik/flox-gml/downloads).
+or download and import from the [latest release](https://github.com/RaniSputnik/Flox-GML/releases/latest).
 3. Congratulations! You're ready to start using Flox!
 
 You will notice that the extension is paid on the marketplace and yet the library is open source
@@ -37,10 +37,12 @@ var event = ds_map_create();
 ds_map_add(event,"from","MainMenu");
 ds_map_add(event,"to","SettingsMenu");
 flox_log_event("MenuNavigation",event);
+ds_map_destroy(event);
 ```
 This is just the tip of the iceberg, though! Use Flox to store custom Entities, make Player Logins via a simple e-mail verification or a social network, browse your game's logs, assign custom permissions, and much more.
 
 ## Where to go from here?
+* Check out [the wiki](https://github.com/RaniSputnik/Flox-GML/wiki) for information on how to use the library.
 * Visit [Flox.cc](http://www.flox.cc) for more information about Flox.
 * Check out the extension topic on the [Game Maker Community](http://gmc.yoyogames.com/index.php?showtopic=619114#entry4550823)
 
