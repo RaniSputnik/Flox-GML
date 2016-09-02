@@ -9,7 +9,7 @@
   <description></description>
   <helpfile></helpfile>
   <androidProps>0</androidProps>
-  <iosProps>0</iosProps>
+  <iosProps>-1</iosProps>
   <installdir></installdir>
   <classname></classname>
   <androidclassname></androidclassname>
@@ -20,7 +20,20 @@
   <maccompilerflags></maccompilerflags>
   <androidinject></androidinject>
   <androidmanifestinject></androidmanifestinject>
-  <iosplistinject></iosplistinject>
+  <iosplistinject>&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+&lt;dict&gt;
+  &lt;key&gt;NSExceptionDomains&lt;/key&gt;
+  &lt;dict&gt;
+    &lt;key&gt;flox.cc&lt;/key&gt;
+    &lt;dict&gt;
+      &lt;key&gt;NSThirdPartyExceptionRequiresForwardSecrecy&lt;/key&gt;
+      &lt;false/&gt;
+      &lt;key&gt;NSIncludesSubdomains&lt;/key&gt;
+      &lt;true/&gt;
+    &lt;/dict&gt;
+  &lt;/dict&gt;
+&lt;/dict&gt;
+</iosplistinject>
   <androidactivityinject></androidactivityinject>
   <gradleinject></gradleinject>
   <iosSystemFrameworks/>
