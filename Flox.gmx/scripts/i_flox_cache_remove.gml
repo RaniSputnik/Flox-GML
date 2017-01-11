@@ -5,6 +5,9 @@
  
 var path = argument0;
 var cache = i_flox_cache();
+
+if not i_flox_assert(is_string(path) and path != "", "Cache path '"+string(path)+"' is invalid") then exit;
+
 // Remove the existing cache data
 var existing = i_flox_cache_get(path,fx_null);
 if map_exists(existing) map_destroy(existing);

@@ -3,4 +3,6 @@
  * Gets the cache map
  */
  
-return map_get(self._persistentData,"serviceCache");
+var cache = map_get(self._persistentData,"serviceCache");
+if not i_flox_assert(map_exists(cache), "Cache has been deleted! This should never happen") then exit;
+return cache;

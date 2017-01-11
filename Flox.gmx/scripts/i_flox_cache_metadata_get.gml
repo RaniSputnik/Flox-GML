@@ -4,10 +4,13 @@
  * If the metadata doesn't exist, it will return the default value
  */
 
-var path = string(argument0);
-var key = string(argument1);
+var path = argument0;
+var key = argument1;
 var metaPath = path + "-" + key;
 var def = argument2;
+
+if not i_flox_assert(is_string(path) and path != "", "Cache path '"+string(path)+"' is invalid") then exit;
+if not i_flox_assert(is_string(key) and key != "", "Cache metadata key '"+string(key)+"' is invalid") then exit;
 
 var cache = i_flox_cache();
 if map_has(cache,metaPath) {

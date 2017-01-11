@@ -9,11 +9,11 @@ var path     = argument0;
 var eTag     = argument1;
 var cache = i_flox_cache();
 
-if not i_flox_assert(is_string(path),"Cache path '"+string(path)+"' is invalid!") return noone;
-if not i_flox_assert(is_string(eTag),"Cache eTag '"+string(eTag)+"' is invalid!") return noone;
+if not i_flox_assert(is_string(path),"Cache path '"+string(path)+"' is invalid!") then exit;
+if not i_flox_assert(is_string(eTag),"Cache eTag '"+string(eTag)+"' is invalid!") then exit;
 
 i_flox_debug_message(fx_log_verbose,"Fetching from cache path="+path+", eTag="+eTag);
-// Cached object or noone (but don't write the 'noone' into the
+// Cached object or noone (but don't write the 'noone' into the map)
 var cachedObject = map_default(cache,path,noone,false);
 if map_exists(cachedObject) {
     var cachedETag = i_flox_cache_metadata_get(path,"eTag",fx_null);
