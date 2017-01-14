@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_entity_url(String type, String id) String
  * Returns the endpoint for a given entity.
  */

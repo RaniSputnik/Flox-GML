@@ -1,4 +1,4 @@
-/// flox_log_info(message)
+﻿/// flox_log_info(message)
 // 
 //  Writes a new message into the session log
  

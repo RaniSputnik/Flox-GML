@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_on_query_entity_load_complete(Map request, Map body, Real httpStatus)
  * Called for each entity a query loads successfully.
  */

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_assert_query_building()
  * Assert to check that a query is currently being constructed/
  */

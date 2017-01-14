@@ -1,4 +1,4 @@
-/**
+﻿/**
  * list_meta_init()
  * Intializes the meta info for the list data structures
  * The meta info assists debugging
@@ -14,3 +14,4 @@ if not ds_exists(0,ds_type_list) {
     var ZEROLIST = ds_list_create();
     list_meta_set_name(ZEROLIST,"<ZEROLIST>");
 }
+

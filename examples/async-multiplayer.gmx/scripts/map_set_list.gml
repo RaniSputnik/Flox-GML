@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_set_list(Map map, String key, List list)
  * Sets the key to a list in the given map
  */

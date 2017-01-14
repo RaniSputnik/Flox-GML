@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_on_entity_destroy_complete(Map request, Map response, Real httpStatus)
  * Called when an entity is destroyed successfully
  */

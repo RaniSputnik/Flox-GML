@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_set(Map map, String key, Any value) 
  * Sets the value for a key in the given map
  */

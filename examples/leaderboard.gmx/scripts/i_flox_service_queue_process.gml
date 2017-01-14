@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_service_queue_process() Boolean
  * Process the service queue.
  */

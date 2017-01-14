@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_on_entity_refresh_error(Map request, Map response, Real httpStatus, Map cachedResponse)
  * Called whenever a refresh entity request fails
  */

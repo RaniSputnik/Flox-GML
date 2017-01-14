@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_default(Map map, String key, Any default, Boolean shouldWrite = true) Any
  * Returns the value with the given key from the given map
  * If the map does not contain the key, the default value is returned

@@ -1,4 +1,4 @@
-/// flox_entity_set_map(entity,prop,map)
+﻿/// flox_entity_set_map(entity,prop,map)
 //
 //  Sets a property on the given entity to the specified map
 

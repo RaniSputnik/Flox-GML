@@ -1,7 +1,9 @@
-/**
- * i_flox_on_entity_load_complete(Map request, Map body, Real httpStatus)
- * Called when an entity is loaded successfully from the server.
- */
+﻿/// i_flox_on_entity_load_complete(request,body,httpStatus)
+///
+/// @param {map} request
+/// @param {map} body
+/// @param {real} httpStatus
+/// Called when an entity is loaded successfully from the server.
 
 var request    = argument0;
 var body       = argument1;

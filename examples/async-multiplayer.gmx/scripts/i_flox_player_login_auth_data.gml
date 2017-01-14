@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_player_login_auth_data(Map authData,
  *                     Script(Map request, Map result, Number status) onComplete,
  *                     Script(Map request, String error, Number status) onError)

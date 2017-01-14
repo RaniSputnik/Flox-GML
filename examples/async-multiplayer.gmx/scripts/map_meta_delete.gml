@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_meta_delete(Map map)
  * Deletes all meta information for a given map
  */

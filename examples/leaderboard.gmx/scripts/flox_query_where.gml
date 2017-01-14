@@ -1,4 +1,4 @@
-/// flox_query_where(constraints,params...)
+﻿/// flox_query_where(constraints,params...)
 //
 //  Adds a where clause to the query.
 //  Subsequent where clauses will override previous constraints.

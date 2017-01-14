@@ -1,4 +1,4 @@
-/// flox_entity_load_type(type,id,onComplete,onError) 
+﻿/// flox_entity_load_type(type,id,onComplete,onError) 
 //
 //  Loads an entity from the server by it's type and id.
 //  This function is asynchronous and will execute either

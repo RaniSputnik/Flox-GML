@@ -1,4 +1,4 @@
-/// flox_query_limit(limit)
+﻿/// flox_query_limit(limit)
 //
 //  Sets the maximum number of results that can be returned
 //  by the query, default is 50.

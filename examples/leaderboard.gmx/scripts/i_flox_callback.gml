@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_callback(Instance context, Script callback, Any ...args) Boolean
  * Call the given script in the given context.
  * Returns whether or not the callback was successful.

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * flox_cache_clear()
  * Clears the Flox service cache (the server response cache)
  */

@@ -1,4 +1,4 @@
-/// flox_entity_destroy(entity,onComplete,onError)
+﻿/// flox_entity_destroy(entity,onComplete,onError)
 //
 //  Destroys a given entity, first by freeing it and then
 //  removing it from the server. This function is asynchronous 

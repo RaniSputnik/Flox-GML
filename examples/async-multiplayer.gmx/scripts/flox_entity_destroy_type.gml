@@ -1,4 +1,4 @@
-/// flox_entity_destroy_type(type,id,onComplete,onError)
+﻿/// flox_entity_destroy_type(type,id,onComplete,onError)
 // 
 //  Destroys a given entity by type and id, removing it from
 //  the server. This function is asynchronous and will execute

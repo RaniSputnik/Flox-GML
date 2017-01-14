@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_get_current_time_utc()
  * Returns a datetime with the current time in UTC
  * avoids modifying the current timezone

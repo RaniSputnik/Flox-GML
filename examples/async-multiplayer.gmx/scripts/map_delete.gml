@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_delete(Map map, String key) Boolean
  * Deletes a given key from the given map.
  * Returns whether or not the key to delete existed.

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * list_replace_map(List list, Real position, Map map)
  * Replaces a value in the list with the given map.
  * Marks the list for json encoding.

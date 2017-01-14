@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_has(Map map, String key) Boolean
  * Returns whether or not a map has a given key
  */

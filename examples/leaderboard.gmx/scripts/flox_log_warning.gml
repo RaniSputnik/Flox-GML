@@ -1,4 +1,4 @@
-/// flox_log_warning(message)
+﻿/// flox_log_warning(message)
 //
 //  Writes a new warning message into the session log
  

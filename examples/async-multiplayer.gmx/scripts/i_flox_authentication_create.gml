@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_authentication_create(String playerId, String authType, String authId, String token) DSMap
  * Creates a new flox authentication object
  */

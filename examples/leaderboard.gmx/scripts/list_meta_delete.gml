@@ -1,4 +1,4 @@
-/**
+﻿/**
  * list_meta_delete(List list)
  * Deletes all meta information for a given list
  */

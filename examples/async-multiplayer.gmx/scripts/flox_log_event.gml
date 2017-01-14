@@ -1,4 +1,4 @@
-/// flox_log_event(eventType,properties)
+﻿/// flox_log_event(eventType,properties)
 //
 //  Adds an event to the session log, events can have
 //  properties bundled with them using the eventData parameter.

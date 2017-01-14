@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_get_os() String
  * Returns a human readable string of the current OS
  */
@@ -18,3 +18,4 @@ switch (os_type) {
     case os_tizen: return "Tizen";
     default: return "Unknown";
 }
+

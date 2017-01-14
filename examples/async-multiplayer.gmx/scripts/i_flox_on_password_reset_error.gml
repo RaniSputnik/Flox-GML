@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_on_password_reset_error(Map request, String error, Real httpStatus, Map cachedResponse)
  * Called when a password reset request fails to complete.
  */

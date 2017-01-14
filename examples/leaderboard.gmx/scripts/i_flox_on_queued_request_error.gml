@@ -1,4 +1,4 @@
-/**
+﻿/**
  * flox_on_queued_request_error(Map request, String error, Real httpStatus, Map cachedResult)
  * Called when a request made with i_flox_request_queued fails.
  * Stops the request queue processing.

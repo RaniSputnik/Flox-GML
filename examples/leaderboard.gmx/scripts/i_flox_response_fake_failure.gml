@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_response_fake_failure(Map request, String error, Real httpStatus)
  * Creates a fake response that can be processed like an ordinary response
  * The response will be queued and processed next frame to maintain more

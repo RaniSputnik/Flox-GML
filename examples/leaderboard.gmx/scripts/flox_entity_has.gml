@@ -1,4 +1,4 @@
-/// flox_entity_has(entity,prop)
+﻿/// flox_entity_has(entity,prop)
 // 
 //  Returns whether or not an entity has a given property
 

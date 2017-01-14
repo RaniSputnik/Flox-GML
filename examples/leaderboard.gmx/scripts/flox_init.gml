@@ -1,4 +1,4 @@
-/// flox_init(gameID,gameKey,version)
+﻿/// flox_init(gameID,gameKey,version)
 // 
 //  Initializes flox with the given gameId, key and version
 //  Your game id and key are given to you when you create your game in

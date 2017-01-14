@@ -1,4 +1,4 @@
-/// flox_entity_get(entity,prop)
+﻿/// flox_entity_get(entity,prop)
 //
 //  Returns the value of a given entity property
 

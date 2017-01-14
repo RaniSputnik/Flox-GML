@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_request_perform(Map request)
  * Performs a flox request and calls back with then the request
  * completes. Request map must include all details of the request including 'method', 'path', 'auth'
@@ -20,6 +20,9 @@ var auth = map_get(request,"authentication");
 var data = map_default(request,"data",noone);
 var onComplete = map_get(request,"onComplete");
 var onError = map_get(request,"onError");
+
+if not i_flox_assert(is_string(method), "Method is not a string") then exit;
+if not i_flox_assert(is_string(path), "Path is not a string") then exit;
 
 var cachedResult = noone;
 var requestId    = noone;

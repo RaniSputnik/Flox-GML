@@ -1,4 +1,4 @@
-/// flox_entity_save_queued(entity)
+﻿/// flox_entity_save_queued(entity)
 //
 //  Saves an entity to the server at the next available moment.
  

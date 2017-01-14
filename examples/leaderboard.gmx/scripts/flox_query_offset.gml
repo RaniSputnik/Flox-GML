@@ -1,4 +1,4 @@
-/// flox_query_offset(offset)
+﻿/// flox_query_offset(offset)
 //
 //  Offsets the results by a given amount, can be used to
 //  paginate. ie. you fetch the first 50 results, then

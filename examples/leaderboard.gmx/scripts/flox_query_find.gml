@@ -1,4 +1,4 @@
-/// flox_query_find(onComplete,onError)
+﻿/// flox_query_find(onComplete,onError)
 //
 //  Use this script after building a query to find the results.
 //  This script is asychronous and will execute either

@@ -1,4 +1,4 @@
-/// flox_entity_set_list(entity,prop,list)
+﻿/// flox_entity_set_list(entity,prop,list)
 //
 // Sets a property on the given entity to the specified list
 

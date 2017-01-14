@@ -1,4 +1,4 @@
-/// flox_entity_create(entityType)
+﻿/// flox_entity_create(entityType)
 //
 //  Creates a new Flox entity, note that this method DOESN'T hit the
 //  server, you must create a flox entity and then save it for the data

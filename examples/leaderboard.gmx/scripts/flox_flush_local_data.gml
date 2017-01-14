@@ -1,4 +1,4 @@
-/// flox_flush_local_data()
+﻿/// flox_flush_local_data()
 //
 //  Saves all the flox data to disk. Changes are flushed to disk automatically
 //  so most of the time you wont have to worry, however you can flush local data

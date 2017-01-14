@@ -22,6 +22,7 @@
     <scripts name="flox">
       <script>scripts\flox_get.gml</script>
       <script>scripts\flox_init.gml</script>
+      <script>scripts\flox_get_time.gml</script>
       <script>scripts\flox_player_get.gml</script>
       <script>scripts\flox_player_login_key.gml</script>
       <script>scripts\flox_player_login_email.gml</script>
@@ -77,6 +78,8 @@
       <script>scripts\i_flox_session_start.gml</script>
       <script>scripts\i_flox_session_add_log_entry.gml</script>
       <script>scripts\i_flox_session_destroy.gml</script>
+      <script>scripts\i_flox_on_get_time_complete.gml</script>
+      <script>scripts\i_flox_on_get_time_error.gml</script>
       <script>scripts\i_flox_request_perform.gml</script>
       <script>scripts\i_flox_request_create.gml</script>
       <script>scripts\i_flox_request.gml</script>
@@ -153,6 +156,7 @@
       <script>scripts\list_replace_map.gml</script>
       <script>scripts\list_exists.gml</script>
       <script>scripts\list_size.gml</script>
+      <script>scripts\list_join.gml</script>
       <script>scripts\list_destroy.gml</script>
       <script>scripts\i_flox_get_os.gml</script>
       <script>scripts\i_flox_get_display_resolution.gml</script>
@@ -180,7 +184,7 @@
     <room>rooms\rmLeaderboard</room>
   </rooms>
   <constants number="47">
-    <constant name="fx_sdk_version">"0.5.2"</constant>
+    <constant name="fx_sdk_version">"0.5.3"</constant>
     <constant name="fx_null">"null"</constant>
     <constant name="fx_guest">"guest"</constant>
     <constant name="fx_key">"key"</constant>

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_on_authenticated(Player player, Map authData, Map previousAuth
  *                         Script(Player player) onComplete,
  *                         Object context)

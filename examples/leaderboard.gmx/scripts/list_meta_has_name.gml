@@ -1,4 +1,4 @@
-/**
+﻿/**
  * list_meta_has_name(List list) Boolean
  * Returns whether or not a given list has been named
  */

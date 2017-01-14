@@ -1,4 +1,4 @@
-/// flox_log_error(errorType,message)
+﻿/// flox_log_error(errorType,message)
 //
 //  Adds an error to the session log
 //  ErrorType is used to group errors together in the control panel

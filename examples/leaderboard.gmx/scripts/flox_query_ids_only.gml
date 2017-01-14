@@ -1,4 +1,4 @@
-/// flox_query_ids_only()
+﻿/// flox_query_ids_only()
 //
 //  Usually a query will callback with a list of all the entities
 //  that are returned by the query, however this can take a while

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_entity_from_map(String type, String id, Map map) Entity
  * Creates an entity of the given type with the given id
  * and applies the maps properties to it.

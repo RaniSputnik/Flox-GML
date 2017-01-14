@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_session_destroy(Map session)
  * Destroys the given session (avoiding the nested map destroy bug in JS targets)
  */

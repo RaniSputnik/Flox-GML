@@ -1,4 +1,4 @@
-/// flox_get()
+﻿/// flox_get()
 //  @return {objFlox}
 //  Gets the objFlox singleton. If the flox instance 
 //  doesn't exist yet this function will create it.
@@ -28,3 +28,4 @@ if instance_number(objFlox) == 0 then instance_create(0,0,objFlox);
 
 // Return the flox singleton
 return instance_find(objFlox,0);
+

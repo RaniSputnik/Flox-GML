@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_get(Map map, String key) Any
  * returns the valie of a map with the given key
  */

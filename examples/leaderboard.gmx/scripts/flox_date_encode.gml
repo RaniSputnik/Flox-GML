@@ -1,4 +1,4 @@
-/// flox_date_encode(date)
+﻿/// flox_date_encode(date)
 //
 //  Takes a GameMaker datetime and turns it into a xs:DateTime string
 //  eg: 2014-12-27T11:23:04.976Z

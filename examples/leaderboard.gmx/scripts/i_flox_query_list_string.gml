@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_query_list_string(List list)
  * Converts a list to a string that can be used in a flox
  * 'WHERE * IN ?' constraint.

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_leaderboard_scores(List scores) List
  * Copys the raw data list and returns a list of scores that includes
  * all debugging info. If an invalid list, a new empty list will be

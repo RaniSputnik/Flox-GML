@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_on_query_complete(Map request, Map response, Real httpStatus)
  * Called when the initial query request has completed. When the
  * query request succeeds it includes a list of all the ids of the

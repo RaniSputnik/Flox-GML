@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_session_add_log_entry(String type, Map data)
  * Adds an entry to the log for the current session
  */

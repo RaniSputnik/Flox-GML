@@ -1,4 +1,4 @@
-/// flox_player_reset_email_password(email,onComplete,onError)
+﻿/// flox_player_reset_email_password(email,onComplete,onError)
 //
 //  Causes the server to send a password-reset e-mail to the given
 //  e-mail address. If that address is unknown to the server, it 

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_player_create(String authType) Player
  * Creates a new player
  */

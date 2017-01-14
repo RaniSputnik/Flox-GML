@@ -1,4 +1,4 @@
-/**
+﻿/**
  * list_meta_get_name(List list) String
  * Gets the display name of a given list
  */

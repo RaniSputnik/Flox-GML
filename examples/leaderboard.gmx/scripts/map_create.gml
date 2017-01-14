@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_create(String name = "") Map
  * Creates a map, optionally you can provide a display name to 
  * help remember what map this is

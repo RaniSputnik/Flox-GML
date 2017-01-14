@@ -1,4 +1,4 @@
-/// flox_query_begin(entityType)
+﻿/// flox_query_begin(entityType)
 //
 //  Begins a query for the given entity type.
 

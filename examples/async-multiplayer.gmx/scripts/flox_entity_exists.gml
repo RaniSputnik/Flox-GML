@@ -1,4 +1,4 @@
-/// flox_entity_exists(entity)
+﻿/// flox_entity_exists(entity)
 //
 //  Returns whether or not the specified entity exists
  

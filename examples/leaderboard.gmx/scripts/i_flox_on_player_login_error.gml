@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_on_player_login_error(Map request, String error, Real httpStatus, Map cache)
  * Called when the authenticate request fails.
  */

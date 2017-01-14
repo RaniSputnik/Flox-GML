@@ -1,4 +1,4 @@
-/// flox_entity_destroy_queued(entity)
+﻿/// flox_entity_destroy_queued(entity)
 //
 //  Removes an entity to the server at the next available moment.
  

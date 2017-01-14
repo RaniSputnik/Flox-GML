@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_encode_map_for_uri(Map data) String
  * Encodes a map into url parameters. The leading ? is not included
  * to allow for maximum flexibility.

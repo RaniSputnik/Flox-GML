@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_persistent_load() Map
  * Loads the persisted flox data ie. the queued requests the
  * response cache, the current player, session and auth details

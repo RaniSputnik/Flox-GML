@@ -1,4 +1,4 @@
-/**
+﻿/**
  * list_add_map(List list, Map map)
  * Adds the given map to the given list.
  * Marks the list for json encoding.

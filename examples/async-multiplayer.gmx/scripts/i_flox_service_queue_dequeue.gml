@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_service_queue_dequeue()
  * Removes the first item from the service queue
  */

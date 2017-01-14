@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_on_query_error(Map request, String error, Real httpStatus, Map cachedResponse)
  * Called when one of the queries requests fails.
  */

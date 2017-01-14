@@ -1,4 +1,4 @@
-/// flox_create_uid(length)
+﻿/// flox_create_uid(length)
 //
 //  Generates a UID (unique identifier) that can be used for Entity IDs. 
 //  If length is not specified, a default of 16 is used.

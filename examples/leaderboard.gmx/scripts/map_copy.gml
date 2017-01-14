@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_copy(Map to, Map from)
  * Copies all properties from a given map to another map
  * without clearing the map that it will copy to

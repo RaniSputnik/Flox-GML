@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_query_finish(Map query)
  * Called when a query has finished loading all the entities.
  */

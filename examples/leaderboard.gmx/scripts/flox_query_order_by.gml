@@ -1,4 +1,4 @@
-/// flox_query_order_by(property)
+﻿/// flox_query_order_by(property)
 //
 //  Orders the results by a given property.
 //  Add either ASC or DESC to after the property to define

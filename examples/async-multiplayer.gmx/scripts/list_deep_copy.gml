@@ -1,4 +1,4 @@
-/**
+﻿/**
  * list_deep_copy(List list) DSList
  * Makes a deep copy (that is a copy that also duplicates nested
  * data structures) of the given list and returns the copy

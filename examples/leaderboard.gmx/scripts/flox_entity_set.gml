@@ -1,4 +1,4 @@
-/// flox_entity_set(entity,prop,value)
+﻿/// flox_entity_set(entity,prop,value)
 //
 //  Sets a property on the given entity to the specified value
 

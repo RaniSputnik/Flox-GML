@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_cache_add(String path, Map data, Map metadata)
  * Adds an entry to the cache with the given data and
  * metadata.
@@ -8,6 +8,10 @@ var path     = argument0;
 var data     = argument1;
 var metadata = argument2;
 var cache = i_flox_cache();
+
+if not i_flox_assert(is_string(path) and path != "", "Cache path '"+string(path)+"' is invalid") then exit;
+if not i_flox_assert(is_real(data) and map_exists(data), "Cache data '"+string(data)+"' is invalid") then exit;
+if not i_flox_assert(is_real(metadata), "Metadata must be a map id or 'noone'") then exit;
 
 // Remove the existing cache, freeing any data structures
 i_flox_cache_remove(path);

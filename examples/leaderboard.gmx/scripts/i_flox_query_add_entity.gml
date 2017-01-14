@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_query_add_entity(Map query, Real position, Entity entity)
  * Adds an entity that was loaded into the query results.
  * The entity may have been loaded from the server or from

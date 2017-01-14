@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_response_process(Map response)
  * Process a new repsonse from the server
  */
@@ -39,7 +39,8 @@ if map_has(self._serviceRequests,requestId) {
     i_flox_debug_message(fx_log_verbose,"Processing response for path = "+path);
     
     // If we couldn't contact the server for any odd/unknown reasons
-    if not map_exists(headers) and status < 0 {
+    // We do not check status as it is incorrectly returned as -1 on a 204 response
+    if not map_exists(headers)/* or status < 0*/ {
         i_flox_debug_message(fx_log_warn,"Flox server unreachable");
         if script_exists(onError)
             then script_execute(onError,requestInfo,"Flox server unreachable",http_status_unknown,cache);

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_meta_get_name(Map map) String
  * Gets the display name of a given map
  */

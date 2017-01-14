@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_request_queued(String method, String path, Map data)
  * Defers a queue based on availability. If the server is currently
  * reachable, the queued request will be performed right away. However

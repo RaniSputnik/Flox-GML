@@ -1,11 +1,11 @@
-/// flox_player_login_email_password(email,password,loginOnly,onComplete,onError)
+﻿/// flox_player_login_email_password(email,password,loginOnly,onComplete,onError)
 //
 //  Log in a player with his e-mail address and a password.
 //  Depending on the 'loginOnly' parameter, this method can also be used to sign up
 //  a previously unknown player. Once an e-mail address is confirmed, a login will only
 //  work with the correct password.
 //
-//  If the e-mail + password combination is correct, the player will be logged in —
+//  If the e-mail + password combination is correct, the player will be logged in â€”
 //  regardless of the 'loginOnly' setting.
 //  If 'loginOnly = true' and the mail address is unknown or the password is wrong,
 //  the method will yield an error with http_status_forbidden.

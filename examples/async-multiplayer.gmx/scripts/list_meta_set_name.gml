@@ -1,4 +1,4 @@
-/**
+﻿/**
  * list_meta_set_name(List list, String name)
  * Sets the display name for a given list, useful for debugging
  */

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_player_login(String authType, String authId, String token, 
  *                     Script(Map request, Map result, Number status) scrComplete,
  *                     Script(Map request, String error, Number status) scrFailure)

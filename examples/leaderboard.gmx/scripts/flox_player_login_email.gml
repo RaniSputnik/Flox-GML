@@ -1,4 +1,4 @@
-/// flox_player_login_email(email,onComplete,onError)
+﻿/// flox_player_login_email(email,onComplete,onError)
 // 
 //  Attempts to log a player in using their email only.
 //  If a player tries to login with the same email on another

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_cache_response(String path, Map headers, Map result)
  * Caches a response from the server
  */

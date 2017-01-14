@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_meta_set_name(Map map, String name)
  * Sets the display name for a given map, useful for debugging
  */

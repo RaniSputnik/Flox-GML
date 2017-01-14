@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_session_create(Map lastSession = noone) Map
  * Creates a new Flox session, optionally with a previous session provided
  */

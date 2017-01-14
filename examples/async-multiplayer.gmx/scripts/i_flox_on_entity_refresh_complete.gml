@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_on_entity_refresh_complete(Map request, Map response, Real httpStatus)
  * Called when an entity is refreshed successfully.
  */

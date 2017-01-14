@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_session_start(String gameID, String gameVersion, String installationID, 
  *                      Boolean reportAnalytics, Map lastSession)
  * Starts a new session and closes the previous one. This will send the analytics of 

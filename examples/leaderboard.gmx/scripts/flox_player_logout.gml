@@ -1,4 +1,4 @@
-/// flox_player_logout()
+﻿/// flox_player_logout()
 //
 //  Logs out the current player and logs in a new guest player
 

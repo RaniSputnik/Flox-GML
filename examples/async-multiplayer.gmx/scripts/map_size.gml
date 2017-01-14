@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_size(Map map) Number
  * Returns the size of the map
  */

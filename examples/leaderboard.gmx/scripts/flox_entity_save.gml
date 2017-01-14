@@ -1,4 +1,4 @@
-/// flox_entity_save(entity,onComplete,onError)
+﻿/// flox_entity_save(entity,onComplete,onError)
 //
 //  Saves an entity to the server. This function is asynchronous
 //  and will execute either onComplete or onError when it is finished.

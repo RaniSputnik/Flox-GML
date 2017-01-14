@@ -1,4 +1,4 @@
-/**
+﻿/**
  * list_destroy(List list, String reason)
  * Destroys the specified list
  */

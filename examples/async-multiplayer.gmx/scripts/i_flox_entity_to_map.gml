@@ -1,4 +1,4 @@
-/**
+﻿/**
  * i_flox_entity_to_map(Entity entity) Map
  * Transforms an entity to a ds_map. Makes a copy of the
  * original entity map.

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_destroy(Map map, String reason = "")
  * Destroys the specified map optionally you can specify
  * a reason (for debugging purposes)

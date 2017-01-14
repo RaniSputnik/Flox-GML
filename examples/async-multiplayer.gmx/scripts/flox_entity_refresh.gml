@@ -1,4 +1,4 @@
-/// flox_entity_refresh(entity,onComplete,onError)
+﻿/// flox_entity_refresh(entity,onComplete,onError)
 //
 //  Updates the properties of an entity with the copy from
 //  the server.

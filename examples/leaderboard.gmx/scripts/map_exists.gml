@@ -1,4 +1,4 @@
-/**
+﻿/**
  * map_exists(Map map) Boolean
  * Returns whether or not a map with the given id exists
  */

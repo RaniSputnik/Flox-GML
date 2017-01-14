@@ -1,4 +1,4 @@
-/// i_flox_assert_initialized() 
+﻿/// i_flox_assert_initialized() 
 //
 // Ensures that Flox is initialized
 

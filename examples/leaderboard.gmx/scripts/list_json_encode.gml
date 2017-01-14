@@ -1,4 +1,4 @@
-/**
+﻿/**
  * list_json_encode(List list) String
  * Encodes a list to json
  */
