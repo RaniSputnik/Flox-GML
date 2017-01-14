@@ -46,6 +46,16 @@ This is just the tip of the iceberg, though! Use Flox to store custom Entities, 
 * Visit [Flox.cc](http://www.flox.cc) for more information about Flox.
 * Check out the extension topic on the [Game Maker Community](http://gmc.yoyogames.com/index.php?showtopic=619114#entry4550823)
 
-## Building the library
+## Publishing the library
 
-Run the build.py script (requires python 3.4)
+1. Update the fx_sdk_version version in the extensions macros
+2. Run the build.py script (requires python 3.4)
+
+The will generate four files in the ./build directory; flox.constants.txt, flox.scripts.gml, objFlox.object.gmx and flox-gml.{version}.zip. The zip file is simply a distribution of the other three files. Each of these files can be imported into GameMaker without requiring the marketplace extension.
+
+Once those files are uploaded;
+
+1. Update the examples with the new version of the library (import the three resource files)
+2. Commit changes and tag the version in Git 
+3. Merge to master
+4. Publish to marketplace
